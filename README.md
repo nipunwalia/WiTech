@@ -2,7 +2,7 @@
 
 Front-end Team
 
-branch 1 handled by Brinda
+branch Brinda handled by Brinda
 
 branch Sunaina handled by Sunaina
 
