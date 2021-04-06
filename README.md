@@ -4,7 +4,7 @@ Front-end Team
 
 branch 1 handled by Brinda
 
-branch 2 handled by Suniana
+branch Sunaina-branch handled by Suniana
 
 Back-end Team 
 
