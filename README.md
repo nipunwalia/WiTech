@@ -10,4 +10,4 @@ Back-end Team
 
 Branch Sanmit handled by Sanmit
 
-Branch 4 handled by Jatin
+Branch jatin handled by Jatin
