@@ -8,6 +8,6 @@ branch Sunaina handled by Sunaina
 
 Back-end Team 
 
-Branch 3 handled by Sanmit
+Branch Sanmit handled by Sanmit
 
 Branch jatin handled by Jatin
