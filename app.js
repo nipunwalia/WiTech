@@ -7,12 +7,7 @@ app.set('view engine','ejs');
 
 app.get('/home',(req,res)=>{
     // route for home page
-    res.send("This is Home Page");
-})
-
-app.get('/about',(req,res)=>{
-    // route for about page
-    res.send("This is About Page");
+    res.render('home');
 })
 
 app.listen(port,()=>console.log(`App is listening at ${port}`));
