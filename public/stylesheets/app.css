@@ -1,0 +1,41 @@
+
+.banner-image{
+    background-image: url('homebg.jpg');
+    background-repeat: no-repeat;
+    background-size: 1600px 600px;
+    height: 600px;
+
+}
+p.anim::before {
+    content: "Women In Technology";
+    animation: toggled infinite 20s ease-in-out;
+}
+@keyframes toggled{
+    50%{
+        opacity: 100%;
+        content: "Women in Technology have been decreasing."
+    }
+    12.5%{
+        opacity: 50%;
+    }
+    25%{
+        opacity: 100%;
+        content: "Women in Technology need to be empowered."
+    }
+    37.5%{
+        opacity: 50%;
+    }
+    62.5%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 100%;
+        content: "Women in Technology have to be supported."
+    }
+    87.5%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
