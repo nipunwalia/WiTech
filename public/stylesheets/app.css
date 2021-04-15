@@ -1,14 +1,26 @@
-
 .banner-image{
-    background-image: url('homebg.jpg');
+    background-image: url('assets/images/team.jpg');
     background-repeat: no-repeat;
     background-size: 1600px 600px;
-    height: 600px;
-
+    height: 630px;
 }
 p.anim::before {
     content: "Women In Technology";
     animation: toggled infinite 20s ease-in-out;
+}
+.navbar{
+    transition:500ms ease-in-out;
+    background:fixed;
+    padding: 10px 20px;
+  }
+.navbar.scrolled{
+  background-color: #000000;
+}
+#nav-color
+{
+   color: #ffffff;
+   font-size: 1rem;
+   padding: auto;
 }
 @keyframes toggled{
     50%{
@@ -41,26 +53,18 @@ p.anim::before {
 }
 #testimonials
 {
-    background: #FF416C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-radius: 10px;
+background: #F2994A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    text-align: center;
-    color: white;
-    padding: 60px 50px;
-}
-.carousel-indicators
-{
-    margin-bottom: -60px;
-    color: #ff7e05;
-}
-hr{
-    width: 5rem;
-    background-color:white;
+text-align: center;
+color: white;
+padding: 20px 0px;
 }
 .About-text
 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Bree Serif', serif;
     font-size: 3.25rem;
 }
 .carousel-item
@@ -79,7 +83,7 @@ hr{
 #features
 {
 	padding:2% 3%;
-	background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+	background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
 	position: relative;
 	z-index: 1;
 }
@@ -115,20 +119,12 @@ hr{
 }
 .about-grid
 {
-    font-family: 'Oswald', sans-serif;
-}
-img{
-    width: 20%;
-    height: 20%;
-}
-p
-{
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
 }
 .text-center
 {
     margin: 20px 0px;
+    font-family: 'Bree Serif', serif;;
 }
 .h1-responsive
 {
@@ -136,17 +132,13 @@ p
     font-size: 2.5rem;
     line-height: 1px;
 }
-hr{
-    width: 10%;
-   background-color: #ccc6c0;
-   font-size: 20rem;
-   margin: auto;
-}
+
 #testimonial-carousal
 {
-    background: #FF416C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 
 	text-align: center;
     height: 5%;
@@ -169,10 +161,11 @@ padding: 10px 0px;
     border-radius: 50%;
     display: inline-block;
   }
-  .active,.dot:hover {
-    background: #FF416C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.active,.dot:hover {
+    background: #ff7700;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbe01, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 @media only screen and (max-width: 768px) {
     [class*="col-"] {
