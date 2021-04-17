@@ -173,3 +173,25 @@ padding: 10px 0px;
     }
   }
   
+
+.impact {
+            background-color: rgb(247, 174, 174);
+        }
+
+        .vismis {
+            margin: 0;
+            background-color: rgb(201, 178, 192);
+        }
+
+        .vismis::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            background: #000;
+            transform: skew(-30deg);
+            transform-origin: top;
+        }
+        .dire{
+            background: linear-gradient(rgb(241, 112, 151),white);
+        }
