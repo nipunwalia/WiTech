@@ -1,14 +1,26 @@
-
 .banner-image{
-    background-image: url('homebg.jpg');
+    background-image: url('assets/images/team.jpg');
     background-repeat: no-repeat;
     background-size: 1600px 600px;
-    height: 600px;
-
+    height: 630px;
 }
 p.anim::before {
     content: "Women In Technology";
     animation: toggled infinite 20s ease-in-out;
+}
+.navbar{
+    transition:500ms ease-in-out;
+    background:fixed;
+    padding: 10px 20px;
+  }
+.navbar.scrolled{
+  background-color: #000000;
+}
+#nav-color
+{
+   color: #ffffff;
+   font-size: 1rem;
+   padding: auto;
 }
 @keyframes toggled{
     50%{
@@ -39,3 +51,125 @@ p.anim::before {
         opacity: 100%;
     }
 }
+#testimonials
+{
+border-radius: 10px;
+background: #F2994A;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+text-align: center;
+color: white;
+padding: 20px 0px;
+}
+.About-text
+{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.25rem;
+}
+.carousel-item
+{
+	padding: 0% 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.About-content
+{
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.5rem;
+}
+#features
+{
+	padding:2% 3%;
+	background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+	position: relative;
+	z-index: 1;
+}
+.feature-box
+{
+	text-align: center;
+	padding: 60px 100px;
+    box-shadow: 0 4px 8px 0 rgba(5, 5, 5, 0.808);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 10px;
+    margin:0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.feature-box:hover
+{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.icon
+{
+	color: #030202;
+	font-size: 50px;
+}
+.icon:hover
+{
+	color:white;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.about-grid
+{
+    font-family: 'Bree Serif', serif;
+}
+.text-center
+{
+    margin: 20px 0px;
+    font-family: 'Bree Serif', serif;;
+}
+.h1-responsive
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1px;
+}
+
+#testimonial-carousal
+{
+    background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+	text-align: center;
+    height: 5%;
+    border-radius: 200px 80px 200px 80px;
+    width: 100%;
+    margin: auto;
+    padding: 10px 80px;
+    color: white;
+}
+.line-2
+{
+padding: 10px 0px;
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 20px 2px;
+    background-color: rgb(5, 5, 5);
+    border-radius: 50%;
+    display: inline-block;
+  }
+.active,.dot:hover {
+    background: #ff7700;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbe01, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+  

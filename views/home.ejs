@@ -6,91 +6,239 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title tag -->
-    <title>WiTech India</title>
-    <!-- google fonts -->
+    <link rel="stylesheet" href="..public/stylesheets/app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <!-- bootstrap cdns -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!-- stylesheet link -->
-    <link rel="stylesheet" href="app.css">
-    <!-- js link -->
-    <script src="app.js"></script>
-    <!-- end of head tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <title>WiTech India</title>
 </head>
 <body>
-  <!-- start of body tag -->
-  <!-- navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-1 fs-5" style="font-family: 'Kanit', sans-serif;">
-        <div class="container">
-          <!-- logo image of navbar -->
-          <img src="Logo.jpg" alt="Logo" class="img" width="50" height="50" style="border-radius: 50px;">
-          <!-- WiTech India name with logo -->
-          <a class="navbar-brand fs-1" href="#" >WiTech India<span style="color: red;">.</span></a>
-          <!-- navbar toggle button for small display screens -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <img src="assets/images/witechlogo.png" style="background-color: white; border-radius: 50px;"alt="Logo" class="img" >
+          <a id="title_1" class="navbar-brand" href="#"><span style="font-size: 2rem; color: rgb(253, 251, 251); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >WiTech India</h1><span style="color:rgb(255, 107, 8);">.</span></a>
+          <button class="navbar-toggler" style="color: black;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- navigations -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="mx-auto"></div>
-            <!-- list of nav items -->
-            <ul class="navbar-nav ms-auto px-0 mb-2 mb-lg-0">
-              <!-- home -->
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#home">Home</a>
-                </li>
-                <!-- about us -->
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#about_us">About Us</a>
-                </li>
-                <!-- ṭestimonials -->
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#testimonials">Testimonials</a>
-                </li>
-                <!-- recent events -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#recent_events">Recent Events</a>
-                </li>
-                <!-- departments and teams -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#departments_and_teams">Departments and Teams</a>
-                </li>
-                <!-- blogs -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#blogs">Blogs</a>
-                </li>
-                <!-- contact us -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact_us">Contact Us</a>
-                </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#testimonials">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#recent_events">Recent Events</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#departments_teams">Departments and Teams</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#blogs">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a id="nav-color" class="nav-link" href="#contact">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <!-- end of navbar -->
-
-      <!-- Home section  -->
+      <!--end of navbar-->
       <div id="home" class="banner-image d-flex justify-content-center align-items-center">
         <div class="content text-center">
           <!-- content of home section -->
-          <p class="text-dark anim fw-bolder lh-base text-break w-100" style="font-size: 4em; font-family: 'Acme', sans-serif"></p>
+          <p class="text-dark anim fw-bolder lh-base text-break w-100" style="font-size: 4em; color:black;  font-family:'Acme', sans-serif"></p>
         </div>
       </div>
-      <!-- end of home section -->
-
-      <!-- start of about section -->
-      
+      <section id="testimonials">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" style="color: black;" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div id="about-carousal" class="carousel-item active">
+            <h1 class="About-text">WHO WE ARE</h1>
+            <hr>
+            <p class="About-content">WiTech India is a part of WiTech (Women in Tech) a nonprofit SEC-registered organization that was founded by Audrey Pe in 2016.</p>
+            <p class="About-content">We work to bring a positive influence in the minds and lives of people associated with us which further creates a difference in the society.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="About-text">MISSION</h1>
+            <hr>
+            <p class="About-content">To educate, inspire, and empower the youth to break gender stereotypes and make a difference using technology.
+    
+            </p>
+            <p class="About-content">To achieve gender equality in the tech industry through increased networking opportunities for young women entering tech industry.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="About-text">GOALS </h1>
+            <hr>
+            <p class="About-content">We focus on encouraging and mentoring people to help them seize numerous opportunities and get to grips with problems.</p>
+            <p class="About-content">We are committed to provide accessible communication and training which improves understanding and has helped us in promoting equality.</p>
+          </div>
+          <div class="carousel-item">
+            <h1 class="About-text">OUR SERVICES</h1>
+            <hr>
+            <p class="About-content">We leverage people’s strengths and talents in a way that leads to a greater result than people try to accomplish the same .</p>
+            <p class="About-content">Lip service is not our way. We promote and celebrate our agendas as a fundamental aspect of what we are and what we do.</p>
+          </div>
+        </div>
+        <a id="controls" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a id="controls" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot" ></span>
+          <span class="dot" ></span>
+          <span class="dot" ></span>
+      </div>
+      </div>
+      </section>
+      <section id="features">
+        <div class="row">
+            <div class="feature-box col-lg-4">
+                <i class="far fa-calendar-alt icon"></i>
+                <h3 class="about-grid">Events</h3>
+                <p class="about-content">Find out about the various events and programs hosted</p>
+          <button type="button" class="btn btn-dark">Find here</button>
+            </div>
+        <div class="feature-box col-lg-4">
+          <i class="fas fa-file-alt icon"></i>
+            <h3 class="about-grid">Read Our Stories..</h3>
+                <p class="about-content">Share your knowledge, experiences or the latest news</p>
+          <button type="button" class="btn btn-dark">Visit blogs</button>
+            </div>
+        <div class="feature-box col-lg-4">
+                <i class="fas fa-users icon"></i>
+                <h3 class="about-grid">Join Us</h3>
+                <p class="about-content">We are looking out for new vision, and strategic talents.</p>
+          <button type="button" class="btn btn-dark">Join Us</button>
+            </div>
+    </div>
+    </section>
+    <section class="text-center">
+        <h3 class="line-2">People said..</h3>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" style="color: black;" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div id="testimonial-carousal" class="carousel-item1 align-items-center active">
+                <div class="testimonial">
+                  <div class="avatar mx-auto ">
+                    <img src="assets/images/male.png" class="rounded-circle img-fluid"
+                      alt="First sample avatar image">
+                  </div>
+                  <p>
+                    <i class="fas fa-quote-left"> </i> WiTech is a great place to work. I am currently working here as an intern.Team mates are really helpful and is the right place to learn and grow,so thank you for this wonderful oppurtunity.
+                  </p>
+                  <h4 class="font-weight-bold">Uma Sharma</h4>
+                  <h6 class="font-weight-bold my-3">Graphic Designer</h6>
+                  <!--Review-->
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star-half-alt blue-text"> </i>
+                </div>
+              </div>
+              <div id="testimonial-carousal" class="carousel-item1">
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto ">
+                    <img src="assets/images/girl.png" class="rounded-circle img-fluid"
+                      alt="Second sample avatar image">
+                  </div>
+                  <!--Content-->
+                  <p>
+                    <i class="fas fa-quote-left"> </i> My experience with Witech has been a gratifying and rewarding one.I realized that I am surrounded with hardworking and capable people who are always ready to help out.It greatly helped me to improve my skills and broadened my vision of approaching situations.</p>
+                  <h4 class="font-weight-bold">Aditi Agarwal</h4>
+                  <h6 class="font-weight-bold my-3">Content Writing Intern</h6>
+                  <!--Review-->
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                </div>
+              </div>
+              <!--Second slide-->
+              <!--Third slide-->
+              <div id="testimonial-carousal" class="carousel-item1">
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto ">
+                    <img src="assets/images/gal2.png" class="rounded-circle img-fluid"
+                      alt="Third sample avatar image">
+                  </div>
+                  <!--Content-->
+                  <p>
+                    <i class="fas fa-quote-left"> </i> Very young and fresh, does not restrict creativity. Very friendly environment which taught me grow and learn so much from a safe and equal space. It has been a really great for me.</p>
+                  <h4 class="font-weight-bold">Aaheli Maitra</h4>
+                  <h6 class="font-weight-bold my-3">intern</h6>
+                  <!--Review-->
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="far fa-star blue-text"> </i>
+                </div>
+              </div>
+              <div id="testimonial-carousal" class="carousel-item1">
+                <div class="testimonial">
+                  <!--Avatar-->
+                  <div class="avatar mx-auto ">
+                    <img src="assets/images/gal-3.png" class="rounded-circle img-fluid"
+                      alt="Third sample avatar image">
+                  </div>
+                  <!--Content-->
+                  <p>
+                    <i class="fas fa-quote-left"> </i> I have had the pleasure of working at WiTech India for about six weeks now and the journey has been mind-boggling.I have never worked anywhere wherein the team has admired my work remarkbly.WiTech India emphasizes on creating a positive workplace environment!</p>
+                  <h4 class="font-weight-bold">Devansh Hirani</h4>
+                  <h6 class="font-weight-bold my-3">Human Resources intern</h6>
+                  <!--Review-->
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="fas fa-star blue-text"> </i>
+                  <i class="far fa-star blue-text"> </i>
+                </div>
+              </div>
+              <!--Third slide-->
+              
+            </div>
+            <!--Slides-->
+            <!--Controls-->
+              </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot" ></span>
+                <span class="dot" ></span>
+                <span class="dot" ></span>
+            </div>
+          <!-- Carousel Wrapper -->
+		<!--Script tag -->
+      <script src="../public/javascript/app.js"></script>
+      <!-- Section: Testimonials -->
+        </section>
 </body>
 </html>
