@@ -16,7 +16,6 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
-            <article class="wrapper">
                 <div class="multistep-container">
                     <div class="multistep-form-area bg-warning">
                         <div class="form-box">
@@ -58,7 +57,7 @@
                                     <input type="number" value="mContact" minlength="10" maxlength="10" name="" id="" placeholder="contact-no" class="form-control">
                                 </div>
                                 <div class="button-row">
-                                    <input type="button" value="Next" class="next">
+                                    <input type="button" id="Next1"  value="Next" class="next">
                                 </div>
                             </form>
                         </div>
@@ -98,8 +97,8 @@
                                 </div>
                     
                                 <div class="button-row">
-                                    <input type="button" value="Previous" class="previous">
-                                    <input type="button" value="Next" class="next">
+                                    <input type="button" id="Back1" value="Previous" class="previous">
+                                    <input type="button" id="Next2" value="Next" class="next">
                                 </div>
                             </form>
                         </div>
@@ -120,21 +119,24 @@
                                 <input type="text" name="mSocial_other" id="" placeholder="Others" class="form-control">
                             </div>
                             <div class="button-row">
-                                <input type="button" value="Previous" class="previous">
+                                <input type="button" id="Back2" value="Previous" class="previous">
                                 <input type="submit" value="Submit" class="submit">
                             </div>
                             </form>
+                        </div>
+                        <div class="step-row">
+                            <div id="progress"></div>
+                            <div class="step-col"><small>Personal Details</small></div>
+                            <div class="step-col"><small>Work and qualification</small></div>
+                            <div class="step-col"><small>Social Media links</small></div>
                         </div>
                     </div>
                     </div>
                 </div>
             </div>
-        </div>
-              </article>
-           
-               
+        </div> 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <script src="//geodata.solutions/includes/countrystate.js"></script>
-    <script src="../public/javascript/script.js"></script>
+    <script src="..public/javascript/script.js"></script>
 </body>
 </html>
