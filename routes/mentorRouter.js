@@ -6,15 +6,16 @@ const mentorRouter=express();
 
 // testing for same email registration error pending
 mentorRouter.post('/register',expressAsyncHandler(async(req,res)=>{
-    console.log(req.body);
+    // console.log(req.body);
     
-    const mentor=new Mentor({name:req.body.name,email:req.body.email,
-        age:req.body.age,gender:req.body.gender,country:req.body.country,
-        state:req.body.state,contact:req.body.contact,qualification:req.body.qualification,
-        college:req.body.college,currentlyworking:req.body.currentlyworking,jobtitle:req.body.jobtitle,
-        jobdescription:req.body.jobdescription,skill_1:req.body.skill_1,skill_2:req.body.skill_2,
-        skill_3:req.body.skill_3,facebookprofile:req.body.facebookprofile,linkedinprofile:req.body.linkedinprofile,
-        otherprofile:req.body.otherprofile
+    const mentor=new Mentor({name:req.body.mName,email:req.body.mEmail,
+        dob:req.body.mDob,gender:req.body.mGender,country:req.body.countryId,
+        state:req.body.stateId,contact:req.body.mContact,qualification:req.body.mDegree,
+        college:req.body.mCollege,currentlyworking:req.body.cw,jobtitle:req.body.mJobTitle,
+        jobdescription:req.body.mJobDesc,areaofinterest:req.body.mInterest,
+        skill_1:[{skilltype:req.body.mskill_1,rating:req.body.mskill_1_rating}],
+        facebookprofile:req.body.mSocialFb,linkedinprofile:req.body.mSocialLn,
+        otherprofile:req.body.mSocialOt
     });
     const createdmentor=await mentor.save();
     if(createdmentor){
@@ -22,7 +23,7 @@ mentorRouter.post('/register',expressAsyncHandler(async(req,res)=>{
     }else{
         res.status(404).send();
     }
-    // res.send("helo");
+    // res.send("Data received");
 }));
 
 module.exports=mentorRouter;
