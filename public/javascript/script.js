@@ -1,6 +1,6 @@
-var $j = jQuery.noConflict();
-$j(document).ready(function()
-{
+// var $j = jQuery.noConflict();
+// $j(document).ready(function()
+// {
     $(".multistep-container .form-box .button-row .next").click(function(){
         $(this).parents(".form-box").fadeOut('fast');
         $(this).parents(".form-box").next().fadeIn('fast');
@@ -10,15 +10,18 @@ $j(document).ready(function()
         $(this).parents(".form-box").prev().fadeIn('fast');
     });
 
-});
+// });
 var Next1=document.getElementById("Next1");
 var Next2=document.getElementById("Next2");
 var Back1=document.getElementById("Back1");
 var Back2=document.getElementById("Back2");
+
+
 Next1.onclick=function()
 {
     progress.style.width="440px";
 }
+
 Back1.onclick=function()
 {
     progress.style.width="220px";
@@ -31,6 +34,7 @@ Back2.onclick=function()
 {
     progress.style.width="440px";
 }
+
 function nameid_validation(){
     var nameid=document.forms["formm"]["mName"].value;
     var letters=/^[A-Za-z]+$/;
