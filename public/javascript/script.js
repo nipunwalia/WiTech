@@ -1,5 +1,5 @@
-var $j = jQuery.noConflict();
-$j(document).ready(function()
+
+$(document).ready(function()
 {
     $(".multistep-container .form-box .button-row .next").click(function(){
         $(this).parents(".form-box").fadeOut('fast');
