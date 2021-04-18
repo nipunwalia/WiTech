@@ -38,7 +38,7 @@ function email_validation(){
         return true;
     }
 }
-function validation(){
+function validation(data){
     if(nameid_validation()){
         if(email_validation()){
             return true;
