@@ -11,8 +11,8 @@ const mentorSchema=mongoose.Schema({
    qualification:{type:String,required:true},
    college:{type:String,required:true},
    currentlyworking:{type:String,required:true},
-   jobtitle:{type:String,required:true},
-   jobdescription:{type:String,required:true},
+   jobtitle:{type:String},
+   jobdescription:{type:String},
    areaofinterest:{type:String,required:true},
    skill_1:[{
       skilltype:String,

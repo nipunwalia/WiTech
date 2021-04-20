@@ -1,15 +1,3 @@
-$(document).ready(function()
-{
-    $(".multistep-container .form-box .button-row .next").click(function(){
-        $(this).parents(".form-box").fadeOut('fast');
-        $(this).parents(".form-box").next().fadeIn('fast');
-    });
-    $(".multistep-container .form-box .button-row .previous").click(function(){
-        $(this).parents(".form-box").fadeOut('fast');
-        $(this).parents(".form-box").prev().fadeIn('fast');
-    });
-
-});
 
 var Next1=document.getElementById("Next1");
 var Next2=document.getElementById("Next2");
@@ -43,9 +31,8 @@ cw[0].addEventListener('click',()=>{
     document.querySelectorAll('.job-label')[1].style.display="inline";
 });
 
-// form submit event handler
-submitButton.addEventListener('click',()=>{
-    
+
+function submitForm(){
     for(let i=0;i<formValues.length;i++){
         formData[fieldArray[i]]=formValues[i].value;
     }
@@ -74,28 +61,54 @@ submitButton.addEventListener('click',()=>{
             }
         }
     }
-    console.log(formData);
-    var xhttp=new XMLHttpRequest();
-    xhttp.open("POST","/api/mentor/register",true);
-    xhttp.setRequestHeader('Content-type',"application/json");
-    xhttp.send(JSON.stringify(formData));
-});
+    // console.log(formData);
+    // var xhttp=new XMLHttpRequest();
+    // xhttp.open("POST","/api/mentor/register",true);
+    // xhttp.setRequestHeader('Content-type',"application/json");
+    // xhttp.send(JSON.stringify(formData));
+}
+function moveNext(stop){
+    $('.form-box').each(function(i){
+        if(i==stop){
+            $(this).fadeOut('fast');
+            $(this).next().fadeIn('fast');
+            return;
+        }
+    });
+}
 
-Next1.onclick=function()
-{    
-        progress.style.width="440px";
+function movePrevious(stop){
+    $('.form-box').each(function(i){
+        if(i==stop){
+            $(this).fadeOut('fast');
+            $(this).prev().fadeIn('fast');
+            return;
+        }
+    });
+}
+
+function nextonSubmit(value){
+    moveNext(value);
+    progress.style.width="440px";
+}
+
+function next2onSubmit(){
+    document.forms["form2"].submit();
 }
 
 Back1.onclick=function()
 {
+    movePrevious(1);
     progress.style.width="220px";
 }
 Next2.onclick=function()
 {
+    moveNext(1);
     progress.style.width="660px";
 }
 Back2.onclick=function()
 {
+    movePrevious(2)
     progress.style.width="440px";
 }
 
@@ -125,6 +138,7 @@ function email_validation(){
         return true;
     }
 }
+
 function validation(){
     if(nameid_validation()){
         if(email_validation()){
@@ -135,10 +149,22 @@ function validation(){
         return false;
     }
 }
+
 function dis(){
     var d=document.forms["formm"]["cw"].value;
     if(d==="No"){
         document.getElementById("dis1").disabled=true;
         document.getElementById("dis2").disabled=true;
+    }
+}
+
+function validate(){
+    for(let i=0;i<=5;i++){
+        let t=$('.form-control')[i].checkValidity();
+        console.log(t);
+        // if(formValues[i].value==""){
+        //     console.log(`${formValues[i].labels[0].textContent} is null`);
+        //     formValues[i].style.borderColor="red";
+        // }
     }
 }
