@@ -13,7 +13,6 @@ var formData={};
 var fieldArray=['mName','mEmail','mDob','mContact','mDegree','mCollege','mJobTitle','mJobDesc','mInterest','mskill_1',"mskill_1_rating",'mSocialFb','mSocialLn','mSocialOt'];
 
 
-
 // event handlers for currently working field
 cw[1].addEventListener('click',()=>{
     // No
@@ -61,11 +60,11 @@ function submitForm(){
             }
         }
     }
-    // console.log(formData);
-    // var xhttp=new XMLHttpRequest();
-    // xhttp.open("POST","/api/mentor/register",true);
-    // xhttp.setRequestHeader('Content-type',"application/json");
-    // xhttp.send(JSON.stringify(formData));
+    console.log(formData);
+    var xhttp=new XMLHttpRequest();
+    xhttp.open("POST","/api/mentor/register",true);
+    xhttp.setRequestHeader('Content-type',"application/json");
+    xhttp.send(JSON.stringify(formData));
 }
 function moveNext(stop){
     $('.form-box').each(function(i){
@@ -93,78 +92,20 @@ function nextonSubmit(value){
 }
 
 function next2onSubmit(){
-    document.forms["form2"].submit();
-}
-
-Back1.onclick=function()
-{
-    movePrevious(1);
-    progress.style.width="220px";
-}
-Next2.onclick=function()
-{
     moveNext(1);
     progress.style.width="660px";
 }
-Back2.onclick=function()
+
+Back1.onclick=function(e)
 {
+    e.preventDefault();
+    movePrevious(1);
+    progress.style.width="220px";
+}
+
+Back2.onclick=function(e)
+{
+    e.preventDefault();
     movePrevious(2)
     progress.style.width="440px";
-}
-
-function nameid_validation(){
-    var nameid=document.forms["formm"]["mName"].value;
-    var letters=/^[A-Za-z]+$/;
-    if(!letters.test(nameid)){
-        alert("Name can only contain alphabets!");
-        nameid.focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-
-function email_validation(){
-    var email=document.forms["formm"]["mEmail"].value;
-    var atpos=email.indexOf("@");
-    var dotpos=email.lastIndexOf(".");
-    if(atpos<1 || dotpos<atpos+2 ||dotpos+2>=email.length){
-        alert("Not a valid e-mail!");
-        email.focus();
-        return false;
-    }
-    else{
-        return true;
-    }
-}
-
-function validation(){
-    if(nameid_validation()){
-        if(email_validation()){
-            return true;
-        }
-    }
-    else{
-        return false;
-    }
-}
-
-function dis(){
-    var d=document.forms["formm"]["cw"].value;
-    if(d==="No"){
-        document.getElementById("dis1").disabled=true;
-        document.getElementById("dis2").disabled=true;
-    }
-}
-
-function validate(){
-    for(let i=0;i<=5;i++){
-        let t=$('.form-control')[i].checkValidity();
-        console.log(t);
-        // if(formValues[i].value==""){
-        //     console.log(`${formValues[i].labels[0].textContent} is null`);
-        //     formValues[i].style.borderColor="red";
-        // }
-    }
 }
