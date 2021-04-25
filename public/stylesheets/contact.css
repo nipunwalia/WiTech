@@ -1,0 +1,60 @@
+*{
+	box-sizing: border-box;
+}
+.container-bg{
+    background-color:lightgrey;
+
+}
+
+
+.form{
+	margin: 20px;
+}
+
+label
+{
+	color: black;
+}
+
+#contact h1{margin-top: 30px;
+	margin-left: 20px;
+	font-size:40px;
+	font-weight: bold;
+	color: rgb(0, 0, 0);
+
+
+}
+#contact small{
+    font-size:20px;
+    margin-left: 20px;
+
+}
+
+.fas{
+    color: rgb(255, 153, 0);
+    font-size: 35px;
+}
+
+.far{
+    color: rgb(255, 153, 0);
+    font-size: 35px;
+}
+.bt {
+    background-color:rgb(255, 153, 0);;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    border-radius: 30px ;
+    transition: background 0.5s;
+    
+  }
+  
+  .bt:hover{
+      background:greenyellow;
+      
+      
+  }	
