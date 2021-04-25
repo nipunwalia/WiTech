@@ -1,6 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const mentorRouter=require('./routes/mentorRouter');
+const departmentRouter=require('./routes/departmentRouter');
 const cors=require('cors');
 const app=express();
 const port=5000;
@@ -23,7 +24,7 @@ app.get('/about',(req,res)=>{
 })
 
 app.get('/mentorform',(req,res)=>{
-    res.render('fsign');
+    res.render('forms/mentorform');
 });
 
 app.get("/contact",(req,res)=>{
@@ -31,5 +32,6 @@ app.get("/contact",(req,res)=>{
 })
 
 app.use('/api/mentor',mentorRouter);
+app.use('/department',departmentRouter);
 
 app.listen(port,()=>console.log(`App is listening at ${port}`));

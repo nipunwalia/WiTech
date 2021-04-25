@@ -1,0 +1,14 @@
+.navbar{
+    transition:500ms ease-in-out;
+    background:fixed;
+    padding: 10px 20px;
+  }
+.navbar.scrolled{
+  background-color: #000000;
+}
+#nav-color
+{
+   color: #ffffff;
+   font-size: 1rem;
+   padding: auto;
+}
