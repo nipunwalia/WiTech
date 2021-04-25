@@ -10,16 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <title>MentorForm</title>
+    <title>VolunteerForm</title>
 </head>
 <body class="bg-dark">
     <div class="container">
         <div class="row">
-            <div class="col-xl-12">
-                <div class="multistep-container">
-                    <div class="multistep-form-area bg-warning">
+            <div class="col-xl-8 volunteer-box">
+                <!-- <div class="multistep-container">
+                    <div class="multistep-form-area bg-warning container-fluid"> -->
                         <div class="form-box"> 
-                            <h2 class=>Personal Details</h2>
+                            <h2 class=>Enter your Details</h2>
                             <form action="#" onsubmit="nextonSubmit(0);return false;">
                                 <div class="form-group">
                                     <label for="mName">Full Name</label>
@@ -33,109 +33,62 @@
                                     <label for="mDob">Date Of Birth</label>
                                     <input type="date" name="mDob" id="mDob" placeholder="D.O.B" class="form-control" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="mGender">Gender</label>
-                                    <input type="radio" name="mGender" id="" class="mGender" value="Male" required>Male &nbsp; &nbsp; &nbsp;
-                                    <input type="radio" name="mGender" id="" class="mGender" value="Female">Female &nbsp; &nbsp; &nbsp;
-                                    <input type="radio" name="mGender" id="" class="mGender" value="Other">Other
-                                </div>
-                                <div class="form-group">
-                                    <label for="mCountry">Choose Country</label>
-                                    <select name="mCountry" value="mCountry" class="countries order-alpha downarrow" id="countryId" required>
-                                      <option value="">Select Country</option>
-                                    </select>
-                                </div>
+
+                                <div id="radio-box-section">
+                                    <p for="mGender">Gender</p>
+                                    <div class="form-group form-check">
+                                        <input type="radio" for="Male" name="mGender" id="" class="mGender form-check-input" value="Male" required>
+                                        <label for="Male" class="form-check-label">Male</label>
+                                    </div>
+
+                                    <div class="form-group form-check">
+                                        <input type="radio" name="mGender" id="" class="mGender form-check-input" value="Female" for="Female">
+                                        <label for="Female" class="form-check-label">Female</label>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="radio" name="mGender" id="" class="mGender form-check-input" value="Other" for="other">
+                                        <label for="other" class="form-check-label">Other</label>
+                                    </div>
+                            </div>
                                 <div class="form-group">
                                     <label for="mState">Choose State</label>
-                                   <select name="mState" value="mState" class="states order-alpha" id="stateId" required>
-                                        <option value="State">Select State</option>
+                                   <select name="mState" value="mState" class="form-select" aria-label="Select State" id="stateId" required>
+                                       <% states.forEach(s=>{ %>
+                                        <option value=""><%= s %></option>
+                                        <%})%>
                                     </select>
                                 </div>
                                 <div class="form-group">
-
                                     <label for="mContact">Contact Number</label>
                                     <input type="text" minlength="10" maxlength="10" name="mContact" id="mContact" placeholder="Contact" class="form-control" required>
                                 </div>
-                                <div class="button-row">
-                                    <button id="Next1" value="Next" class="next">Next</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="form-box" >
-                            <h4>Work and Qualification</h4>
-                            <form action="#"  name="form2" onsubmit="next2onSubmit(1);return false;">
-                                <div class="form-group">
+                                <div id="radio-box-section">
+                                    <p>Will you give any donation to Witech?</p>
+                                    <div class="form-group form-check">
+                                        <input type="radio" for="yes" name="donation" id="" class="mGender form-check-input" value="yes" required>
+                                        <label for="yes" class="form-check-label">Yes</label>
+                                    </div>
 
-                                    <label for="mDegree">Degree</label>
-                                    <input type="text" name="mDegree" id="mDegree" placeholder="Degree/Specialization" class="form-control" required=true>
-                                </div>
+                                    <div class="form-group form-check">
+                                        <input type="radio" name="donation" id="" class="mGender form-check-input" value="no" for="no">
+                                        <label for="no" class="form-check-label">No</label>
+                                    </div>
+                            </div>
                                 <div class="form-group">
-                                    <label for="mCollege">College/University</label>
-                                    <input type="text" name="mCollege" id="mCollege" placeholder="College/University" class="form-control" required=true>
+                                    <label for="reason">Why you want to work with WiTech?</label>
+                                    <textarea name="reason" id="" cols="40" rows="4" required></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <label for="cw">Currently Working</label>
-                                    <input type="radio" name="cw"  class="cw" placeholder="" value="Yes" checked required=true>Yes
-                                    <input type="radio" name="cw"  class="cw" placeholder="" value="No">No
-                                </div>
-                                <div class="form-group">
-                                    <label for="dis1" class="job-label">Job Title</label>
-                                    <input type="text" name="mJob_title" id="dis1" placeholder="Job Title" class="form-control" required=true>
-                                </div>
-                                <div class="form-group">
-                                    <label for="dis2" class="job-label">Job description</label>
-                                    <input type="text" name="mJob_des" id="dis2" placeholder="Job Description" class="form-control" required=true>
-                                </div>
-                                <div class="form-group">
-                                    <label for="mInterest">Area of interest</label>
-                                    <input type="text" name="mInterest" id="" placeholder="Area of interest/Field of expertise" class="form-control" required=true>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Skills">Additional Skills</label>
-                                    <input type="text" name="mSkill1" id="" placeholder="skills" class="form-control" required=true>
-                                    <input type="number" max=5 min=1  name="mRate1" id="" placeholder="rate" class="form-control" required=true>
-                                </div>
-                                
                                 <div class="button-row">
-                                    <button id="Back1" class="previous">Previous</button>
-                                    <button id="Next2" type="submit" class="next">Next</button>
+                                    <button class="btn btn-primary">Submit</button>
                                 </div>
                             </form>
                         </div>
-                        <div class="form-box">
-                            <h4>Social Media Handles</h4>
-                            <form action="#" onsubmit="return submitForm(this)">
-                            <div class="form-group">
-                                <label for="mSocial_fb">Facebook</label>
-                                <input type="text" name="mSocial_fb" id="" placeholder="facebook" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="mSocial_link">Linked In</label>
-                                <input type="text" name="mSocial_link" id="" placeholder="Linked In" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="mSocial_other">Others</label>
-                                <input type="text" name="mSocial_other" id="" placeholder="Others" class="form-control" required>
-                            </div>
-                            <div class="button-row">
-                                <input type="button" id="Back2" value="Previous" class="previous">
-                                <button  class="submit" id="mentor-submit-button">Submit</button>
-                            </div>
-                            </form>
-                        </div>
-                        <div class="step-row">
-                            <div id="progress"></div>
-                            <div class="step-col"><small>Personal Details</small></div>
-                            <div class="step-col"><small>Work and qualification</small></div>
-                            <div class="step-col"><small>Social Media links</small></div>
-                        </div>
-                    </div>
-                    </div>
+                    <!-- </div>
+                    </div> -->
                 </div>
             </div>
         </div> 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-    <script src="//geodata.solutions/includes/countrystate.js"></script>
-    <script src="/javascript/script.js"></script>
+    <script src="/javascript/volunteerform.js"></script>
 </body>
 </html>
