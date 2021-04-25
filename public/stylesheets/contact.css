@@ -5,7 +5,9 @@
     background-color:lightgrey;
 
 }
-
+a{
+    text-decoration: none;
+}
 
 .form{
 	margin: 20px;
@@ -54,7 +56,7 @@ label
   }
   
   .bt:hover{
-      background:greenyellow;
-      
-      
+      background:greenyellow;   
+      text-decoration: none;
+      color: white;
   }	
