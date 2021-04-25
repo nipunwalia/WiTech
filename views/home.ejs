@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/app.css">
+
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/witechlogo.png">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -15,43 +19,10 @@
     <title>WiTech India</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <img src="WiTech/public/assets/images/witechlogo.png" style="background-color: white; border-radius: 50px;"alt="Logo" class="img" >
-          <a id="title_1" class="navbar-brand" href="#"><span style="font-size: 2rem; color: rgb(253, 251, 251); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >WiTech India</h1><span style="color:rgb(255, 107, 8);">.</span></a>
-          <button class="navbar-toggler" style="color: black;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#testimonials">Testimonials</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#recent_events">Recent Events</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#departments_teams">Teams and Departments</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#blogs">Blogs</a>
-              </li>
-              <li class="nav-item">
-                <a id="nav-color" class="nav-link" href="#contact">Contact Us</a>
-              </li>
-              <li class="nav-item active" style="border-radius: 20%; font-size: 2rem;">
-                <a id="nav-color" class="nav-link" aria-current="page" href="covid.html">Get Covid-19 info</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+      <!-- start of navbar -->
+            <%- include('partials/navbar')%>
+
       <!--end of navbar-->
       <div id="slideshow-example" data-component="slideshow">
         <div role="list">
@@ -143,7 +114,7 @@
             </div>
     </div>
     </section>
-    <section class="text-center">
+    <section class="text-center" id="testimonial_section">
         <h3 class="line-2">People said..</h3>
        <center> <hr class="line-teams"></center>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -157,7 +128,7 @@
               <div id="testimonial-carousal" class="carousel-item1 align-items-center active">
                 <div class="testimonial">
                   <div class="avatar mx-auto ">
-                    <img src="assets/images/male.png" class="rounded-circle img-fluid"
+                    <img src="/assets/images/male.png" class="rounded-circle img-fluid"
                       alt="First sample avatar image">
                   </div>
                   <p>
@@ -171,13 +142,13 @@
                   <i class="fas fa-star blue-text"> </i>
                   <i class="fas fa-star blue-text"> </i>
                   <i class="fas fa-star-half-alt blue-text"> </i>
-                </div> witechlogo
+                </div>
               </div>
               <div id="testimonial-carousal" class="carousel-item1">
                 <div class="testimonial">
                   <!--Avatar-->
                   <div class="avatar mx-auto ">
-                    <img src="assets/images/girl.png" class="rounded-circle img-fluid"
+                    <img src="/assets/images/girl.png" class="rounded-circle img-fluid"
                       alt="Second sample avatar image">
                   </div>
                   <!--Content-->
@@ -199,7 +170,7 @@
                 <div class="testimonial">
                   <!--Avatar-->
                   <div class="avatar mx-auto ">
-                    <img src="assets/images/gal2.png" class="rounded-circle img-fluid"
+                    <img src="/assets/images/gal2.png" class="rounded-circle img-fluid"
                       alt="Third sample avatar image">
                   </div>
                   <!--Content-->
@@ -219,7 +190,7 @@
                 <div class="testimonial">
                   <!--Avatar-->
                   <div class="avatar mx-auto ">
-                    <img src="assets/images/gal-3.png" class="rounded-circle img-fluid"
+                    <img src="/assets/images/gal-3.png" class="rounded-circle img-fluid"
                       alt="Third sample avatar image">
                   </div>
                   <!--Content-->
@@ -393,56 +364,56 @@
           <div class="col-md-6">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <i id="icon-dept" class="fas fa-coins"></i>
-                  <h3>Finance</h3>
+                  <h3><a href="/department/finance">Finance</a></h3>
                   <p>Finance department  manages the day to day and long term monetary operations and strategy.</p>
-                  <span>read more..</span> <i class="bx bx-chevron-right"></i>
+                  <a href="/department/finance"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
               </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                 <i id="icon-dept" class="fas fa-bullhorn"></i>
-                  <h3>Marketing and Creatives</h3>
+                  <h3><a href="/department/marketing">Marketing and Creatives</a></h3>
                   <p>Emerging of new influence on the marketing and creatives team brings out extreme possibilities of understandable communications.</p>
-                  <span>read more..</span> <i class="bx bx-chevron-right"></i>
+                  <a href="/department/marketing"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
               </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                 <i id="icon-dept" class="fas fa-user-friends"></i>
-                  <h3>Outreach and Public Relation</h3>
+                  <h3><a href="/department/outreach">Outreach and Public Relation</a></h3>
                   <p>By building a strong community and partnership, we help to consistently achieve milestones.</p>
-                  <span>read more..</span> <i class="bx bx-chevron-right"></i>
+                  <a href="/department/outreach"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
               </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
                 <i id="icon-dept" class="fas fa-chart-area"></i>
-                  <h3>Logistics and Operation</h3>
+                  <h3><a href="/department/logistics">Logistics and Operation</a></h3>
                   <p>Managing the information flow and and structure of production, we potentially contribute to the company's work.</p>
-                  <span>read more..</span> <i class="bx bx-chevron-right"></i>
+                  <a href="/department/logistics"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
               </div>
           </div>
+          
           <div class="col-md-6 mt-4 mt-md-0 offset-md-3">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
                 <i id="icon-dept" class="fas fa-laptop-code"></i>
-                  <h3>Technical</h3>
+                  <h3><a href="/department/technical">Technical</h3></a>
                   <p>All the roles including promoting, communicating, strategising and execution come under our surveillance.</p>
-                  <a href="Technical.html" style="color:white;"><span>Click here to know more</span> <i class="bx bx-chevron-right"></i></a>
-              </div>
+                  <a href="/department/technical"><span>read more..</span> <i class="bx bx-chevron-right"></i></a>
           </div>
-
+          </a>
       </div>
 
   </div>
 </section>
-<section class="events">
+<section class="events" id="recent_events">
  <center><h2>Recent Events</h2></center>
   <center><hr class="line-teams"></center>
 <div class="container">
   <div class="row">
       <div class="col-lg-4 col-sm-6">
           <div class="box">
-              <img src="assets/images/pgm.jpg">
+              <img src="/assets/images/pgm.jpg">
               <div class="box-content">
                   <h3 class="title">Harvard WE code</h3>
                   <a href="#demo" class="btn btn-dark " data-toggle="collapse">Click here to know more</a>
@@ -457,7 +428,7 @@
       </div>
       <div class="col-lg-4 col-sm-6">
           <div class="box">
-              <img src="assets/images/pgm3.jpg">
+              <img src="/assets/images/pgm3.jpg">
               <div class="box-content">
                   <h3 class="title">Mentorship program</h3>
                   <a href="#demo" class="btn btn-dark" data-toggle="collapse">Click here to know more</a>
@@ -472,7 +443,7 @@
   </div>
   <div class="col-lg-4 col-sm-6">
     <div class="box">
-        <img src="assets/images/team.jpg">
+        <img src="/assets/images/team.jpg">
         <div class="box-content">
             <h3 class="title">Simons Leadership Conference</h3>
             <a href="#demo" class="btn btn-dark" data-toggle="collapse">Click here to know more</a>
@@ -488,7 +459,7 @@
 </div>
 <div class="col-lg-4 col-sm-6">
   <div class="box">
-      <img src="assets/images/pgm3.jpg">
+      <img src="/assets/images/pgm3.jpg">
       <div class="box-content">
           <h3 class="title">Hiring program</h3>
           <a href="#demo" class="btn btn-dark" data-toggle="collapse">Click here to know more</a>
@@ -503,7 +474,7 @@
 </div>
 <div class="col-lg-4 col-sm-6">
   <div class="box">
-      <img src="assets/images/pgm4.jpg">
+      <img src="/assets/images/pgm4.jpg">
       <div class="box-content">
           <h3 class="title">Other progroms</h3>
           <a href="#demo" class="btn btn-dark" data-toggle="collapse">Click here to know more</a>
@@ -518,7 +489,7 @@
 </div>
 <div class="col-lg-4 col-sm-6">
   <div class="box">
-      <img src="assets/images/pgm5.jpg">
+      <img src="/assets/images/pgm5.jpg">
       <div class="box-content">
           <h3 class="title">WiTech conference</h3>
           <a href="#demo" class="btn btn-dark" data-toggle="collapse">Click here to know more</a>

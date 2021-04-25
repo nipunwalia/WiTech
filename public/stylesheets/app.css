@@ -1,3 +1,9 @@
+.banner-image{
+    background-image: url('assets/images/team.jpg');
+    background-repeat: no-repeat;
+    background-size: 1600px 600px;
+    height: 630px;
+}
 
 html {
     scroll-behavior: smooth;
@@ -7,6 +13,7 @@ html {
         transition-delay: 0 ;
     }
 }
+
 .bottom-left
 {
     position: absolute;
@@ -59,6 +66,42 @@ html {
   [data-component="slideshow"] .slide.active {
     display: block;
   }
+
+
+/* p.anim::before {
+    content: "Women In Technology";
+    animation: toggled infinite 20s ease-in-out;
+}
+@keyframes toggled{
+    50%{
+        opacity: 100%;
+        content: "Women in Technology have been decreasing."
+    }
+    12.5%{
+        opacity: 50%;
+    }
+    25%{
+        opacity: 100%;
+        content: "Women in Technology need to be empowered."
+    }
+    37.5%{
+        opacity: 50%;
+    }
+    62.5%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 100%;
+        content: "Women in Technology have to be supported."
+    }
+    87.5%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+*/
 #testimonials
 {
 border-radius: 10px;
@@ -250,6 +293,15 @@ padding: 10px 0px;
     color:white;
    
 }
+
+.icon-box a{
+    text-decoration: none;
+    color: inherit;
+}
+.icon-box a:hover{
+    color: inherit;
+}
+
 .icon-box:hover{
     color:black;
     cursor: pointer;
@@ -350,9 +402,11 @@ padding: 10px 0px;
     .box{ margin: 0 0 30px; }
 }
 /*Departments styles-Technical*/
+/*
+
 .banner
 {
-    background-image: url('assets/images/tech-banner.jpg');
+    background-image: url('/assets/images/tech-banner.jpg');
     background-repeat: no-repeat;
     background-size: 1600px 600px;
     height: 400px;
@@ -482,7 +536,7 @@ padding: 10px 0px;
     transform: translate3d(0,0,0);
   }
   .bg {  
-    background-image:url('assets/images/pgm3.jpg');
+    background-image:url('/assets/images/pgm3.jpg');
     z-index: -1;
     border-radius: 30px;
     filter:contrast(.7) brightness(.7);  
@@ -582,6 +636,7 @@ padding: 10px 0px;
     animation: gradient 2s infinite ease-in;
 }
 /*dean*/
+/*
 .dean-tech
 {
     margin: 100px 25px;
@@ -675,4 +730,4 @@ padding: 10px 0px;
         margin-bottom: 10px;
     }
     
-}
+} */
