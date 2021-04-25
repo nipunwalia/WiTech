@@ -4,6 +4,7 @@
     background-size: 1600px 600px;
     height: 630px;
 }
+
 html {
     scroll-behavior: smooth;
   }
@@ -13,7 +14,61 @@ html {
     }
 }
 
-p.anim::before {
+.bottom-left
+{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Bree Serif', serif;
+     color: white;
+}
+.bottom-right
+{
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Bree Serif', serif;
+   color: white;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Bree Serif', serif;
+    
+  }
+
+.navbar{
+    transition:500ms ease-in-out;
+    background:fixed;
+    padding: 10px 20px;
+  }
+.navbar.scrolled{
+  background-color: #000000;
+}
+#nav-color
+{
+   color: #ffffff;
+   font-size: 1rem;
+   padding: auto;
+}
+[data-component="slideshow"] .slide {
+    display: none;
+  }
+
+  [data-component="slideshow"] .slide.active {
+    display: block;
+  }
+
+
+/* p.anim::before {
     content: "Women In Technology";
     animation: toggled infinite 20s ease-in-out;
 }
@@ -46,6 +101,7 @@ p.anim::before {
         opacity: 100%;
     }
 }
+*/
 #testimonials
 {
 border-radius: 10px;
@@ -119,7 +175,7 @@ padding: 20px 0px;
 .text-center
 {
     margin: 100px 0px;
-    font-family: 'Bree Serif', serif;;
+    font-family: 'Bree Serif', serif;
 }
 .h1-responsive
 {
