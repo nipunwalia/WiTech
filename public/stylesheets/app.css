@@ -17,7 +17,7 @@ html {
 .bottom-left
 {
     position: absolute;
-    bottom: 8px;
+    bottom: 20%;
     left: 16px;
     font-size: 3rem;
     font-weight: 600;
@@ -31,7 +31,7 @@ html {
     font-family: 'Bree Serif', serif;
    color: white;
     position: absolute;
-    bottom: 8px;
+    bottom: 20%;
     right: 16px;
 }
 .centered {
@@ -42,23 +42,8 @@ html {
     font-size: 3rem;
     font-weight: 600;
     font-family: 'Bree Serif', serif;
-    
   }
 
-.navbar{
-    transition:500ms ease-in-out;
-    background:fixed;
-    padding: 10px 20px;
-  }
-.navbar.scrolled{
-  background-color: #000000;
-}
-#nav-color
-{
-   color: #ffffff;
-   font-size: 1rem;
-   padding: auto;
-}
 [data-component="slideshow"] .slide {
     display: none;
   }
@@ -67,41 +52,6 @@ html {
     display: block;
   }
 
-
-/* p.anim::before {
-    content: "Women In Technology";
-    animation: toggled infinite 20s ease-in-out;
-}
-@keyframes toggled{
-    50%{
-        opacity: 100%;
-        content: "Women in Technology have been decreasing."
-    }
-    12.5%{
-        opacity: 50%;
-    }
-    25%{
-        opacity: 100%;
-        content: "Women in Technology need to be empowered."
-    }
-    37.5%{
-        opacity: 50%;
-    }
-    62.5%{
-        opacity: 50%;
-    }
-    75%{
-        opacity: 100%;
-        content: "Women in Technology have to be supported."
-    }
-    87.5%{
-        opacity: 50%;
-    }
-    100%{
-        opacity: 100%;
-    }
-}
-*/
 #testimonials
 {
 border-radius: 10px;
@@ -401,6 +351,7 @@ padding: 10px 0px;
 @media only screen and (max-width:990px){
     .box{ margin: 0 0 30px; }
 }
+
 /*Departments styles-Technical*/
 /*
 

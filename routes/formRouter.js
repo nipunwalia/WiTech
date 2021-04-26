@@ -1,12 +1,12 @@
 const express=require('express');
 const expressAsyncHandler=require('express-async-handler');
 const Mentor =require('../models/mentorSchema.js');
-const mentorRouter=express();
+const Volunteer=require('../models/volunteerSchema.js');
+const formRouter=express();
 
 
 // testing for same email registration error pending
-mentorRouter.post('/register',expressAsyncHandler(async(req,res)=>{
-    
+formRouter.post('/mentor/register',expressAsyncHandler(async(req,res)=>{
     try{
         const mentor=new Mentor({name:req.body.mName,email:req.body.mEmail,
             dob:req.body.mDob,gender:req.body.mGender,country:req.body.countryId,
@@ -26,7 +26,22 @@ mentorRouter.post('/register',expressAsyncHandler(async(req,res)=>{
     }catch(e){
         console.log(e);
     }
-    
 }));
 
-module.exports=mentorRouter;
+formRouter.post('/volunteer/register',expressAsyncHandler(async(req,res)=>{
+    try{
+        const volunteer=new Volunteer({name:req.body.vName,email:req.body.vEmail,dateofbirth:req.body.vDob,
+            gender:req.body.vGender,state:req.body.vState,
+            contact:req.body.vContact,donationstatus:req.body.vDonationStatus,reason:req.body.vReason});
+        const createdVolunteer=await volunteer.save();
+        if(createdVolunteer){
+            res.send("Data Saved");
+        }else{
+            res.status(404).send();
+        }
+    }catch(e){
+        console.log(e);
+    }
+}));
+
+module.exports=formRouter;

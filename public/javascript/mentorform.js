@@ -20,6 +20,8 @@ cw[1].addEventListener('click',()=>{
     document.getElementById('dis2').style.display="none";
     document.querySelectorAll('.job-label')[0].style.display="none";
     document.querySelectorAll('.job-label')[1].style.display="none";
+    document.getElementById('dis1').required=false;
+    document.getElementById('dis2').required=false;
 });
 
 cw[0].addEventListener('click',()=>{
@@ -28,6 +30,8 @@ cw[0].addEventListener('click',()=>{
     document.getElementById('dis2').style.display="block";
     document.querySelectorAll('.job-label')[0].style.display="inline";
     document.querySelectorAll('.job-label')[1].style.display="inline";
+    document.getElementById('dis1').required=true;
+    document.getElementById('dis2').required=true;
 });
 
 
@@ -60,11 +64,13 @@ function submitForm(){
             }
         }
     }
-    console.log(formData);
     var xhttp=new XMLHttpRequest();
-    xhttp.open("POST","/api/mentor/register",true);
+    xhttp.open("POST","/api/forms/mentor/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.send(JSON.stringify(formData));
+    document.getElementsByTagName('form')[2].reset();
+    document.getElementsByTagName('form')[1].reset();
+    document.getElementsByTagName('form')[0].reset();
 }
 function moveNext(stop){
     $('.form-box').each(function(i){
