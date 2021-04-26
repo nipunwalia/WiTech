@@ -5,7 +5,7 @@ var donationStatus=document.querySelectorAll('.donation');
 var formData={};
 var fieldArray=['vName','vEmail','vDob','vContact','vReason'];
 
-function submitForm(){
+function submitForm(e){
     for(let i=0;i<formGroups.length;i++){
         formData[fieldArray[i]]=formGroups[i].value;
         console.log(formGroups[i].value);
@@ -34,9 +34,9 @@ function submitForm(){
         }
     }
     formData["vState"]=state.value.toString();
-    console.log(formData);
     var xhttp=new XMLHttpRequest();
-    xhttp.open("POST","",true);
+    xhttp.open("POST","/api/forms/volunteer/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.send(JSON.stringify(formData));
+    document.getElementsByTagName('form')[0].reset();
 }
