@@ -2,22 +2,19 @@
 <html lang="en">
 
 <head>
-    <!-- start of head tag -->
-
-    <!-- meta tags -->
+    <link rel="stylesheet" href="/stylesheets/app.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title tag -->
-    <title>About WiTech India</title>
-    <!-- cdns and links -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Zen+Dots&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/app.css">
-    <link rel="stylesheet" href="/stylesheets/navbar.css">
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -27,93 +24,85 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-
-    <!-- end of head tag -->
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <title>About Us</title>
 </head>
 
 <body>
-    <!-- start of body tag -->
-    <%-include('partials/navbar')%>
+
+
     <!-- heading -->
-    <div class=" vismis mt-5 pt-5 text-center fs-2 w-100 bgg d-inline-block text-dark"
-        style="font-family: 'Acme', sans-serif">
-        About Us
-    </div>
-
-    <!-- Vision and Mission section -->
-    <div class="row mt-4">
-        <div class="col-md-4 col-sm-6 w-50" style="background: linear-gradient(white,lightpink);">
-            <div class="fs-4 mt-3 text-center">Vision</div>
-            <div class="fs-5 text-start ms-4 w-75"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorum
-                asperiores obcaecati impedit? Dignissimos, distinctio! Laborum perspiciatis facilis voluptatum
-                reiciendis voluptas maxime minus id. Expedita commodi nesciunt, et doloribus nemo minima magni
-                reprehenderit officiis hic suscipit sapiente modi, possimus esse eligendi!</div>
-            <br>
+    <div class="fw-bolder p-5"
+        style="font-size: 3em; font-family: 'Bree Serif', serif; text-align: center;">About Us</div>
+    <!-- Vision and Mission -->
+    <div class="container">
+        <div class="row w-100" >
+            <div class="col-sm w-75 mx-3"style="background: linear-gradient(45deg,rgb(241, 153, 37),rgb(255, 140, 8),rgb(247, 229, 71)); border-radius: 0px 40px; box-shadow: 9px 6px black; border: 5px solid black;">
+                <div class="fs-1 mt-3 fw-bolder" style="color: rgb(107, 20, 20); text-align: center;font-family: 'Zen Dots', cursive;text-shadow: 2px 2px white;">Vision</div>
+                <div class="fs-4 text-start mx-4 text-justify" style="color: rgb(70, 7, 7);"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum
+                    asperiores obcaecati impedit? Dignissimos, distinctio! Laborum perspiciatis facilis voluptatum
+                    reiciendis voluptas maxime minus id. Expedita commodi nesciunt, et doloribus nemo minima magni
+                    reprehenderit officiis hic suscipit sapiente modi, possimus esse eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde corporis inventore placeat provident quae quisquam, velit nobis harum quibusdam nam.</div>
+                <br>
+            </div>
+            <div class="col-sm w-75 mx-3" style="background: linear-gradient(45deg,rgb(241, 153, 37),rgb(255, 140, 8),rgb(247, 229, 71)); border-radius: 0px 40px; box-shadow: 9px 6px black; border: 5px solid black;">
+                <div class="fs-1 mt-3 fw-bolder" style="color: rgb(107, 20, 20); text-align: center;font-family: 'Zen Dots', cursive; text-shadow: 2px 2px white;">Mission</div>
+                <div class="fs-4 text-start mx-5 text-justify" style="color: rgb(70, 7, 7);"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum
+                    asperiores obcaecati impedit? Dignissimos, distinctio! Laborum perspiciatis facilis voluptatum
+                    reiciendis voluptas maxime minus id. Expedita commodi nesciunt, et doloribus nemo minima magni
+                    reprehenderit officiis hic suscipit sapiente modi, possimus esse eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ratione excepturi qui nostrum deserunt accusamus! Deserunt temporibus error recusandae totam?</div>
+                <br>
+            </div>
+            
         </div>
-        <div class="col-md-4 col-sm-6 w-50" style="background: linear-gradient(lightpink,white);">
-            <div class="fs-4 mt-3 text-center">Mission</div>
-            <div class="fs-5 text-start ms-4"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                asperiores obcaecati impedit? Dignissimos, distinctio! Laborum perspiciatis facilis voluptatum
-                reiciendis voluptas maxime minus id. Expedita commodi nesciunt, et doloribus nemo minima magni
-                reprehenderit officiis hic suscipit sapiente modi, possimus esse eligendi!</div>
-            <br>
-        </div>
     </div>
+    <!-- Our Story -->
 
-    <!-- start of Story section -->
-    <div class="container mt-5 pt-5">
+    </div>
+    <div class="container mt-4 my-5" >
+        <div class="fs-1 my-3" style="text-align: center;font-family: 'Abril Fatface', cursive;">Our Story</div>
         <div class="row">
-            <div class="col">
-                <div class="fs-5 text-start">
-                    <img src="homee.jpeg" alt="" height="90%" width="90%">
-                </div>
-            </div>
-            <div class="col">
-                <div class="fs-4 mt-3 text-start">Story</div>
-                <div class="fs-5"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eveniet vero
-                    consectetur ullam illo praesentium consequatur, laborum distinctio sint pariatur. Cupiditate veniam
-                    quis qui deserunt nobis modi maiores vero molestias, soluta quam quos ea aperiam? Lorem ipsum dolor
-                    sit, amet consectetur adipisicing elit. Dolorem aperiam id placeat blanditiis, soluta facilis totam
-                    aliquam enim nulla porro reprehenderit voluptates obcaecati dolor doloremque cupiditate, ipsa natus
-                    perferendis accusamus omnis eligendi corrupti? Maxime iste perspiciatis expedita, fugiat eveniet
-                    quas.</div>
-            </div>
+                <div class="fs-4 text-justify px-3 mt-0"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum
+                    asperiores obcaecati impedit? Dignissimos, distinctio! Laborum perspiciatis facilis voluptatum
+                    reiciendis voluptas maxime minus id. Expedita commodi nesciunt, et doloribus nemo minima magni
+                    reprehenderit officiis hic suscipit sapiente modi, possimus esse eligendi! Lorem ipsum, dolor sit
+                    amet consectetur adipisicing elit. Ab ipsam cumque ducimus reiciendis officia eius beatae aspernatur
+                    deleniti, exercitationem in porro laborum iusto molestias dignissimos. Cupiditate minima totam
+                    doloremque explicabo natus qui aperiam corrupti consectetur reiciendis nobis unde nesciunt, amet
+                    provident alias ex nisi recusandae saepe sint aliquam corporis fuga. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam ab vero laborum. Vero possimus eaque officiis harum illum corporis, molestiae ducimus id sed omnis amet recusandae porro consequuntur provident molestias ex cum atque tenetur nesciunt at necessitatibus iure ut vitae! Reprehenderit rem tenetur minus, fugit accusamus libero non nemo iure doloremque sunt quis doloribus maiores a nulla reiciendis quam fugiat odio harum eaque? Hic atque eius molestiae deserunt non nostrum provident consequatur ducimus corporis quas ex laboriosam officiis vel pariatur quod, voluptates harum architecto magnam quam quibusdam. Aperiam optio ut veniam perspiciatis, cum aliquam tenetur eveniet, non accusamus fugiat eligendi.</div>
+                <br>
         </div>
     </div>
 
-    <!-- Our Impact section -->
-    <div class="container mt-5 pt-5 impact w-100 ">
-        <div class="row">
-            <div class="col">
-                <div class="fs-5 text-start">
-                    <div class="fs-3 mt-3 text-center fw-bolder">Our Impact</div>
+    <!-- Impact Section -->
+    <div class="container impact w-100 pt-4">
+            <div class="fs-4 text-justify mx-6 px-4 py-0" style="background: linear-gradient(to right,rgb(248, 162, 2),rgb(255, 189, 65)); border-radius: 0px 40px; color: black; border: 2px black; box-shadow: 3px 5px black;">
 
-                    <div class="fs-5"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eveniet vero
-                        consectetur ullam illo praesentium consequatur, laborum distinctio sint pariatur. Cupiditate
-                        veniam
-                        quis qui deserunt nobis modi maiores vero molestias, soluta quam quos ea aperiam? Lorem ipsum
-                        dolor
-                        sit, amet consectetur adipisicing elit. Dolorem aperiam id placeat blanditiis, soluta facilis
-                        totam
-                        aliquam enim nulla porro reprehenderit voluptates obcaecati dolor doloremque cupiditate, ipsa
-                        natus
-                        perferendis accusamus omnis eligendi corrupti? Maxime iste perspiciatis expedita, fugiat eveniet
-                        quas.</div>
-                </div>
-            </div>
-            <div class="col">
-                <img src="homee.jpeg" alt="" height="90%" width="90%">
-            </div>
+            <div class="fs-1 pt-4" style="text-align: center;font-family: 'Abril Fatface', cursive;color: rgb(107, 20, 20);">Our Impact</div>
+
+            <div class="fs-4 my-5 mx-2"> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eveniet vero
+                consectetur ullam illo praesentium consequatur, laborum distinctio sint pariatur. Cupiditate
+                veniam
+                quis qui deserunt nobis modi maiores vero molestias, soluta quam quos ea aperiam? Lorem ipsum
+                dolor
+                sit, amet consectetur adipisicing elit. Dolorem aperiam id placeat blanditiis, soluta facilis
+                totam
+                aliquam enim nulla porro reprehenderit voluptates obcaecati dolor doloremque cupiditate, ipsa
+                natus
+                perferendis accusamus omnis eligendi corrupti? Maxime iste perspiciatis expedita, fugiat eveniet
+                quas.</div>
         </div>
     </div>
 
-    <!-- Our Partners section -->
+    <!-- Our Partners -->
     <div class="partners mt-5">
-        <div class="fs-2 text-center fw-bolder">Our Partners</div>
+        <div class="fs-1 text-center" style="font-family: 'Abril Fatface', cursive;">Our Partners</div>
         <div class="fs-4 text-center mt-3">Contributing to make a difference. </div>
         <div class="container mt-5 pt-4">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-sm">
                     One of three columns
                 </div>
@@ -127,29 +116,22 @@
         </div>
     </div>
 
-    <!-- Director information section -->
+    <!-- About WiTech India Director -->
     <div class="container mt-5 pt-5 dire">
 
-        <div class="row">
-            <div class="col-6">
-                <div class="fs-3 fw-bolder text-center"> About Director</div>
-                <div class="fs-4 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in optio error vero
+        <div class="row" style="background: linear-gradient(45deg, rgb(252, 126, 8),rgb(255, 126, 41),rgb(252, 126, 8),orange); border-radius: 40px 0px;">
+            <div class="fs-1 pt-3" style="text-align: center;font-family: 'Abril Fatface', cursive;color: rgb(107, 20, 20);"> About Director</div>
+                <div class="fs-4 mt-3 py-4 px-4 mb-4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Est in optio error vero
                     id quod reprehenderit esse ipsa architecto vitae repudiandae molestias necessitatibus molestiae
                     distinctio, eveniet eos fugit, saepe at animi consectetur aliquam quae et maxime? Fugit quasi
                     deserunt vero vitae consectetur quo nulla beatae, et odit nostrum reprehenderit. Explicabo cum fugit
                     tenetur in modi vel ab autem rem consequuntur quidem, vero distinctio dolorem corrupti temporibus
                     nulla? Ratione, saepe. Reiciendis officia eos quas dolore totam harum, ullam alias sequi ipsam
                     deleniti doloremque, excepturi reprehenderit aspernatur dicta vel ipsa ab error repellendus
-                    consequatur esse illo voluptatum. Culpa natus debitis pariatur omnis?</div>
-            </div>
-            <div class="col-6 dir">
-                <img src="homee.jpeg" alt="" height="100%" width="100%">
+                    consequatur esse illo voluptatum. Culpa natus debitis pariatur omnis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus praesentium obcaecati vero quae quidem. A amet incidunt vero suscipit laudantium necessitatibus consequuntur doloremque, consequatur modi itaque, commodi in! Ea harum incidunt nisi inventore quas at voluptas asperiores, maxime eos eum quisquam doloribus esse consectetur accusantium officiis quo assumenda, iste temporibus?</div>
             </div>
         </div>
     </div>
-
-    <!-- end of about content -->
-    <!-- footer -->
 </body>
 
 </html>
