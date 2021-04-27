@@ -68,6 +68,7 @@ function submitForm(){
     xhttp.open("POST","/api/forms/mentor/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.send(JSON.stringify(formData));
+    // xhttp.send(formData);
     document.getElementsByTagName('form')[2].reset();
     document.getElementsByTagName('form')[1].reset();
     document.getElementsByTagName('form')[0].reset();
