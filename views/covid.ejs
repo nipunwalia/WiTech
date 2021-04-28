@@ -35,6 +35,7 @@
           </div>
         </div>
       </div>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       <div class="title_covid">
         <h1>Covid-19 tracker</h1>
         <h3>-State-wise-</h3>
@@ -2140,6 +2141,48 @@
      <rect id="rect4186" x="1361.753" y="315.875" fill="none" width="15.5" height="7"/>
      <rect id="rect4190" x="1413.753" y="315.875" fill="none" width="15.5" height="7"/>
      </svg>
+     
+     <div class="input-group mb-3">
+      <label for="states">Choose a state:</label>
+
+      <select name="states" id="states">
+        <option value="Andaman and Nicobar Island">Andaman and Nicobar Island</option>
+        <option value="AndhraPradesh">Andhra Pradesh</option>
+        <option value="ArunachalPradesh">Arunachal Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Chhattisgarh">Chhattisgarh</option>
+        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Goa">Goa</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Himachal Pradesh">Himachal Pradesh</option>
+        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="MadhyaPradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Manipur">Manipur</option>
+        <option value="Meghalaya">Meghalaya</option>
+        <option value="Mizoram">Mizoram</option>
+        <option value="Nagaland">Nagaland</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Puducherry">Puducherry</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Sikkim">Sikkim</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Telangana">Telangana</option>
+        <option value="Tripura">Tripura</option>
+        <option value="UttarPradesh">Uttar Pradesh</option>
+        <option value="Uttarakhand">Uttarakhand</option>
+        <option value="WestBengal">West Bengal</option>
+      </select>
+        <button onclick="search()">Search</button>
+      </div>
 
      <% for(let i=1;i<=34;i++){ %>
       <div class="states" id=<%= statesList[i-1] %>>
@@ -2176,13 +2219,14 @@
             <tr>
              <th>Waste percentage</th>
              <td class="waste"></td>
+             <a href="covid-detail.html" style="text-align: right;">Know more.</a>
             </tr>
           </table>
          </span>
         </div>
       <%}%>
   
-  <script src="javascript/navbar.js"></script> 
+  <script src="/javascript/navbar.js"></script> 
   <script src="/javascript/app.js"></script>     
   <script src="/javascript/covid.js"></script>         
 </body>
