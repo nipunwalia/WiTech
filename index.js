@@ -9,9 +9,9 @@ const app=express();
 const port=5000;
 
 // stateslist for volunteer form
-var statesList=['Andaman and Nicobar Island','AndhraPradesh','ArunachalPradesh','Assam','Bihar',"Chandigarh",'Chhattisgarh',"Dadar and Nagar Haveli",'Delhi','Goa','Gujarat','Haryana','HimachalPradesh',
-    "Jammu and Kashmir",'Jharkhand','Karnataka','Kerala','MadhyaPradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland',
-    'Odisha','Puducherry','Punjab','Rajasthan','Sikkim','TamilNadu','Telangana','Tripura','UttarPradesh','Uttarakhand','WestBengal'
+var statesList=['Andaman and Nicobar Islands','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar',"Chandigarh",'Chhattisgarh',"Dadar and Nagar Haveli",'Delhi','Goa','Gujarat','Haryana','Himachal Pradesh',
+    "Jammu and Kashmir",'Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland',
+    'Odisha','Puducherry','Punjab','Rajasthan','Sikkim','TamilNadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','WestBengal'
 ];
 
 // andaman nicobar remaining
@@ -50,7 +50,11 @@ app.get("/volunteer",(req,res)=>{
 });
 
 app.get("/covid",(req,res)=>{
-    res.render('covid',{statesList:statesIdList});
+    res.render('covid',{states:{0:statesIdList,1:statesList}});
+})
+
+app.get('/covidinfo',(req,res)=>{
+    res.render('covid-detail');
 })
 
 app.use('/api/forms',formRouter);
