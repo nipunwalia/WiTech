@@ -1,14 +1,3 @@
-// var xhttp=new XMLHttpRequest();
-//  xhttp.open("GET","/api/covid/getData",true);
-//  xhttp.setRequestHeader('Content-type',"application/json");
-//  xhttp.onreadystatechange = function() {
-//     if (this.readyState == 4 && this.status == 200) {
-//         covidData=displayData(JSON.parse(this.responseText));
-//     }
-//   };
-// xhttp.send();
-
-
 async function getCovidData(){
     var xhttp=new XMLHttpRequest();
     xhttp.open("GET","/api/covid/getData",true);
