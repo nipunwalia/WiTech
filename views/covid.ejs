@@ -2251,17 +2251,16 @@
                                 <rect id="rect4190" x="1413.753" y="315.875" fill="none" width="15.5" height="7" />
                         </svg>
     
-                        <div class="input-group mb-3">
-                            <label for="states">Choose a state:</label>
-    
+                        <div class="input-group my-3 py-3 text-light fw-lighter fs-5" style="background: linear-gradient(60deg,orange,rgb(248, 53, 53)); font-family: Zen Dots,cursive; border-radius: 40px 0px;" >
+                            <label for="states" >Choose a state:</label>
+                    
                             <select name="statesDropdown" id="statesDropdown">
                                 <option value="Select State" selected>Select State</option>
                                 <% for(let i=0;i< states[0].length;i++){ %>
                                     <option value=<%=states[1][i].split(" ").join("") %> id=<%= '#'+ states[0][i] %> > <%= states[1][i] %> </option>
-                          <%}%>
-                      </select>
-                      <input type=" text" id="stateSearch">
-                                        <!-- <button>Search</button> -->
+                                <%}%>
+                            </select>
+                            
                         </div>
                     </div>
     
