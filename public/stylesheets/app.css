@@ -423,3 +423,31 @@ cursor: pointer;}
   border-radius: 100px; /* Rounded corners */
   /* font-size: 18px; Increase font size */
 }
+.animm{
+    animation: move 2s infinite ease-in-out;
+}
+.animm:hover{
+    color: red;
+}
+@keyframes move{
+    50%{
+        background: linear-gradient(45deg, rgb(251,201,132),white);
+    }
+}
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
