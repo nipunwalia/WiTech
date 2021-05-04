@@ -4,6 +4,7 @@ var state=document.getElementById('stateId');
 var donationStatus=document.querySelectorAll('.donation');
 var formData={};
 var fieldArray=['vName','vEmail','vDob','vContact','vReason'];
+var formAlert=document.getElementById('formalert');
 
 function submitForm(e){
     for(let i=0;i<formGroups.length;i++){
@@ -37,6 +38,16 @@ function submitForm(e){
     var xhttp=new XMLHttpRequest();
     xhttp.open("POST","/api/forms/volunteer/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            formAlert.className="alert alert-success";
+        }else{
+            formAlert.className="alert alert-danger"; 
+        }
+        formAlert.innerHTML=this.responseText;
+        formAlert.style.display='block';
+        formAlert.scrollIntoView();
+        document.getElementsByTagName('form')[0].reset();
+      };
     xhttp.send(JSON.stringify(formData));
-    document.getElementsByTagName('form')[0].reset();
 }

@@ -9,6 +9,7 @@ var mGender=document.querySelectorAll('.mGender');
 var countryId=document.getElementById('countryId');
 var stateId=document.getElementById('stateId');
 var cw=document.querySelectorAll('.cw');
+var formAlert=document.getElementById('formalert');
 var formData={};
 var fieldArray=['mName','mEmail','mDob','mContact','mDegree','mCollege','mJobTitle','mJobDesc','mInterest','mskill_1',"mskill_1_rating",'mSocialFb','mSocialLn','mSocialOt'];
 
@@ -67,11 +68,22 @@ function submitForm(){
     var xhttp=new XMLHttpRequest();
     xhttp.open("POST","/api/forms/mentor/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          formAlert.className="alert alert-success";
+        }else{
+            formAlert.className="alert alert-danger";
+        }
+        formAlert.innerHTML=this.responseText;
+        formAlert.style.display='block';
+        formAlert.scrollIntoView();
+        document.getElementsByTagName('form')[2].reset();
+        document.getElementsByTagName('form')[1].reset();
+        document.getElementsByTagName('form')[0].reset();
+      };
     xhttp.send(JSON.stringify(formData));
-    // xhttp.send(formData);
-    document.getElementsByTagName('form')[2].reset();
-    document.getElementsByTagName('form')[1].reset();
-    document.getElementsByTagName('form')[0].reset();
+    
+    
 }
 function moveNext(stop){
     $('.form-box').each(function(i){

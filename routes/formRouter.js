@@ -33,7 +33,7 @@ formRouter.post('/mentor/register',expressAsyncHandler(async(req,res)=>{
         const googleSheets=google.sheets({version:"v4",auth:client});
         const spreadsheetId="1SZQ9bTqhlYdkxarcOFMIlFApI57Cwpan33r0kTUZzCw";
         
-        await googleSheets.spreadsheets.values.append({auth,spreadsheetId,range:"Sheet2!A:Q",valueInputOption:"USER_ENTERED",
+        var response=await googleSheets.spreadsheets.values.append({auth,spreadsheetId,range:"Sheet2!A:Q",valueInputOption:"USER_ENTERED",
         resource:{
             values:[[req.body.mName,req.body.mEmail,
                     req.body.mDob,req.body.mGender,req.body.countryId,
@@ -43,12 +43,12 @@ formRouter.post('/mentor/register',expressAsyncHandler(async(req,res)=>{
                     req.body.mskill_1,req.body.mskill_1_rating,
                     req.body.mSocialFb,req.body.mSocialLn,
                     req.body.mSocialOt]]
-        }
-    });
-
+        }});
+     
+        res.send("Form Submition Successfull");
     }catch(e){
         console.log(e);
-        res.status(404).send();
+        res.status(404).send("Error");
     }
 }));
 
@@ -81,9 +81,9 @@ formRouter.post('/volunteer/register',expressAsyncHandler(async(req,res)=>{
                   req.body.vState,req.body.vContact,req.body.vDonationStatus,req.body.vReason]]
                  }
         });
-
+        res.send("Form Submition Successfull");
     }catch(e){
-        res.status(404).send();
+        res.status(404).send("Error");
     }
     
 }));
