@@ -57,3 +57,60 @@ function slideShow() {
   dots[i-1].className += " active";
   setTimeout(slideShow, 2000);
 }
+function Show1() {
+  var x = document.getElementById('show1_events');
+  var sb=document.getElementById('show1_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide1_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show1()
+function Hide1()
+{
+  var x = document.getElementById('show1_events');
+  var sb=document.getElementById('show1_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide1_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide1()
+function Show2() {
+  var x = document.getElementById('show2_events');
+  var sb=document.getElementById('show2_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide2_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show2()
+function Hide2()
+{
+  var x = document.getElementById('show2_events');
+  var sb=document.getElementById('show2_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide2_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide2()
+function Show3() {
+  var x = document.getElementById('show3_events');
+  var sb=document.getElementById('show3_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide3_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show3()
+function Hide3()
+{
+  var x = document.getElementById('show3_events');
+  var sb=document.getElementById('show3_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide3_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide3()

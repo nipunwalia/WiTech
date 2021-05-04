@@ -14,26 +14,7 @@ html {
     }
 }
 
-.bottom-left
-{
-    position: absolute;
-    bottom: 20%;
-    left: 16px;
-    font-size: 3rem;
-    font-weight: 600;
-    font-family: 'Bree Serif', serif;
-     color: white;
-}
-.bottom-right
-{
-    font-size: 3rem;
-    font-weight: 600;
-    font-family: 'Bree Serif', serif;
-   color: white;
-    position: absolute;
-    bottom: 20%;
-    right: 16px;
-}
+
 .centered {
     position: absolute;
     top: 50%;
@@ -264,93 +245,106 @@ padding: 10px 0px;
 {
     font-size: 50px; 
 }
-.events
-{
-    margin: 120px 0px;
-    padding: 0px;
+/*events section*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.blog-home2 {
+    color: #8d97ad;
+    margin:0;
+    padding: 0;
+  }
+.blog-home2 h1,
+.blog-home2 h2,
+.blog-home2 h3,
+.blog-home2 h4,
+.blog-home2 h5,
+.blog-home2 h6 {
+  color: #3e4555;
 }
-.box{
-    font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    height: 70vh;
-    width: 100%;
-    margin: 0px;
-    box-shadow: 5px 10px 8px #888888;
-    padding: 10px 20px ;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
+.blog-home2 .font-weight-medium {
+  font-weight: 2rem;
+}
+
+.blog-home2 .bg-light {
+  background-color: #f4f8fa;
 
 }
-.box:before,
-.box:after{
-    content: "";
-    background: linear-gradient(-45deg, #fd6030, #ff7e06, #fdb705, #ff8303);
-    opacity: 0.5;
-    position:absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 100%;
-    transition: all 0.35s 0s ease-out;
+
+.blog-home2 .subtitle {
+  color: #ff6600;
+  font-size: 1.2 rem;
+  line-height: 24px;
 }
-.box:hover:before{ bottom: 0; }
-.box:after{
-    opacity: 0.8;
-    bottom: 0;
-    top: 100%;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transition: all 0.35s 0.2s ease-in;
-    border-radius: 120px;
+#show1_events,
+#show2_events,
+#show3_events
+{
+  font-family: 'Courgette', cursive;
+  color: #87a7b3;
 }
-.box:hover:after{ top: 25%; }
-.box img{
-    width: 100%;
-    height: 70vh;
-    border-radius: 150px;
+
+.blog-home2 h5 {
+  line-height: 22px;
+  font-size: 18px;
 }
-.box .box-content{
-    color: #fff;
-    text-align: center;
-    width: 80%;
-    opacity: 0;
-    transform: translateX(-50%) translateY(-55%);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-    overflow: hidden;
-    transition: all 0.35s 0.5s ease;
+
+.blog-home2 a.link {
+  color: #3e4555;
 }
-.box:hover .box-content{
-    opacity: 1;
-    transform: translateX(-50%) translateY(-40%);
+
+.blog-home2 a.link:hover {
+  color: #316ce8;
 }
-.box .title{
-    font-size: 26px;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin: 0;
+
+.blog-home2 .on-hover {
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
-.box .title:after{
-    content: '';
-    height: 1px;
-   /* width: 100px;*/
-    margin: 5px auto 3px;
-    display: block;
-    clear: both;
+
+.blog-home2 .on-hover:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  border:5px solid #000000;
+  box-shadow:5px 10px 8px #888888; ;
 }
-.box .post{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 1px;
+
+.blog-home2 .date-pos {
+  right: 10px;
+  top: 10px;
 }
-@media only screen and (max-width:990px){
-    .box{ margin: 0 0 30px; }
+
+.blog-home2 .date-pos span {
+  font-size: 35px;
+  line-height: 30px;
 }
+.blog-home2 .bg-info-gradiant {
+    background: #000000;
+    background: -webkit-linear-gradient(legacy-direction(to right), #000000 0%, #000000 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#000000), to(#000000));
+    background: -webkit-linear-gradient(left, #000000 0%, #000000 100%);
+    background: -o-linear-gradient(left, #000000 0%, #000000 100%);
+    background: linear-gradient(to right, #000000 0%, #000000 100%);
+}
+.blog-home2 button{
+
+        color: #ff0202;
+        background-color: #000000;
+        border-radius: 20px;
+        width: 200px;
+        padding: 15px;
+        border: 4px solid rgb(255, 136, 0);
+        font-family: 'Bree Serif', serif;
+        font-size: 1.2rem;
+}
+.blog-home2 button:hover {
+          color: #ff5201;
+          background-color: #ffffff;
+          opacity: 1;
+        
+}
+/*covid-map*/
 .map
 {
     margin: auto;
@@ -422,4 +416,32 @@ cursor: pointer;}
   /* padding: 15px; Some padding  */
   border-radius: 100px; /* Rounded corners */
   /* font-size: 18px; Increase font size */
+}
+.animm{
+    animation: move 2s infinite ease-in-out;
+}
+.animm:hover{
+    color: red;
+}
+@keyframes move{
+    50%{
+        background: linear-gradient(45deg, rgb(251,201,132),white);
+    }
+}
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
 }
