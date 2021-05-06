@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/app.css">
-    <link rel="stylesheet" href="stylesheets/navbar.css">
-    <link rel="stylesheet" href="stylesheets/footer.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="/assets/images/witechlogo.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-    <title>WiTech India</title>
-</head>
-<body>
-      <!-- start of navbar -->
-            <%- include('partials/navbar')%>
-      <!--end of navbar-->
 
-      <div id="slideshow-example" data-component="slideshow">
-        <div role="list">
-          <div class="slide">
-            <img src="/assets/images/tech-banner.jpg" alt="" width="100%" height="650px">
-            <div class="centered">Women In Technology</div>
-          </div>
-          <div class="slide">
-            <img src="/assets/images/wit.jpeg" alt="" width="100%" height="650px">
-            <div class="bottom-right">Women In Technology has to be empowered</div>
-          </div>
-          <div class="slide">
-            <img src="/assets/images/tech-banner.jpg" alt="" width="100%" height="650px">
-             <div class="bottom-left">Women In Technology</div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="stylesheets/navbar.css">
+  <link rel="stylesheet" href="stylesheets/footer.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/witechlogo.png">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+  <title>WiTech India</title>
+</head>
+
+<body>
+  <!-- start of navbar -->
+  <%- include('partials/navbar')%>
+    <!--end of navbar-->
+
+    <div id="slideshow-example" data-component="slideshow">
+      <div role="list">
+        <div class="slide">
+          <img src="/assets/images/tech-banner.jpg" alt="" width="100%" height="650px">
+          <div class="centered">Women In Technology</div>
+        </div>
+        <div class="slide">
+          <img src="/assets/images/wit.jpeg" alt="" width="100%" height="650px">
+          <div class="bottom-right">Women In Technology has to be empowered</div>
+        </div>
+        <div class="slide">
+          <img src="/assets/images/tech-banner.jpg" alt="" width="100%" height="650px">
+          <div class="bottom-left">Women In Technology</div>
         </div>
       </div>
-      <section id="testimonials">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    </div>
+    <section id="testimonials">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" style="color: black;" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -50,423 +59,602 @@
           <div id="about-carousal" class="carousel-item active">
             <h1 class="About-text">WHO WE ARE</h1>
             <hr>
-            <p class="About-content">WiTech India is a part of WiTech (Women in Tech) a nonprofit SEC-registered organization that was founded by Audrey Pe in 2016.</p>
-            <p class="About-content">We work to bring a positive influence in the minds and lives of people associated with us which further creates a difference in the society.</p>
+            <p class="About-content">WiTech India is a part of WiTech (Women in Tech) a nonprofit SEC-registered
+              organization that was founded by Audrey Pe in 2016.</p>
+            <p class="About-content">We work to bring a positive influence in the minds and lives of people associated
+              with us which further creates a difference in the society.</p>
           </div>
           <div class="carousel-item">
             <h1 class="About-text">MISSION</h1>
             <hr>
-            <p class="About-content">To educate, inspire, and empower the youth to break gender stereotypes and make a difference using technology.
-    
+            <p class="About-content">To educate, inspire, and empower the youth to break gender stereotypes and make a
+              difference using technology.
+
             </p>
-            <p class="About-content">To achieve gender equality in the tech industry through increased networking opportunities for young women entering tech industry.</p>
+            <p class="About-content">To achieve gender equality in the tech industry through increased networking
+              opportunities for young women entering tech industry.</p>
           </div>
           <div class="carousel-item">
             <h1 class="About-text">GOALS </h1>
             <hr>
-            <p class="About-content">We focus on encouraging and mentoring people to help them seize numerous opportunities and get to grips with problems.</p>
-            <p class="About-content">We are committed to provide accessible communication and training which improves understanding and has helped us in promoting equality.</p>
+            <p class="About-content">We focus on encouraging and mentoring people to help them seize numerous
+              opportunities and get to grips with problems.</p>
+            <p class="About-content">We are committed to provide accessible communication and training which improves
+              understanding and has helped us in promoting equality.</p>
           </div>
           <div class="carousel-item">
             <h1 class="About-text">OUR SERVICES</h1>
             <hr>
-            <p class="About-content">We leverage people’s strengths and talents in a way that leads to a greater result than people try to accomplish the same .</p>
-            <p class="About-content">Lip service is not our way. We promote and celebrate our agendas as a fundamental aspect of what we are and what we do.</p>
+            <p class="About-content">We leverage people’s strengths and talents in a way that leads to a greater result
+              than people try to accomplish the same .</p>
+            <p class="About-content">Lip service is not our way. We promote and celebrate our agendas as a fundamental
+              aspect of what we are and what we do.</p>
           </div>
         </div>
-        <a id="controls" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a id="controls" class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+          data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only"></span>
         </a>
-        <a id="controls" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a id="controls" class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+          data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only"></span>
         </a>
         <div style="text-align:center">
           <span class="dot"></span>
-          <span class="dot" ></span>
-          <span class="dot" ></span>
-          <span class="dot" ></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
-      </div>
-      </section>
-      <section id="features">
-        <div class="row">
-            <div class="feature-box col-lg-4">
-                <i class="far fa-calendar-alt icon"></i>
-                <h3 class="about-grid">Events</h3>
-                <p class="about-content">Find out about the various events and programs hosted</p>
+    </section>
+    <section id="features">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="far fa-calendar-alt icon"></i>
+          <h3 class="about-grid">Events</h3>
+          <p class="about-content">Find out about the various events and programs hosted</p>
           <button type="button" class="btn btn-dark">Find here</button>
-            </div>
+        </div>
         <div class="feature-box col-lg-4">
           <i class="fas fa-file-alt icon"></i>
-            <h3 class="about-grid">Read Our Stories..</h3>
-                <p class="about-content">Share your knowledge, experiences or the latest news</p>
+          <h3 class="about-grid">Read Our Stories..</h3>
+          <p class="about-content">Share your knowledge, experiences or the latest news</p>
           <button type="button" class="btn btn-dark">Visit blogs</button>
-            </div>
+        </div>
         <div class="feature-box col-lg-4">
-                <i class="fas fa-users icon"></i>
-                <h3 class="about-grid">Join Us</h3>
-                <p class="about-content">We are looking out for new vision, and strategic talents.</p>
+          <i class="fas fa-users icon"></i>
+          <h3 class="about-grid">Join Us</h3>
+          <p class="about-content">We are looking out for new vision, and strategic talents.</p>
           <button type="button" class="btn btn-dark">Join Us</button>
-            </div>
-    </div>
+        </div>
+      </div>
     </section>
     <section class="text-center" id="testimonial_section">
-        <h3 class="line-2">People said..</h3>
-       <center> <hr class="line-teams"></center>
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" style="color: black;" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div id="testimonial-carousal" class="carousel-item1 align-items-center active">
-                <div class="testimonial">
-                  <div class="avatar mx-auto ">
-                    <img src="/assets/images/male.png" class="rounded-circle img-fluid"
-                      alt="First sample avatar image">
-                  </div>
-                  <p>
-                    <i class="fas fa-quote-left"> </i> WiTech is a great place to work. I am currently working here as an intern.Team mates are really helpful and is the right place to learn and grow,so thank you for this wonderful oppurtunity.
-                  </p>
-                  <h4 class="font-weight-bold">Uma Sharma</h4>
-                  <h6 class="font-weight-bold my-3">Graphic Designer</h6>
-                  <!--Review-->
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star-half-alt blue-text"> </i>
-                </div>
+      <h3 class="line-2">People said..</h3>
+      <center>
+        <hr class="line-teams">
+      </center>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" style="color: black;" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div id="testimonial-carousal" class="carousel-item1 align-items-center active">
+            <div class="testimonial">
+              <div class="avatar mx-auto ">
+                <img src="/assets/images/male.png" class="rounded-circle img-fluid" alt="First sample avatar image">
               </div>
-              <div id="testimonial-carousal" class="carousel-item1">
-                <div class="testimonial">
-                  <!--Avatar-->
-                  <div class="avatar mx-auto ">
-                    <img src="/assets/images/girl.png" class="rounded-circle img-fluid"
-                      alt="Second sample avatar image">
-                  </div>
-                  <!--Content-->
-                  <p>
-                    <i class="fas fa-quote-left"> </i> My experience with Witech has been a gratifying and rewarding one.I realized that I am surrounded with hardworking and capable people who are always ready to help out.It greatly helped me to improve my skills and broadened my vision of approaching situations.</p>
-                  <h4 class="font-weight-bold">Aditi Agarwal</h4>
-                  <h6 class="font-weight-bold my-3">Content Writing Intern</h6>
-                  <!--Review-->
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                </div>
-              </div>
-              <!--Second slide-->
-              <!--Third slide-->
-              <div id="testimonial-carousal" class="carousel-item1">
-                <div class="testimonial">
-                  <!--Avatar-->
-                  <div class="avatar mx-auto ">
-                    <img src="/assets/images/gal2.png" class="rounded-circle img-fluid"
-                      alt="Third sample avatar image">
-                  </div>
-                  <!--Content-->
-                  <p>
-                    <i class="fas fa-quote-left"> </i> Very young and fresh, does not restrict creativity. Very friendly environment which taught me grow and learn so much from a safe and equal space. It has been a really great for me.</p>
-                  <h4 class="font-weight-bold">Aaheli Maitra</h4>
-                  <h6 class="font-weight-bold my-3">intern</h6>
-                  <!--Review-->
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="far fa-star blue-text"> </i>
-                </div>
-              </div>
-              <div id="testimonial-carousal" class="carousel-item1">
-                <div class="testimonial">
-                  <!--Avatar-->
-                  <div class="avatar mx-auto ">
-                    <img src="/assets/images/gal-3.png" class="rounded-circle img-fluid"
-                      alt="Third sample avatar image">
-                  </div>
-                  <!--Content-->
-                  <p>
-                    <i class="fas fa-quote-left"> </i> I have had the pleasure of working at WiTech India for about six weeks now and the journey has been mind-boggling.I have never worked anywhere wherein the team has admired my work remarkbly.WiTech India emphasizes on creating a positive workplace environment!</p>
-                  <h4 class="font-weight-bold">Devansh Hirani</h4>
-                  <h6 class="font-weight-bold my-3">Human Resources intern</h6>
-                  <!--Review-->
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="fas fa-star blue-text"> </i>
-                  <i class="far fa-star blue-text"> </i>
-                </div>
-              </div>
-              <!--Third slide-->
-              
+              <p>
+                <i class="fas fa-quote-left"> </i> WiTech is a great place to work. I am currently working here as an
+                intern.Team mates are really helpful and is the right place to learn and grow,so thank you for this
+                wonderful oppurtunity.
+              </p>
+              <h4 class="font-weight-bold">Uma Sharma</h4>
+              <h6 class="font-weight-bold my-3">Graphic Designer</h6>
+              <!--Review-->
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star-half-alt blue-text"> </i>
             </div>
-            <!--Slides-->
-            <!--Controls-->
+          </div>
+          <div id="testimonial-carousal" class="carousel-item1">
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto ">
+                <img src="/assets/images/girl.png" class="rounded-circle img-fluid" alt="Second sample avatar image">
               </div>
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot" ></span>
-                <span class="dot" ></span>
-                <span class="dot" ></span>
+              <!--Content-->
+              <p>
+                <i class="fas fa-quote-left"> </i> My experience with Witech has been a gratifying and rewarding one.I
+                realized that I am surrounded with hardworking and capable people who are always ready to help out.It
+                greatly helped me to improve my skills and broadened my vision of approaching situations.
+              </p>
+              <h4 class="font-weight-bold">Aditi Agarwal</h4>
+              <h6 class="font-weight-bold my-3">Content Writing Intern</h6>
+              <!--Review-->
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
             </div>
-          <!-- Carousel Wrapper -->
+          </div>
+          <!--Second slide-->
+          <!--Third slide-->
+          <div id="testimonial-carousal" class="carousel-item1">
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto ">
+                <img src="/assets/images/gal2.png" class="rounded-circle img-fluid" alt="Third sample avatar image">
+              </div>
+              <!--Content-->
+              <p>
+                <i class="fas fa-quote-left"> </i> Very young and fresh, does not restrict creativity. Very friendly
+                environment which taught me grow and learn so much from a safe and equal space. It has been a really
+                great for me.
+              </p>
+              <h4 class="font-weight-bold">Aaheli Maitra</h4>
+              <h6 class="font-weight-bold my-3">intern</h6>
+              <!--Review-->
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="far fa-star blue-text"> </i>
+            </div>
+          </div>
+          <div id="testimonial-carousal" class="carousel-item1">
+            <div class="testimonial">
+              <!--Avatar-->
+              <div class="avatar mx-auto ">
+                <img src="/assets/images/gal-3.png" class="rounded-circle img-fluid" alt="Third sample avatar image">
+              </div>
+              <!--Content-->
+              <p>
+                <i class="fas fa-quote-left"> </i> I have had the pleasure of working at WiTech India for about six
+                weeks now and the journey has been mind-boggling.I have never worked anywhere wherein the team has
+                admired my work remarkbly.WiTech India emphasizes on creating a positive workplace environment!
+              </p>
+              <h4 class="font-weight-bold">Devansh Hirani</h4>
+              <h6 class="font-weight-bold my-3">Human Resources intern</h6>
+              <!--Review-->
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="fas fa-star blue-text"> </i>
+              <i class="far fa-star blue-text"> </i>
+            </div>
+          </div>
+          <!--Third slide-->
+
+        </div>
+        <!--Slides-->
+        <!--Controls-->
+      </div>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <!-- Carousel Wrapper -->
       <!-- Section: Testimonials v.2 -->
-        </section>
-<section class="text-center my-5 p-1">
+    </section>
+    <section class="text-center my-5 p-1">
 
-  <!-- Section heading -->
-  <h3 id="teams-contents"class="h1-responsive font-weight-bold my-5">Teams</h3><center><hr class="line-teams"></center>
-  <span class="team-2">WE WORK WORLDWIDE, HAVE A BIG TEAM WORKING DEDICATEDLY TO SAVE THE CHILD. THE TEAM CONSIST OF EXPERTS WHO FEEL CHILDREN'S' DANGER AND ENJOY THE WORK.</span>
-  <!-- Grid row -->
-  <div id="team-move" class="row">
+      <!-- Section heading -->
+      <h3 id="teams-contents" class="h1-responsive font-weight-bold my-5">Teams</h3>
+      <center>
+        <hr class="line-teams">
+      </center>
+      <span class="team-2">WE WORK WORLDWIDE, HAVE A BIG TEAM WORKING DEDICATEDLY TO SAVE THE CHILD. THE TEAM CONSIST OF
+        EXPERTS WHO FEEL CHILDREN'S' DANGER AND ENJOY THE WORK.</span>
+      <!-- Grid row -->
+      <div id="team-move" class="row">
 
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
-      <!--Card-->
-      <div class="card testimonial-card">
-        <!--Background color-->
-        <div class="card-up">
-        <!--Avatar-->
-        <div class="avatar mx-auto white">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg" class="rounded-circle img-fluid " >
-        </div>
-        <div class="card-body">
-          <!--Name-->
-          <h4 class="font-weight-bold mb-4">Alison</h4>
-          <span>Front-end Developer</span>
-          <hr class="teams-line">
-          <!--Quotation-->
-          <p class="dark-grey-text mt-4">Lorem ipsum dolor sit amet eos
-            adipisci, consectetur adipisicing elit.</p>
-            <!-- Facebook -->
-<i class="fab fa-facebook-f" style="font-size: x-large;"></i>
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+          <!--Card-->
+          <div class="card testimonial-card">
+            <!--Background color-->
+            <div class="card-up">
+              <!--Avatar-->
+              <div class="avatar mx-auto white">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(25).jpg" class="rounded-circle img-fluid ">
+              </div>
+              <div class="card-body">
+                <!--Name-->
+                <h4 class="font-weight-bold mb-4">Alison</h4>
+                <span>Front-end Developer</span>
+                <hr class="teams-line">
+                <!--Quotation-->
+                <p class="dark-grey-text mt-4">Lorem ipsum dolor sit amet eos
+                  adipisci, consectetur adipisicing elit.</p>
+                <!-- Facebook -->
+                <i class="fab fa-facebook-f" style="font-size: x-large;"></i>
 
-<!-- Twitter -->
-<i class="fab fa-twitter" style="font-size: x-large;"></i>
+                <!-- Twitter -->
+                <i class="fab fa-twitter" style="font-size: x-large;"></i>
 
-<!-- Instagram -->
-<i class="fab fa-instagram" style="font-size: x-large;"></i>
+                <!-- Instagram -->
+                <i class="fab fa-instagram" style="font-size: x-large;"></i>
 
-<!-- Linkedin -->
-<i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
+                <!-- Linkedin -->
+                <i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
 
 
-<!-- Github -->
-<i class="fab fa-github" style="font-size: x-large;"></i>
+                <!-- Github -->
+                <i class="fab fa-github" style="font-size: x-large;"></i>
+              </div>
             </div>
+          </div>
+          <!--Card-->
         </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+          <!--Card-->
+          <div class="card testimonial-card">
+            <!--Background color-->
+            <div class="card-up ">
+
+              <!--Avatar-->
+              <div class="avatar mx-auto white">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(16).jpg" class="rounded-circle img-fluid">
+              </div>
+              <div class="card-body">
+                <!--Name-->
+                <h4 class="font-weight-bold mb-4">Anna Aston</h4>
+                <span>Wordpress Developer</span>
+                <hr class="teams-line">
+                <!--Quotation-->
+                <p class="dark-grey-text mt-4">Neque cupiditate assumenda in
+                  maiores repudiandae mollitia architecto.</p>
+                <i class="fab fa-facebook-f" style="font-size: x-large;"></i>
+
+                <!-- Twitter -->
+                <i class="fab fa-twitter" style="font-size: x-large;"></i>
+
+                <!-- Instagram -->
+                <i class="fab fa-instagram" style="font-size: x-large;"></i>
+
+                <!-- Linkedin -->
+                <i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
+
+
+                <!-- Github -->
+                <i class="fab fa-github" style="font-size: x-large;"></i>
+              </div>
+            </div>
+          </div>
+          <!--Card-->
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6">
+          <!--Card-->
+          <div class="card testimonial-card">
+            <!--Background color-->
+            <div class="card-up">
+              <!--Avatar-->
+              <div class="avatar mx-auto white">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(18).jpg" class="rounded-circle img-fluid">
+              </div>
+              <div class="card-body">
+                <!--Name-->
+                <h4 class="font-weight-bold mb-4">Maria Kate</h4>
+                <span>Marketing Manager</span>
+                <hr class="teams-line">
+                <!--Quotation-->
+                <p class="dark-grey-text mt-4">Delectus impedit saepe officiis
+                  ab aliquam repellat rem unde ducimus.</p>
+                <i class="fab fa-facebook-f" style="font-size: x-large;"></i>
+
+                <!-- Twitter -->
+                <i class="fab fa-twitter" style="font-size: x-large;"></i>
+
+                <!-- Instagram -->
+                <i class="fab fa-instagram" style="font-size: x-large;"></i>
+
+                <!-- Linkedin -->
+                <i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
+
+
+                <!-- Github -->
+                <i class="fab fa-github" style="font-size: x-large;"></i>
+              </div>
+            </div>
+          </div>
+          <!--Card-->
+        </div>
+        <!--Grid column-->
+
       </div>
-      <!--Card-->
-    </div>
-    <!--Grid column-->
+      <!-- Grid row -->
 
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
-      <!--Card-->
-      <div class="card testimonial-card">
-        <!--Background color-->
-        <div class="card-up ">
+    </section>
+    <section id="services" class="services section-bg ">
+      <div class="container" data-aos="fade-up">
 
-        <!--Avatar-->
-        <div class="avatar mx-auto white">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(16).jpg" class="rounded-circle img-fluid">
-        </div>
-        <div class="card-body">
-          <!--Name-->
-          <h4 class="font-weight-bold mb-4">Anna Aston</h4>
-          <span>Wordpress Developer</span>
-          <hr class="teams-line">
-          <!--Quotation-->
-          <p class="dark-grey-text mt-4">Neque cupiditate assumenda in
-            maiores repudiandae mollitia architecto.</p>
-            <i class="fab fa-facebook-f" style="font-size: x-large;"></i>
-
-<!-- Twitter -->
-<i class="fab fa-twitter" style="font-size: x-large;"></i>
-
-<!-- Instagram -->
-<i class="fab fa-instagram" style="font-size: x-large;"></i>
-
-<!-- Linkedin -->
-<i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
-
-
-<!-- Github -->
-<i class="fab fa-github" style="font-size: x-large;"></i>
-</div>
-        </div>
-      </div>
-      <!--Card-->
-    </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6">
-      <!--Card-->
-      <div class="card testimonial-card">
-        <!--Background color-->
-        <div class="card-up">
-        <!--Avatar-->
-        <div class="avatar mx-auto white">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(18).jpg" class="rounded-circle img-fluid">
-        </div>
-        <div class="card-body">
-          <!--Name-->
-          <h4 class="font-weight-bold mb-4">Maria Kate</h4>
-          <span>Marketing Manager</span>
-          <hr class="teams-line">
-          <!--Quotation-->
-          <p class="dark-grey-text mt-4">Delectus impedit saepe officiis
-            ab aliquam repellat rem unde ducimus.</p>
-            <i class="fab fa-facebook-f" style="font-size: x-large;" ></i>
-
-<!-- Twitter -->
-<i class="fab fa-twitter" style="font-size: x-large;"></i>
-
-<!-- Instagram -->
-<i class="fab fa-instagram" style="font-size: x-large;"></i>
-
-<!-- Linkedin -->
-<i class="fab fa-linkedin-in" style="font-size: x-large;"></i>
-
-
-<!-- Github -->
-<i class="fab fa-github" style="font-size: x-large;"></i>
-</div>
-        </div>
-      </div>
-      <!--Card-->
-    </div>
-    <!--Grid column-->
-
-  </div>
-  <!-- Grid row -->
-
-</section>
-<section id="services" class="services section-bg ">
-  <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
+        <div class="section-title">
           <h2>Departments</h2>
 
-      </div>
-      <center><hr class="line-teams"></center>
-      <div class="row">
+        </div>
+        <center>
+          <hr class="line-teams">
+        </center>
+        <div class="row">
           <div class="col-md-6">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <i id="icon-dept" class="fas fa-coins"></i>
-                  <h3><a href="/department/finance">Finance</a></h3>
-                  <p>Finance department  manages the day to day and long term monetary operations and strategy.</p>
-                  <a href="/department/finance"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
-              </div>
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i id="icon-dept" class="fas fa-coins"></i>
+              <h3><a href="/department/finance">Finance</a></h3>
+              <p>Finance department manages the day to day and long term monetary operations and strategy.</p>
+              <a href="/department/finance"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
+            </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                <i id="icon-dept" class="fas fa-bullhorn"></i>
-                  <h3><a href="/department/marketing">Marketing and Creatives</a></h3>
-                  <p>Emerging of new influence on the marketing and creatives team brings out extreme possibilities of understandable communications.</p>
-                  <a href="/department/marketing"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
-              </div>
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i id="icon-dept" class="fas fa-bullhorn"></i>
+              <h3><a href="/department/marketing">Marketing and Creatives</a></h3>
+              <p>Emerging of new influence on the marketing and creatives team brings out extreme possibilities of
+                understandable communications.</p>
+              <a href="/department/marketing"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
+            </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                <i id="icon-dept" class="fas fa-user-friends"></i>
-                  <h3><a href="/department/outreach">Outreach and Public Relation</a></h3>
-                  <p>By building a strong community and partnership, we help to consistently achieve milestones.</p>
-                  <a href="/department/outreach"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
-              </div>
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i id="icon-dept" class="fas fa-user-friends"></i>
+              <h3><a href="/department/outreach">Outreach and Public Relation</a></h3>
+              <p>By building a strong community and partnership, we help to consistently achieve milestones.</p>
+              <a href="/department/outreach"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
+            </div>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                <i id="icon-dept" class="fas fa-chart-area"></i>
-                  <h3><a href="/department/logistics">Logistics and Operation</a></h3>
-                  <p>Managing the information flow and and structure of production, we potentially contribute to the company's work.</p>
-                  <a href="/department/logistics"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
-              </div>
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i id="icon-dept" class="fas fa-chart-area"></i>
+              <h3><a href="/department/logistics">Logistics and Operation</a></h3>
+              <p>Managing the information flow and and structure of production, we potentially contribute to the
+                company's work.</p>
+              <a href="/department/logistics"><span>read more..</span></a> <i class="bx bx-chevron-right"></i>
+            </div>
           </div>
-          
-          <div class="col-md-6 mt-4 mt-md-0 offset-md-3">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-                <i id="icon-dept" class="fas fa-laptop-code"></i>
-                  <h3><a href="/department/technical">Technical</h3></a>
-                  <p>All the roles including promoting, communicating, strategising and execution come under our surveillance.</p>
-                  <a href="/department/technical"><span>read more..</span> <i class="bx bx-chevron-right"></i></a>
-          </div>
-          </a>
-      </div>
 
-  </div>
-</section>
-<section class="events" id="recent_events">
-  <div class="blog-home2 py-5">
-    <div class="container">
-      <!-- Row  -->
-      <div class="row justify-content-center">
-        <!-- Column -->
-        <div class="col-md-8 text-center">
-          <h2>Recent Events</h2>
-          <center><hr class="line-teams"></center>
-          <h5 class="subtitle font-weight-normal">You can dream, create, design and build the most wonderful place in the world…but it requires people to make the dream a reality.
-            We are looking out for new vision, eager minds and strategic talent. We believe in a team culture, where we work outside the box to get more involved with the customers and collaborators.</h5>
+          <div class="col-md-6 mt-4 mt-md-0 offset-md-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i id="icon-dept" class="fas fa-laptop-code"></i>
+              <h3><a href="/department/technical">Technical</h3></a>
+              <p>All the roles including promoting, communicating, strategising and execution come under our
+                surveillance.</p>
+              <a href="/department/technical"><span>read more..</span> <i class="bx bx-chevron-right"></i></a>
+            </div>
+            </a>
+          </div>
+
         </div>
-        <!-- Column -->
-        <!-- Column -->
+    </section>
+    <section class="events" id="recent_events">
+      <div class="blog-home2 py-5">
+        <div class="container">
+          <!-- Row  -->
+          <div class="row justify-content-center">
+            <!-- Column -->
+            <div class="col-md-8 text-center">
+              <h2>Recent Events</h2>
+              <center>
+                <hr class="line-teams">
+              </center>
+              <h5 class="subtitle font-weight-normal">You can dream, create, design and build the most wonderful place
+                in the world…but it requires people to make the dream a reality.
+                We are looking out for new vision, eager minds and strategic talent. We believe in a team culture, where
+                we work outside the box to get more involved with the customers and collaborators.</h5>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+          </div>
+          <div class="row mt-4">
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+              <div class="card border-0 mb-4">
+                <a href="#"><img class="card-img-top" src="/assets/images/pgm3.jpg" alt="wrappixel kit"></a>
+                <div
+                  class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                  Mar<span class="d-block">6</span></div>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Harvard WE CODE</a>
+                </h5>
+                <div id="show1_events" style="display: none;">The student-run conference WECode is organizing its annual
+                  women in tech conference this spring from 6th to 8th March.
+                  Spreading opportunities for attendees to learn, connect and form mutual bonds stemming from an
+                  interactive passion for computer science,
+                  it's the largest student-run women in tech organization in the United States promoting female
+                  representation in the technology industry.</div>
+                <button id="show1_button" onclick=Show1() value="read1">Read More</button>
+                <button id="hide1_button" onclick=Hide1()>Hide the content</button>
+
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+              <div class="card border-0 mb-4">
+                <a href="#"><img class="card-img-top" src="/assets/images/pgm5.jpg" alt="wrappixel kit"></a>
+                <div
+                  class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                  Oct<span class="d-block">23</span></div>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Mentorship Program</a>
+                </h5>
+                <div id="show2_events" style="display: none;">Do you want to utilise your potential and be substantive
+                  for a positive outcome?
+                  WiTech India invites you to be a part of a young and aspirational team working everyday to grow with
+                  the organisation.
+                  Make a change in the society with your enthusiastic and vibrant approach.</div>
+                <button id="show2_button" onclick=Show2() value="read2">Read More</button>
+                <button id="hide2_button" onclick=Hide2()>Hide the content</button>
+
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4 on-hover">
+              <div class="card border-0 mb-4">
+                <a href="#"><img class="card-img-top" src="/assets/images/pgm4.jpg" alt="wrappixel kit"></a>
+                <div
+                  class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">
+                  Oct<span class="d-block">23</span></div>
+                <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Simmons Leadership
+                    Conference</a></h5>
+                <div id="show3_events" style="display: none;">Highlighting the idea of how exceptional and resilient
+                  global women leaders are, the 42nd Simmons Leadership Conference is taking place virtually on March
+                  23, 2021.
+                  It's a one-day professional development event for women, inspiring them through compelling
+                  presentations and timely panel discussions with senior business leaders from around the world. A
+                  non-skippable opportunity and one of the most sought-after conferences,
+                  this leadership conference helps motivate, educate, and empower women to acquire independent
+                  livelihoods in every stage of their career.</div>
+                <button id="show3_button" onclick=Show3() value="read3">Read More</button>
+                <button id="hide3_button" onclick=Hide3()>Hide the content</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="row mt-4">
-        <!-- Column -->
-        <div class="col-md-4 on-hover">
-          <div class="card border-0 mb-4">
-            <a href="#"><img class="card-img-top" src="/assets/images/pgm3.jpg" alt="wrappixel kit"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Mar<span class="d-block">6</span></div>
-            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Harvard WE CODE</a></h5>
-            <div id="show1_events" style="display: none;">The student-run conference WECode is organizing its annual women in tech conference this spring from 6th to 8th March.
-               Spreading opportunities for attendees to learn, connect and form mutual bonds stemming from an interactive passion for computer science,
-                it's the largest student-run women in tech organization in the United States promoting female representation in the technology industry.</div>
-           <button id="show1_button" onclick=Show1() value="read1">Read More</button>
-            <button id="hide1_button" onclick=Hide1()>Hide the content</button>
-           
+    </section>
+    <section class="contacts" id="contacts">
+      <div style="background: linear-gradient(lightgrey,white);">
+        <div class="heading py-4" style="background: linear-gradient(60deg,orange,rgb(250, 114, 52));">
+          <div class="container">
+            <div class="row">
+              <div class="col-3 text-light fs-1 text-center pt-3 px-2 mx-5" style="font-family: Bree Serif,cursive;">
+                CONTACT<span class="text-dark">&#10095</span></div>
+              <div class="col-5 py-3 text-light fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                voluptates sapiente
+                similique pariatur sit minus, eveniet quia praesentium fugit ipsa! Lorem ipsum dolor sit.</div>
+            </div>
           </div>
         </div>
-        <!-- Column -->
-        <div class="col-md-4 on-hover">
-          <div class="card border-0 mb-4">
-            <a href="#"><img class="card-img-top" src="/assets/images/pgm5.jpg" alt="wrappixel kit"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
-            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Mentorship Program</a></h5>
-            <div id="show2_events" style="display: none;">Do you want to utilise your potential and be substantive for a positive outcome? 
-              WiTech India invites you to be a part of a young and aspirational team working everyday to grow with the organisation. 
-              Make a change in the society with your enthusiastic and vibrant approach.</div>
-          <button id="show2_button" onclick=Show2() value="read2">Read More</button>
-           <button id="hide2_button" onclick=Hide2()>Hide the content</button>
-           
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-6">
+              <div class="headd fs-4 fw-bold py-5">DROP US A MESSAGE!</div>
+
+              <form action="#" method="#">
+                <div class="form-group">
+                  <label>Your Name:</label><br>
+                  <input type="text" class="form-control" id="nName" name="nName" placeholder="Enter Your Name"
+                    required>
+                </div><br>
+
+                <div class="form-group">
+                  <label>Email address:</label><br>
+                  <input type="email" class="form-control" id="nMail" name="nMmail" placeholder="Enter a valid email"
+                    required>
+                </div><br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Subject:</label><br>
+                  <input type="text" class="form-control" id="nSub" name="nSub" placeholder="Subject">
+                </div><br>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Your Message:</label><br>
+                  <textarea class="form-control" id="nMessage" name="nMessage" rows="5" required
+                    placeholder="Enter Your Message"></textarea>
+                </div><br>
+                <input type="button" value="Submit" class="fs-3 my-3 px-5"
+                  style="background-color: gray; border-radius: 5px 5px; color: white;">
+              </form>
+            </div>
+            <div class="col-sm-5 col-md-6">
+              <div class="fs-4 fw-bold py-5">CONTACT INFO</div>
+              <br>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi odio, velit laborum cupiditate
+                laudantium soluta blanditiis fugiat eaque quis voluptate facilis totam perspiciatis debitis.
+                Quibusdam obcaecati ducimus laboriosam esse rerum.</p>
+              <br>
+              <i class="fas fa-map-marker-alt"></i> <br><br>
+              <i class="fas fa-phone-alt"></i><br><br>
+              <i class="far fa-envelope"></i>
+            </div>
           </div>
-        </div>
-        <!-- Column -->
-        <div class="col-md-4 on-hover">
-          <div class="card border-0 mb-4">
-            <a href="#"><img class="card-img-top" src="/assets/images/pgm4.jpg" alt="wrappixel kit"></a>
-            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">Oct<span class="d-block">23</span></div>
-            <h5 class="font-weight-medium mt-3"><a href="#" class="text-decoration-none link">Simmons Leadership Conference</a></h5>
-            <div id="show3_events" style="display: none;">Highlighting the idea of how exceptional and resilient global women leaders are, the 42nd Simmons Leadership Conference is taking place virtually on March 23, 2021.
-               It's a one-day professional development event for women, inspiring them through compelling presentations and timely panel discussions with senior business leaders from around the world. A non-skippable opportunity and one of the most sought-after conferences, 
-               this leadership conference helps motivate, educate, and empower women to acquire independent livelihoods in every stage of their career.</div>
-          <button id="show3_button" onclick=Show3() value="read3">Read More</button>
-           <button id="hide3_button" onclick=Hide3()>Hide the content</button>
-          </div>
+
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!--including footer-->
-<%- include('partials/footer')%>
+    </section>
+    <section class="contacts" id="contacts">
+      <div style="background: linear-gradient(lightgrey,white);">
+        <div class="heading py-4" style="background: linear-gradient(60deg,orange,rgb(250, 114, 52));">
+          <div class="container">
+            <div class="row">
+              <div class="col-3 text-light fs-1 text-center pt-3 px-2 mx-5" style="font-family: Bree Serif,cursive;">
+                CONTACT<span class="text-dark">&#10095</span>
+              </div>
+              <div class="col-5 py-3 text-light fs-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. At
+                voluptates sapiente
+                similique pariatur sit minus, eveniet quia praesentium fugit ipsa! Lorem ipsum dolor
+                sit.</div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-6">
+              <div class="headd fs-4 fw-bold py-5">DROP US A MESSAGE!</div>
+
+              <form action="#" method="#">
+                <div class="form-group">
+                  <label>Your Name:</label><br>
+                  <input type="text" class="form-control" id="nName" name="nName" placeholder="Enter Your Name"
+                    required>
+                </div><br>
+
+                <div class="form-group">
+                  <label>Email address:</label><br>
+                  <input type="email" class="form-control" id="nMail" name="nMmail" placeholder="Enter a valid email"
+                    required>
+                </div><br>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Subject:</label><br>
+                  <input type="text" class="form-control" id="nSub" name="nSub" placeholder="Subject">
+                </div><br>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Your Message:</label><br>
+                  <textarea class="form-control" id="nMessage" name="nMessage" rows="5" required
+                    placeholder="Enter Your Message"></textarea>
+                </div><br>
+                <input type="button" value="Submit" class="fs-3 my-3 px-5"
+                  style="background: linear-gradient(60deg,orange,rgb(250,114,52)); border-radius: 5px 5px; color: white;">
+              </form>
+            </div>
+            <div class="col-sm-5 col-md-6">
+              <div class="fs-4 fw-bold py-5">CONTACT INFO</div>
+              <br>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi odio, velit laborum
+                cupiditate
+                laudantium soluta blanditiis fugiat eaque quis voluptate facilis totam perspiciatis
+                debitis.
+                Quibusdam obcaecati ducimus laboriosam esse rerum.</p>
+              <br>
+              <i class="fas fa-map-marker-alt"></i> <br><br>
+              <i class="fas fa-phone-alt"></i><br><br>
+              <i class="far fa-envelope"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--including footer-->
+    <%- include('partials/footer')%>
       <script src="javascript/app.js"></script>
 </body>
+
 </html>
