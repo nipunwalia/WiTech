@@ -1,66 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<html>
-    <head>
-        <title>Contact Page</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/assets/images/witechlogo.png" type="image/png">
-        <link rel="stylesheet" type="text/css" href="stylesheets/contact.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/63b5dce89a.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class ="container-bg">
-            <div class= "container">
-            <div id="contact">
-                <h1>CONTACT US <span style="color:rgb(255, 153, 0);">&#10095 </span>
-                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quisquam rerum, voluptatem neque fugiat vel corporis soluta sunt sint illo, fugit excepturi quidem molestiae. Itaque nemo eos delectus sapiente debitis.</small>
-                </h1>
-            </div>
-            </div><br>
-        </div>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/witechlogo.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <title>Contact Page</title>
+</head>
+
+<body style="background: linear-gradient(lightgrey,white);">
+    <div class="heading py-4" style="background: linear-gradient(60deg,orange,rgb(250, 114, 52));">
         <div class="container">
-            <div class="col-lg-6 dfrom col-sm-6 col-xs-12">
-                <div class="form" id="form">
-                    <h3>Drop Us a Message</h3>
-                    <form action="#" method="#">
-                        <div class="form-group">
-                            <label>Your Name:</label><br>
-                            <input type="text" class="form-control" id="nName" name="nName"  placeholder="Enter Your Name" required>
-                        </div><br>
-
-                        <div class="form-group">
-                            <label>Email address:</label><br>
-                            <input type="email" class="form-control" id="nMail" name="nMmail" placeholder="Enter a valid email" required>
-                        </div><br>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Subject:</label><br>
-                            <input type="text" class="form-control" id="nSub" name="nSub" placeholder="Subject">
-                        </div><br>
-
-                        <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Your Message:</label><br>
-                                <textarea class="form-control" id="nMessage" name="nMessage" rows="5" required placeholder="Enter Your Message"></textarea>
-                            </div><br>
-                        <a href="#" class="bt">Submit</a>   
-                    </form>  
-                </div>
+            <div class="row">
+                <div class="col-3 text-light fs-1 text-center pt-3 px-2 mx-5" style="font-family: Bree Serif,cursive;">CONTACT<span
+                        class="text-dark">&#10095</span></div>
+                <div class="col-5 py-3 text-light fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    voluptates sapiente
+                    similique pariatur sit minus, eveniet quia praesentium fugit ipsa! Lorem ipsum dolor sit.</div>
             </div>
-            <div id="contact_info">
-                <h3>CONTACT INFO</h3>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-6">
+            <div class="headd fs-4 fw-bold py-5">DROP US A MESSAGE!</div>
+
+                <form action="#" method="#">
+                    <div class="form-group">
+                        <label>Your Name:</label><br>
+                        <input type="text" class="form-control" id="nName" name="nName" placeholder="Enter Your Name"
+                            required>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label>Email address:</label><br>
+                        <input type="email" class="form-control" id="nMail" name="nMmail"
+                            placeholder="Enter a valid email" required>
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Subject:</label><br>
+                        <input type="text" class="form-control" id="nSub" name="nSub" placeholder="Subject">
+                    </div><br>
+
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Your Message:</label><br>
+                        <textarea class="form-control" id="nMessage" name="nMessage" rows="5" required
+                            placeholder="Enter Your Message"></textarea>
+                    </div><br>
+                    <input type="button" value="Submit" class="fs-3 my-3 px-5" style="background-color: gray; border-radius: 5px 5px; color: white;">
+                </form>
+            </div>
+            <div class="col-sm-5 col-md-6">
+                <div class="fs-4 fw-bold py-5">CONTACT INFO</div>
                 <br>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi odio, velit laborum cupiditate laudantium soluta blanditiis fugiat eaque quis voluptate facilis totam perspiciatis debitis. Quibusdam obcaecati ducimus laboriosam esse rerum.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi odio, velit laborum cupiditate
+                    laudantium soluta blanditiis fugiat eaque quis voluptate facilis totam perspiciatis debitis.
+                    Quibusdam obcaecati ducimus laboriosam esse rerum.</p>
                 <br>
                 <i class="fas fa-map-marker-alt"></i> <br><br>
                 <i class="fas fa-phone-alt"></i><br><br>
                 <i class="far fa-envelope"></i>
             </div>
         </div>
-        <script src="#"></script>        
-    </body>  
+        
+    </div>
+
+</body>
+
 </html>
