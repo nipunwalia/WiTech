@@ -40,6 +40,7 @@ function submitForm(e){
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+                document.cookie="formresponse=valid; Samesite=Strict"
                 window.location.href='/formresponse';
             }
         if(this.status==404){
