@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="Tasks_and_Responsibilties" x="236" y="415" width="620" height="170" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="VOLUNTEERS_REQUIRED" x="122" y="234" width="1160" height="149" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 48 48">
+      <image width="48" height="48" xlink:href="../ui%20and%20ux/icons8-instagram-64.png"/>
+    </pattern>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1920" height="1080" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1919" height="1079" fill="none"/>
+    </g>
+    <image id="Human-Rights-Education" width="2303" height="1677" transform="translate(-155 -483)" opacity="0.1" xlink:href="../ui%20and%20ux/Human-Rights-Education.png"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="1014" height="685" rx="319" transform="translate(39 395)" fill="rgba(236,234,234,0.61)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Tasks_and_Responsibilties)" style="mix-blend-mode: hard-light;isolation: isolate">
+      <text id="Tasks_and_Responsibilties-2" data-name="Tasks and Responsibilties" transform="translate(245 421)" font-size="50" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="54">Tasks and Responsibilties</tspan></text>
+    </g>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="114.5" cy="114" rx="114.5" ry="114" transform="translate(1806 -114)" fill="#fa5300"/>
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="153" cy="156" rx="153" ry="156" transform="translate(1791 945)" fill="#fa5300"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="1037" height="91" rx="45.5" transform="translate(62 28)" fill="rgba(231,226,226,0.2)"/>
+    <text id="Fight_against_Covid-19" data-name="Fight against Covid-19" transform="translate(171 100)" font-size="70" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Fight against Covid-19</tspan></text>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="1270" height="163" rx="81.5" transform="translate(62 219)" fill="rgba(169,165,165,0.25)" opacity="0.27"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#VOLUNTEERS_REQUIRED)">
+      <text id="VOLUNTEERS_REQUIRED-2" data-name="VOLUNTEERS REQUIRED" transform="translate(126 328)" fill="#fa5300" font-size="83" font-family="SegoeScript-Bold, Segoe Script" font-weight="700"><tspan x="0" y="0">VOLUNTEERS REQUIRED</tspan></text>
+    </g>
+    <image id="WiTech_India_COLORED_1_" data-name="WiTech India_COLORED (1)" width="176" height="176" transform="translate(1092)" xlink:href="../ui%20and%20ux/WiTech%20India_COLORED%20(1).png"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="676" height="83" rx="41.5" transform="translate(229 526)" fill="#fff"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="676" height="84" rx="42" transform="translate(232 629)" fill="#fff"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="676" height="73" rx="36.5" transform="translate(232 734)" fill="#fff"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="676" height="85" rx="42.5" transform="translate(232 836)" fill="#fff"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="676" height="78" rx="39" transform="translate(232 940)" fill="#fff"/>
+    <text id="Know_information_about_bed_availability_oxygen_supply" data-name="Know information about bed availability,oxygen supply" transform="translate(229 576)" font-size="24" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Know information about bed availability,oxygen supply</tspan></text>
+    <text id="Nearby_catering_services_available_for_covid_patients." data-name="Nearby catering services available for covid patients." transform="translate(245 988)" font-size="24" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Nearby catering services available for covid patients.</tspan></text>
+    <text id="Current_data_about_corona_cases_district_and_statewise." data-name="Current data about corona cases district and statewise." transform="translate(233 887)" font-size="24" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Current data about corona cases district and statewise.</tspan></text>
+    <text id="Covid_vaccine_availability_as_per_different_age_groups." data-name="Covid vaccine availability as per different age groups." transform="translate(229 779)" font-size="24" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Covid vaccine availability as per different age groups.</tspan></text>
+    <text id="Listen_to_people_about_their_stories_during_covid_time" data-name="Listen to people about their stories during covid time" transform="translate(245 677)" font-size="24" font-family="LucidaBright-DemiItalic, Lucida Bright" font-weight="300" font-style="italic"><tspan x="0" y="0">Listen to people about their stories during covid time</tspan></text>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="522" height="98" rx="49" transform="translate(1284 497)" fill="#fa5300"/>
+    <text id="Click_here_to_apply" data-name="Click here to apply" transform="translate(1328 558)" fill="#fff" font-size="48" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">Click here to apply</tspan></text>
+    <text id="or" transform="translate(1498 655)" fill="#5e5454" font-size="48" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">or</tspan></text>
+    <text id="_Connect_us" data-name="
+Connect us" transform="translate(1413 659)" fill="#938484" font-size="48" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0"></tspan><tspan x="0" y="55">Connect us</tspan></text>
+    <rect id="icons8-instagram-64" width="98" height="98" rx="49" transform="translate(1209 802)" fill="url(#pattern)"/>
+    <image id="icons8-facebook-48_1_" data-name="icons8-facebook-48 (1)" width="89" height="89" transform="translate(1383 811)" xlink:href="../ui%20and%20ux/icons8-facebook-48%20(1).png"/>
+    <image id="icons8-linkedin-48" width="90" height="90" transform="translate(1701 806)" xlink:href="../ui%20and%20ux/icons8-linkedin-48.png"/>
+    <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="88" cy="106" rx="88" ry="106" transform="translate(-69 -106)" fill="#fa5300"/>
+    <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="89" cy="129" rx="89" ry="129" transform="translate(-71 979)" fill="#fa5300"/>
+    <text id="witech.india" transform="translate(1186 928)" fill="#938484" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">witech.india</tspan></text>
+    <text id="WiTech_India" data-name="WiTech India" transform="translate(1684 928)" fill="#938484" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">WiTech India</tspan></text>
+    <text id="WiTech_India-2" data-name="WiTech India" transform="translate(1339 928)" fill="#938484" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">WiTech India</tspan></text>
+    <image id="icons8-twitter-48" width="77" height="77" transform="translate(1548 815)" xlink:href="../ui%20and%20ux/icons8-twitter-48.png"/>
+    <text id="_WiTech_india" data-name="@WiTech_india" transform="translate(1500 929)" fill="#938484" font-size="20" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">@WiTech_india</tspan></text>
+  </g>
+</svg>
