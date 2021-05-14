@@ -1,3 +1,4 @@
+
 async function getCovidData(){
     var xhttp=new XMLHttpRequest();
     xhttp.open("GET","/api/covid/getData",true);
@@ -23,22 +24,23 @@ const noOfVaccines=document.getElementsByClassName('no-of-vaccines');
 const vaccineAvalability=document.getElementsByClassName('vaccine-availability');
 const waste=document.getElementsByClassName('waste');
 const statesDropDown=document.getElementById("statesDropdown");
-const stateSearch=document.getElementById("stateSearch");
+// const stateSearch=document.getElementById("stateSearch");
+const stateAnchor=document.getElementsByClassName('map-state-link');
 
 statesDropDown.addEventListener('change',()=>{
   searchStatesInDropDown(statesDropDown.value);
 });
 
-stateSearch.addEventListener('keyup',()=>{
-    var filter=stateSearch.value.toLowerCase(); 
-    for(let i=0;i<states.length;i++){
-        if(stateName[i].innerHTML.split(" ").join("").toLowerCase().indexOf(filter) > -1 ){
-            states[i].style.display="flex";
-        }else{
-            states[i].style.display='none';
-        }    
-    }
-})
+// stateSearch.addEventListener('keyup',()=>{
+//     var filter=stateSearch.value.toLowerCase(); 
+//     for(let i=0;i<states.length;i++){
+//         if(stateName[i].innerHTML.split(" ").join("").toLowerCase().indexOf(filter) > -1 ){
+//             states[i].style.display="flex";
+//         }else{
+//             states[i].style.display='none';
+//         }    
+//     }
+// })
 
 async function displayData(data){
     for(let i=0;i<data.length-1;i++){
@@ -86,3 +88,21 @@ function resumeDiv() {
      PreviousScrollTop = DivElmnt.scrollTop;
      ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
 }
+
+var linkList=[];
+function changeMapStateColor(){    
+    // getting access to path
+    // we have to use set and getAttribute to change color.
+    let path=stateAnchor[0].getElementsByTagName('path');
+
+    for(let i=0;i<stateAnchor.length;i++){
+        let title=stateAnchor[i].getAttribute('xlink:title');
+        linkList.push(title);
+        if(title == "Arunachal Pradesh"){
+            stateAnchor[i].getElementsByTagName('path')[0].setAttribute('fill','black');
+        }
+    }
+    console.log(linkList);
+}
+
+changeMapStateColor();

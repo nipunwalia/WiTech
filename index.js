@@ -30,8 +30,14 @@ app.use(express.static('public'));
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-    res.render('home');
+    res.render('home',{data:""});
 });
+
+app.get('/formresponse',(req,res)=>{
+    res.render("partials/formsuccess");
+});
+
+
 
 app.get('/about',(req,res)=>{
     res.render('about');
