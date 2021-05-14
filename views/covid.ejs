@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/stylesheets/app.css">
+    <!-- <link rel="stylesheet" href="../public/stylesheets/app.css"> -->
     <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/covid.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/images/witechlogo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -2072,7 +2074,8 @@
                        c-2.521-3.125-4.812-1.457-5.741-5.666c-0.812-3.646,2.214-13.92-4.995-10.938c-2.771-3.604-3.23-4.675-3.343-8.729
                        c-0.065-2.796-1.032-4.35-1.666-6.904c-1.062-4.312-0.494-9.93-0.271-14.396c0.729,0.646,1.854,0.729,2.633,1.354
                        c2.148-2.005-0.312-7.865-0.688-10.697c-0.5-3.703-1.696-6.989-2-10.75c-0.355-4.466-0.262-8.055-1.334-12.188
-                       c-1.832-7.025-0.885-14.021-0.58-21.17c0.148-3.688,1.363-7.688,3.604-10.549c0.112,1.881-0.397,2.967-0.604,4.562
+               
+        c-1.832-7.025-0.885-14.021-0.58-21.17c0.148-3.688,1.363-7.688,3.604-10.549c0.112,1.881-0.397,2.967-0.604,4.562
                        c-0.101,0.729,0.188,1.627,0.005,2.334c-0.312,1.173-1.29,1.302-1.622,2.516c-0.627,2.271,0.507,4.38,1.062,6.521
                        c0.498,1.909,0.334,3.688,0.659,5.518c2.864,0.133,2.231-4.666,2.578-6.521c0.417-2.239,0.039-4.493,0.337-6.712
                        c0.33-2.459,1.959-4.506,2.417-6.938c0.396-2.09-0.104-4.027-0.17-6.139C669.787,1728.347,669.559,1721.302,673.145,1721.496
@@ -2251,8 +2254,8 @@
                                 <rect id="rect4190" x="1413.753" y="315.875" fill="none" width="15.5" height="7" />
                         </svg>
     
-                        <div class="input-group my-3 py-3 text-light fw-lighter fs-5" style="background: linear-gradient(60deg,orange,rgb(248, 53, 53)); font-family: Zen Dots,cursive; border-radius: 40px 0px;" >
-                            <label for="states" >Choose a state:</label>
+                        <div class="input-group my-3 py-3 text-light fw-lighter fs-5" style="background: linear-gradient(60deg,orange,rgb(248, 53, 53));width: fit-content; padding: 0px 20px; border-radius: 20px;" >
+                            <label for="states" style="font-family: Bree Serif,Serif; padding: auto;" >Choose a state:</label>
                     
                             <select name="statesDropdown" id="statesDropdown">
                                 <option value="Select State" selected>Select State</option>
@@ -2265,43 +2268,144 @@
                     </div>
     
                 </div>
-                <div class="col mx-3 px-3" style="background: linear-gradient(60deg,rgb(253, 172, 22),rgb(252, 39, 39));">
-                    <div class="imge">
-                        <img src="/assets/images/covid1.jpg" class="img-fluid mt-2" alt="Corona Virus Disease">
-                    </div>
-                    <div class="news pt-2 fs-3 text-light" style="font-family: Bree Serif,Serif;text-align: center">
-                        News And Headlines
-                    </div>
-                    <div class="newwws mb-2" id="scrollContainer"
-                        style="border: 3px solid white; background: linear-gradient(60deg,rgb(252, 215, 147),rgb(250, 117, 117));">
-                        <ul class="list-group fw-lighter" style="font-family: Zen Dots,cursive;">
-                            <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel"
-                                data-interval="900">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 1</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 2</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 3</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 4</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 5</li>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 6</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 7</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 8</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 9</li>
-                                        <li class="list-group-item list-group-item-warning animm">News Headline 10</li>
-                                    </div>
-    
-                                </div>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
+                <div class=" col mx-3
+                                        px-3"style="background: linear-gradient(60deg,rgb(253, 172, 22),rgb(252, 39, 39)); height: 500px;transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+                                        border: 8px solid orange;
+                                        border-radius:20px;
+                                        box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+                                          rgb(0 0 0 / 73%) 0px 16px 10px -10px;">
+                                        <h4 class="hny-title mb-0 text-center mb-2 shop_with_us_title text-light ps-2 py-3"
+                                            style="font-size:1.5em; font-family: Zen Dots,cursive;">NEWS AND HEADLINES
+                                        </h4>
+                                        <hr style="width: 100%;height:0.5rem;color: white;">
+                                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <div class="blog-grids">
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white">Kumerica</div>
+                                                            </h4>
+                                                           <span>The United States of Kumerica: cool creativity or ignoble
+                                                            imitation?</span> <br>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                    <div class="blog-grids mt-4">
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white"> Blazing the Trail for
+                                                                    Black
+                                                                    Creators</div>
+                                                            </h4>
+                                                            World-renowned British-Ghanaian Architect, Sir David Adjaye
+                                                            OBE has received the
+                                                            highest professional honour in the United Kingdom ...
+                                                            <br>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="blog-grids mt-4">
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white">Charle 101</div>
+                                                            </h4>
+                                                            If you have plans of visiting Hawaii, Spain or Japan,
+                                                            chances are high that you
+                                                            would rehearse to polish ...
+                                                            <br>
+                                                        </div>
+                                                        <hr>
+                                
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                    <div class="blog-grids mt-4">
+
+
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white">15
+                                                                    entrepreneurs</div>
+                                                            </h4>
+                                                            Its without a doubt that young men and women
+                                                            entrepreneurs are really
+                                                            taking on the economic sector
+                                                            <br>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="blog-grids mt-4">
+
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white">Afrobeats and its
+                                                                    influence
+                                                                    </div>
+                                                            </h4>
+                                                            Afrobeats as a genre of music was originally originated from
+                                                            Ghana.
+                                                            <br>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+
+                                                    <div class="blog-grids mt-4">
+
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white"> COVID 19 on the
+                                                                    Africa</div>
+                                                            </h4>
+                                                            What started as a minor infection in Wuhan
+                                                           
+                                                            <br>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="blog-grids mt-4">
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white"> COVID on
+                                                                    Madagascar</div>
+                                                            </h4>
+                                                            The covid 19 infection in Madagascar is part of the global
+                                                            Covid 19 pandemic.
+                                                           
+                                                            <br>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+
+                                                    <div class="blog-grids mt-4">
+
+                                                        <div class="blog-grid-right text-justify">
+                                                            <h4 style="text-align: center;">
+                                                                <div class="font-weight-bold" style="color:white">2014 to today </div>
+                                                            </h4>
+                                                            On the 20th of October 2011, the world was stunned by the
+                                                            news that the dictator..
+                                                            
+                                                            <br>
+                                                        </div>
+                                                        <div class="clearfix"> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                        </div>
+
             </div>
         </div>
 
@@ -2347,8 +2451,7 @@
         </div>
       <%}%>
   
-  <script src="/javascript/navbar.js"></script> 
-  <script src="/javascript/app.js"></script>     
+  <script src="/javascript/navbar.js"></script>    
   <script src="/javascript/covid.js"></script>         
 </body>
 </html>
