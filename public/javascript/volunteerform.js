@@ -5,7 +5,7 @@ var donationStatus=document.querySelectorAll('.donation');
 var formData={};
 var fieldArray=['vName','vEmail','vDob','vContact','vReason'];
 var formAlert=document.getElementById('formalert');
-let cookie=document.cookie.split('; ');
+
 function submitForm(e){
     for(let i=0;i<formGroups.length;i++){
         formData[fieldArray[i]]=formGroups[i].value;
@@ -40,13 +40,7 @@ function submitForm(e){
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            cookie.find((element)=>{
-                if(element === 'formresult=none'){
-                    document.cookie='formresult=success; Samesite=Strict'
-                    window.location.href='/'
-                }
-            })
-            // window.location.assign('http://localhost:5000/');
+                window.location.href='/formresponse';
             }
         if(this.status==404){
             formAlert.className="alert alert-danger"; 
