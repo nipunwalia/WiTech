@@ -4,11 +4,11 @@ var state=document.getElementById('stateId');
 var donationStatus=document.querySelectorAll('.donation');
 var formData={};
 var fieldArray=['vName','vEmail','vDob','vContact','vReason'];
-
+var formAlert=document.getElementById('formalert');
+let cookie=document.cookie.split('; ');
 function submitForm(e){
     for(let i=0;i<formGroups.length;i++){
         formData[fieldArray[i]]=formGroups[i].value;
-        console.log(formGroups[i].value);
     }
     for(let i=0;i<gender.length;i++){
         if(gender[i].checked){
@@ -37,6 +37,24 @@ function submitForm(e){
     var xhttp=new XMLHttpRequest();
     xhttp.open("POST","/api/forms/volunteer/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            cookie.find((element)=>{
+                if(element === 'formresult=none'){
+                    document.cookie='formresult=success; Samesite=Strict'
+                    window.location.href='/'
+                }
+            })
+            // window.location.assign('http://localhost:5000/');
+            }
+        if(this.status==404){
+            formAlert.className="alert alert-danger"; 
+            formAlert.innerHTML=this.responseText;
+            formAlert.style.display='block';
+            formAlert.scrollIntoView();
+        }
+        document.getElementsByTagName('form')[0].reset();
+      };
     xhttp.send(JSON.stringify(formData));
-    document.getElementsByTagName('form')[0].reset();
 }

@@ -1,8 +1,8 @@
 
 body{
     background: #a8c0ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .container
 {
@@ -55,15 +55,18 @@ overflow: hidden;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  
 
 }
 .multistep-form-area
 {
     border-radius: 100px 100px 100px 100px;
    align-content: center;
-   background: #B2FEFA;  /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-   background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: #F2C94C;  /* fallback for old browsers */
+   /*background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /*background: -webkit-linear-gradient(to right,  #F2C94C, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+   /*background: linear-gradient(to right,  #F2C94C, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
    
    box-shadow: 5px 10px 18px #3a3939;
 }
@@ -100,7 +103,7 @@ body {
   animation: scroll 70s linear infinite;
   background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
   color: #eee;
-  
+  background-color: #F2C94C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,6 +135,7 @@ body {
     position: absolute;
     top:25px;
     left: 25px;
+ 
 }
 .multistep-container .multistep-form-area .form-box h4{
     font-weight: 600;
@@ -150,30 +154,43 @@ body {
 {
     display: none;
 }
-.multistep-container .multistep-form-area .form-box .button-row .next,
-.multistep-container .multistep-form-area .form-box .button-row .previous,
-.multistep-container .multistep-form-area .form-box .button-row .submit
-{
-    background-color:rgb(247, 58, 1);
-    border: 0;
-    box-shadow: none;
-    padding: 7px 40px;
-    min-width: 100px;
-    border-radius: 20px;
-    color: white;
-    font-weight: 500;
+
+
+.multistep-container .multistep-form-area .form-box .button-row .next{
+  width: 90%;
 }
 .multistep-container .multistep-form-area .form-box .button-row {
-    display: table;
+    display: flex;
+    justify-content: space-around;
     margin: auto;
     margin-top: 20px;
-}
-.multistep-container .multistep-form-area .form-box .button-row .submit
-{
-    background-color:rgb(247, 27, 247);
 }
 
 label{
     font-size: 4em;
     line-height: 2.5rem;
+}
+
+#formalert{
+  margin-top: 15px;
+  display: none;
+}
+
+#radio-box-section{
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+}
+#radio-box-section p{
+  padding: 0;
+  margin: auto;
+}
+#radio-box-section .form-group{
+  padding: 0;
+  margin: auto;
+}
+#radio-box-section .form-group input{
+  margin-top:12px;
 }

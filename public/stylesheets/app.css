@@ -5,6 +5,8 @@
     height: 630px;
 }
 
+
+
 html {
     scroll-behavior: smooth;
   }
@@ -13,6 +15,15 @@ html {
         transition-delay: 0 ;
     }
 }
+
+#formalert{
+    position: absolute;
+    top:10%;
+    width: 50%;
+    left:30%;
+    display:none;
+}
+
 
 .bottom-left
 {
