@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1466" viewBox="0 0 1920 1466">
+  <defs>
+    <filter id="Ellipse_1" x="-176" y="-379" width="881" height="747" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1216 912">
+      <image width="1216" height="912" xlink:href="../ui%20and%20ux/pale-virus-test.png"/>
+    </pattern>
+    <pattern id="pattern-2" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 100 100">
+      <image width="100" height="100" xlink:href="../ui%20and%20ux/icons8-protection-mask-100.png"/>
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 904 509">
+      <image width="904" height="509" xlink:href="../ui%20and%20ux/Screenshot%20(99).png"/>
+    </pattern>
+    <pattern id="pattern-4" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 1216 912">
+      <image width="1216" height="912" xlink:href="../ui%20and%20ux/pablo-social-distancing-friendship-on-the-phone-stay-home-concept-1.png"/>
+    </pattern>
+    <pattern id="pattern-5" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 4000 2250">
+      <image width="4000" height="2250" xlink:href="../ui%20and%20ux/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg"/>
+    </pattern>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <image id="white-sticky-notes-2" width="894.346" height="864.482" transform="translate(655.95 110.646) rotate(9)" xlink:href="../ui%20and%20ux/white-sticky-notes-2.png"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_1)">
+      <ellipse id="Ellipse_1-2" data-name="Ellipse 1" cx="431.5" cy="364.5" rx="431.5" ry="364.5" transform="translate(-172 -375)" fill="#ff8000"/>
+    </g>
+    <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="391" cy="395" rx="391" ry="395" transform="translate(-201 -465)" fill="#fff"/>
+    <ellipse id="Ellipse_3" data-name="Ellipse 3" cx="303.687" cy="269.572" rx="303.687" ry="269.572" transform="translate(-223.261 -133.77) rotate(-19)" fill="#ff8000"/>
+    <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(-172 -275)" fill="#fff" stroke="#707070" stroke-width="1">
+      <ellipse cx="250.5" cy="274.5" rx="250.5" ry="274.5" stroke="none"/>
+      <ellipse cx="250.5" cy="274.5" rx="250" ry="274" fill="none"/>
+    </g>
+    <image id="icons8-virus-50" width="123" height="123" transform="translate(29 22)" xlink:href="../ui%20and%20ux/icons8-virus-50.png"/>
+    <image id="icons8-virus-50_1_" data-name="icons8-virus-50 (1)" width="69" height="69" transform="translate(58 166)" xlink:href="../ui%20and%20ux/icons8-virus-50%20(1).png"/>
+    <image id="icons8-protection-mask-64" width="121.888" height="121.888" transform="translate(133.492 48.18) rotate(-20)" xlink:href="../ui%20and%20ux/icons8-protection-mask-64.png"/>
+    <image id="WiTech_India_COLORED_1_" data-name="WiTech India_COLORED (1)" width="278" height="278" transform="translate(873 200.5)" xlink:href="../ui%20and%20ux/WiTech%20India_COLORED%20(1).png"/>
+    <text id="WE_ARE_WITH_YOU_IN_THIS_TOGETHER" data-name="WE ARE WITH YOU IN THIS TOGETHER" transform="translate(716 132)" fill="#f60" font-size="58" font-family="BookmanOldStyle-Bold, Bookman Old Style" font-weight="700" style="mix-blend-mode: darken;isolation: isolate"><tspan x="0" y="0">WE ARE WITH YOU IN THIS TOGETHER</tspan></text>
+    <rect id="pale-virus-test" width="375" height="281" transform="translate(-106.162 833.168) rotate(9)" fill="url(#pattern)"/>
+    <rect id="icons8-protection-mask-100" width="137" height="137" rx="68.5" transform="translate(687 445.518)" fill="url(#pattern-2)"/>
+    <image id="icons8-soap-dispenser-80" width="130" height="130" transform="translate(965 452.518)" xlink:href="../ui%20and%20ux/icons8-soap-dispenser-80.png"/>
+    <rect id="Screenshot_99_" data-name="Screenshot (99)" width="165" height="93" transform="translate(1207 472.518)" fill="url(#pattern-3)"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="685" height="220" rx="60" transform="translate(687 694.518)" fill="rgba(255,255,255,0.73)"/>
+    <text id="BE_INFORMED._BE_PREPARED._BE_SMART._BE_SAFE." data-name="BE INFORMED.
+BE PREPARED.
+BE SMART.
+BE SAFE." transform="translate(917 732.518)" fill="#ff8000" font-size="30" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0" fill="#000">BE </tspan><tspan y="0" fill="#ff8000">INFORMED.</tspan><tspan x="0" y="34" fill="#000">BE </tspan><tspan y="34" fill="#ff8000">PREPARED.</tspan><tspan x="0" y="68" fill="#000">BE </tspan><tspan y="68" fill="#ff8000">SMART.</tspan><tspan x="0" y="102" fill="#000">BE </tspan><tspan y="102" fill="#ff8000">SAFE.</tspan></text>
+    <text id="BE_READY_TO_FIGHT_COVID-19" data-name="BE READY TO FIGHT #COVID-19" transform="translate(706 907)" fill="#ff8000" font-size="39" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0" fill="#000">BE READY TO</tspan><tspan y="0" fill="#ff8000"> </tspan><tspan y="0" fill="#000">FIGHT </tspan><tspan y="0" fill="#ff8000">#COVID-19</tspan></text>
+    <text id="I_protect_You_You_protect_Me_" data-name="I protect You ,You protect Me !" transform="translate(661.5 658.018)" font-size="39" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">I PROTECT YOU ,YOU PROTECT ME !</tspan></text>
+    <image id="flame-the-man-got-sick" width="469.026" height="351.769" transform="translate(217.974 904.115)" xlink:href="../ui%20and%20ux/flame-the-man-got-sick.png"/>
+    <rect id="pablo-social-distancing-friendship-on-the-phone-stay-home-concept-1" width="345" height="258" transform="translate(1625 951)" fill="url(#pattern-4)"/>
+    <g id="fusion-medical-animation-rnr8D3FNUNY-unsplash" stroke="#707070" stroke-width="1" opacity="0.15" fill="url(#pattern-5)">
+      <rect width="1920" height="1080" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1919" height="1079" fill="none"/>
+    </g>
+    <g id="Component_2_1" data-name="Component 2 – 1" transform="translate(134 585)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="394" height="125" rx="62.5" fill="rgba(255,128,0,0.89)"/>
+    </g>
+    <text id="Click_here_to_know_more" data-name="Click here to know more" transform="translate(149 658)" font-size="31" font-family="ArialRoundedMTBold, Arial Rounded MT"><tspan x="0" y="0">Click here to know more</tspan></text>
+  </g>
+</svg>

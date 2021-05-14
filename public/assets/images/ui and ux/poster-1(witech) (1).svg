@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <filter id="christina-wocintechchat-com-UTw3j_aoIKM-unsplash" x="-35" y="-470" width="3057" height="2026" filterUnits="userSpaceOnUse">
+      <feOffset dx="40" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_4" x="691.5" y="-7" width="289" height="1103.599" filterUnits="userSpaceOnUse">
+      <feOffset dx="30" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.451"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Educate." x="279" y="560" width="236" height="92" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Empower." x="273" y="716" width="270" height="92" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Inspire." x="280" y="872" width="208" height="92" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Your_greatest_self_has_been_waiting_for_your_whole_life_don_t_make_it_wait_any_longer." x="1278" y="315" width="376" height="220" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <line id="Line_4" data-name="Line 4" x1="263" y1="123" transform="translate(1640.333 1063.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1920" height="1080" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1919" height="1079" fill="none"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#christina-wocintechchat-com-UTw3j_aoIKM-unsplash)">
+      <image id="christina-wocintechchat-com-UTw3j_aoIKM-unsplash-2" data-name="christina-wocintechchat-com-UTw3j_aoIKM-unsplash" width="3008" height="2008" transform="translate(-35 -464)" opacity="0.52" xlink:href="../ui%20and%20ux/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.jpg"/>
+    </g>
+    <path id="Path_1" data-name="Path 1" d="M676,0" fill="none" stroke="#707070" stroke-width="1"/>
+    <path id="Path_3" data-name="Path 3" d="M768,282.4" fill="#ff8000" stroke="#707070" stroke-width="1"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Path_4)">
+      <path id="Path_4-2" data-name="Path 4" d="M874.517,728,938,1074.8H893.918L688-10.8h46.055" transform="translate(3.5 10.8)" fill="rgba(255,93,0,0.75)" opacity="0.91"/>
+    </g>
+    <path id="Path_5" data-name="Path 5" d="M664-8H-10.8V1085.2H872Z" transform="translate(10.8 8)" fill="rgba(250,155,61,0.42)" stroke="#707070" stroke-width="1"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="619" height="507" rx="50" transform="translate(93 504)" fill="rgba(255,230,230,0.33)"/>
+    <rect id="Rectangle_3" data-name="Rectangle 3" width="540" height="107" rx="50" transform="translate(135 550)" fill="#ff5d00"/>
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="535" height="102" rx="50" transform="translate(135 706)" fill="#ff5d00"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="535" height="102" rx="50" transform="translate(135 862)" fill="#ff5d00"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Educate.)">
+      <text id="Educate.-2" data-name="Educate." transform="translate(392 623)" stroke="#707070" stroke-width="1" font-size="54" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-107.235" y="0">Educate.</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Empower.)">
+      <text id="Empower.-2" data-name="Empower." transform="translate(403 779)" stroke="#707070" stroke-width="1" font-size="54" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-124.255" y="0">Empower.</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Inspire.)">
+      <text id="Inspire.-2" data-name="Inspire." transform="translate(379 935)" stroke="#707070" stroke-width="1" font-size="54" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-93.749" y="0">Inspire.</tspan></text>
+    </g>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="205.5" cy="201.5" rx="205.5" ry="201.5" transform="translate(1264 197)" fill="rgba(255,255,255,0.23)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Your_greatest_self_has_been_waiting_for_your_whole_life_don_t_make_it_wait_any_longer.)">
+      <text id="Your_greatest_self_has_been_waiting_for_your_whole_life_don_t_make_it_wait_any_longer.-2" data-name="Your greatest self has been waiting for your whole life; don’t make it wait any longer." transform="translate(1282 319)" font-size="35" font-family="SegoeUI-Semibold, Segoe UI" font-weight="600"><tspan x="9.887" y="38">Your greatest self has </tspan><tspan x="7.76" y="85">been waiting for your </tspan><tspan x="3.308" y="132">whole life; don’t make </tspan><tspan x="37.821" y="179">it wait any longer.</tspan></text>
+    </g>
+    <image id="WiTech_India_COLORED_1_" data-name="WiTech India_COLORED (1)" width="238" height="238" transform="translate(260 197)" xlink:href="../ui%20and%20ux/WiTech%20India_COLORED%20(1).png"/>
+  </g>
+</svg>
