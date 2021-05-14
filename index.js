@@ -1,11 +1,14 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const formRouter=require('./routes/formRouter');
+const https=require("https");
 const departmentRouter=require('./routes/departmentRouter');
 const cors=require('cors');
 const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
 const app=express();
+const cookieParser=require('cookie-parser');
+var cookies;
 const port=5000;
 
 // stateslist for volunteer form
@@ -21,6 +24,7 @@ var statesIdList=["andaman_nicobar_1","andhra_pradesh_1","arunachal_pradesh_1","
 ];
 
 app.use(cors());
+app.use(cookieParser());
 // app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
@@ -34,10 +38,13 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/formresponse',(req,res)=>{
-    res.render("partials/formsuccess");
+   var cookies=req.cookies;
+    if(cookies.formresponse == 'valid'){
+        res.render("partials/formsuccess");
+    }else{
+        res.render('partials/error');
+    }
 });
-
-
 
 app.get('/about',(req,res)=>{
     res.render('about');
