@@ -135,4 +135,61 @@ function Hide3()
   x.style.display='none';
 }
 Hide3()
+function Show4() {
+  var x = document.getElementById('show4_events');
+  var sb=document.getElementById('show4_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide4_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show4()
+function Hide4()
+{
+  var x = document.getElementById('show4_events');
+  var sb=document.getElementById('show4_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide4_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide4()
+function Show5() {
+  var x = document.getElementById('show5_events');
+  var sb=document.getElementById('show5_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide5_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show5()
+function Hide5()
+{
+  var x = document.getElementById('show5_events');
+  var sb=document.getElementById('show5_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide5_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide5()
+function Show6() {
+  var x = document.getElementById('show6_events');
+  var sb=document.getElementById('show6_button');
+  sb.style.display='none';
+  var hb=document.getElementById('hide6_button');
+  hb.style.display='block';
+  x.style.display='block';
+}
+Show6()
+function Hide6()
+{
+  var x = document.getElementById('show6_events');
+  var sb=document.getElementById('show6_button');
+  sb.style.display='block';
+  var hb=document.getElementById('hide6_button');
+  hb.style.display='none';
+  x.style.display='none';
+}
+Hide6()
 
