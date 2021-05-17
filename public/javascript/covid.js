@@ -1,4 +1,3 @@
-
 $(window).scroll(function(){
 	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
 });
@@ -6,22 +5,16 @@ var slideshows = document.querySelectorAll('[data-component="slideshow"]');
 slideshows.forEach(initSlideShow);
 
 function initSlideShow(slideshow) {
-
   var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
-
   var index = 0, time = 3000;
   slides[index].classList.add('active');  
-  
   setInterval( () => {
     slides[index].classList.remove('active');
     index++;
     if (index === slides.length) index = 0; 
-    
     slides[index].classList.add('active');
-
   }, time);
 }
-
 
 async function getCovidData(){
     var xhttp=new XMLHttpRequest();
@@ -30,11 +23,11 @@ async function getCovidData(){
     xhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && this.status == 200) {
              await displayData(JSON.parse(this.responseText));
+             await changeMapStateColor(JSON.parse(this.responseText),stateIndex);
         }
     };
     xhttp.send();
 } 
-
 getCovidData();
 
 const states=document.getElementsByClassName('states');
@@ -48,39 +41,29 @@ const noOfVaccines=document.getElementsByClassName('no-of-vaccines');
 const vaccineAvalability=document.getElementsByClassName('vaccine-availability');
 const waste=document.getElementsByClassName('waste');
 const statesDropDown=document.getElementById("statesDropdown");
-// const stateSearch=document.getElementById("stateSearch");
 const stateAnchor=document.getElementsByClassName('map-state-link');
+// array for statewise index of path for svgs.
+var stateIndex = [ [30],[11],[32,35],[33],[0],[26],[6],[27],[28],[10],[8],[17],
+[20],[31,34,36,37,38,39],[2],[13],[14],[5],[9],[23],[25],[22],[24],[7],[29],[18],
+[3],[1],[15],[12],[21],[16],[19],[4] ];
 
 statesDropDown.addEventListener('change',()=>{
   searchStatesInDropDown(statesDropDown.value);
 });
 
-// stateSearch.addEventListener('keyup',()=>{
-//     var filter=stateSearch.value.toLowerCase(); 
-//     for(let i=0;i<states.length;i++){
-//         if(stateName[i].innerHTML.split(" ").join("").toLowerCase().indexOf(filter) > -1 ){
-//             states[i].style.display="flex";
-//         }else{
-//             states[i].style.display='none';
-//         }    
-//     }
-// })
-
-async function displayData(data){
-    for(let i=0;i<data.length-1;i++){
-        stateName[i].innerHTML=data[i+1][0];
-        cases[i].innerHTML=data[i+1][1];
-        recovered[i].innerHTML=data[i+1][2];
-        deaths[i].innerHTML=data[i+1][3];
-        oxygen[i].innerHTML=data[i+1][4];
-        beds[i].innerHTML=data[i+1][5];
-        noOfVaccines[i].innerHTML=data[i+1][6];
-        vaccineAvalability[i].innerHTML=data[i+1][7];
-        waste[i].innerHTML=data[i+1][8];
-    }   
+async function displayData(data){ 
+        for(let i=0;i<data.length-1;i++){
+            stateName[i].innerHTML=data[i+1][0];
+            cases[i].innerHTML=data[i+1][1];
+            recovered[i].innerHTML=data[i+1][2];
+            deaths[i].innerHTML=data[i+1][3];
+            oxygen[i].innerHTML=data[i+1][4];
+            beds[i].innerHTML=data[i+1][5];
+            noOfVaccines[i].innerHTML=data[i+1][6];
+            vaccineAvalability[i].innerHTML=data[i+1][7];
+            waste[i].innerHTML=data[i+1][8];
+        }
 }
-
-
 
 function searchStatesInDropDown(value){
     for(let i=0;i<stateName.length;i++){
@@ -98,6 +81,7 @@ function scrollDiv_init() {
      PreviousScrollTop  = 0;    
      ScrollInterval = setInterval('scrollDiv()', ScrollRate);
 }
+
 function scrollDiv() {
      if (!ReachedMaxScroll) {
           DivElmnt.scrollTop = PreviousScrollTop;
@@ -105,28 +89,37 @@ function scrollDiv() {
           ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
      }
 }
+
 function pauseDiv() {
      clearInterval(ScrollInterval);
 }
+
 function resumeDiv() {
      PreviousScrollTop = DivElmnt.scrollTop;
-     ScrollInterval    = setInterval('scrollDiv()', ScrollRate);
+     ScrollInterval  = setInterval('scrollDiv()', ScrollRate);
 }
 
-var linkList=[];
-function changeMapStateColor(){    
-    // getting access to path
-    // we have to use set and getAttribute to change color.
-    let path=stateAnchor[0].getElementsByTagName('path');
-
-    for(let i=0;i<stateAnchor.length;i++){
-        let title=stateAnchor[i].getAttribute('xlink:title');
-        linkList.push(title);
-        if(title == "Arunachal Pradesh"){
-            stateAnchor[i].getElementsByTagName('path')[0].setAttribute('fill','black');
+// debug loop
+// for(let i=0;i<stateAnchor.length;i++){
+//     console.log(`${i} ${stateAnchor[i].getAttribute('xlink:title')}`)
+// }
+async function changeMapStateColor(data,stateIndex){    
+    // let path=stateAnchor[0].getElementsByTagName('path');
+    for(let i=0;i<data.length-1;i++){
+        for(let j=0; j < stateIndex[i].length ; j++){
+            let value=parseInt(data[i+1][1].split(',').join(""));
+            
+            if(value > 1000000){    
+                stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','red');
+            }
+            if(value > 500000 && value < 1000000){
+                stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','orange');
+            }
+            if(value < 500000){
+                stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','green');
+            }
         }
     }
-    console.log(linkList);
 }
 
-changeMapStateColor();
+
