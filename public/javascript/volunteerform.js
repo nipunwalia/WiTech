@@ -35,13 +35,13 @@ function submitForm(e){
     }
     formData["vState"]=state.value.toString();
     var xhttp=new XMLHttpRequest();
-    xhttp.open("POST","/api/forms/volunteer/register",true);
+    xhttp.open("POST","/forms/api/volunteer/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
                 document.cookie="formresponse=valid; Samesite=Strict"
-                window.location.href='/formresponse';
+                window.location.href='/form/response';
             }
         if(this.status==404){
             formAlert.className="alert alert-danger"; 

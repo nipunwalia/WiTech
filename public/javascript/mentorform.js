@@ -66,11 +66,11 @@ function submitForm(){
         }
     }
     var xhttp=new XMLHttpRequest();
-    xhttp.open("POST","/api/forms/mentor/register",true);
+    xhttp.open("POST","/forms/api/mentor/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            window.location.href='/formresponse';
+            window.location.href='/form/response';
         }else{
             formAlert.className="alert alert-danger";
         }

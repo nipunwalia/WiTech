@@ -1,25 +1,4 @@
-// var cookie;
-// document.cookie="formresult=none; Samesite=Strict";
-// document.cookie.split('; ').find((element)=>{
-//   if(element === 'formresult=success'){
-//     cookie=true;
-//   }
-//   else{
-//     cookie=false;
-//   }
-// });
 
-// console.log(cookie);
-
-// if(cookie){
-//       setTimeout(()=>{
-//         document.getElementById('formalert').style.display="block";
-//       },1000);
-//       setTimeout(()=>{
-//         document.getElementById('formalert').style.display="";
-//       },2000);
-//       document.cookie='formresult=none; Samesite=Strict'
-// }
 
 $(window).scroll(function(){
 	$('nav').toggleClass('scrolled', $(this).scrollTop() > 50);

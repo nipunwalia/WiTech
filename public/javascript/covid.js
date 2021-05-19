@@ -18,7 +18,7 @@ function initSlideShow(slideshow) {
 
 async function getCovidData(){
     var xhttp=new XMLHttpRequest();
-    xhttp.open("GET","/api/covid/getData",true);
+    xhttp.open("GET","/covid/api/getData",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -42,10 +42,12 @@ const vaccineAvalability=document.getElementsByClassName('vaccine-availability')
 const waste=document.getElementsByClassName('waste');
 const statesDropDown=document.getElementById("statesDropdown");
 const stateAnchor=document.getElementsByClassName('map-state-link');
+
 // array for statewise index of path for svgs.
 var stateIndex = [ [30],[11],[32,35],[33],[0],[26],[6],[27],[28],[10],[8],[17],
 [20],[31,34,36,37,38,39],[2],[13],[14],[5],[9],[23],[25],[22],[24],[7],[29],[18],
 [3],[1],[15],[12],[21],[16],[19],[4] ];
+
 
 statesDropDown.addEventListener('change',()=>{
   searchStatesInDropDown(statesDropDown.value);
