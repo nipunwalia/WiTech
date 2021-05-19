@@ -325,6 +325,7 @@ padding: 20px 0px;
 .testimonial1 .testimonial-content{
     width: 70%;
     float: right;
+   
 }
 .testimonial1 .title{
     display: block;
@@ -338,7 +339,7 @@ padding: 20px 0px;
     padding-left: 15px;
 }
 .testimonial1 .description{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     font-family: 'Bree Serif', serif;
     margin: 0;
