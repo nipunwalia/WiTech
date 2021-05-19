@@ -1,25 +1,19 @@
 const express=require('express');
 const departmentRouter=express();
+const financeRouter=require('./departments/financeRouter');
+const outreachAndPublicRouter=require('./departments/outreachandpublicRouter');
+const logisticsAndOpsRouter=require('./departments/logisticsandopsRouter');
 
+// departmentRouter.get('/technical',(req,res)=>{
+//     res.render('departments/technical');
+// });
 
-departmentRouter.get('/technical',(req,res)=>{
-    res.render('departments/technical');
-});
+// departmentRouter.use('/finance',(req,res,next));
+// // departmentRouter.use('/outreach',outreachAndPublicRouter);
+// // departmentRouter.use('/logistics',logisticsAndOpsRouter);
 
-departmentRouter.get('/finance',(req,res)=>{
-    res.render('departments/finance');
-});
-
-departmentRouter.get('/marketing',(req,res)=>{
-    res.render('departments/marketing');
-});
-
-departmentRouter.get('/outreach',(req,res)=>{
-    res.render('departments/outreach');
-});
-
-departmentRouter.get('/logistics',(req,res)=>{
-    res.render('departments/logistics');
-});
+// departmentRouter.get('/marketing',(req,res)=>{
+//     res.render('departments/marketing');
+// });
 
 module.exports=departmentRouter;
