@@ -132,10 +132,12 @@
     transform: translate3d(0,0,0);
   }
   .bg {  
-    background-image:url('/assets/images/pgm3.jpg');
-    z-index: -1;
-    border-radius: 30px;
-    filter:contrast(.7) brightness(.7);  
+      /* background-image:url('../../public/assets/images/pgm3.jpg'); */
+      background-color: grey;
+      background-blend-mode: color-burn;
+      z-index: -1;
+      border-radius: 30px;
+      filter:contrast(.7) brightness(1);  
   }
   
   .content {
