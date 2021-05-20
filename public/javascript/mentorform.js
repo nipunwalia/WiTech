@@ -37,6 +37,8 @@ cw[0].addEventListener('click',()=>{
 
 
 function submitForm(){
+    let date=new Date();
+    formData['date']=`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
     for(let i=0;i<formValues.length;i++){
         formData[fieldArray[i]]=formValues[i].value;
     }
@@ -68,15 +70,18 @@ function submitForm(){
     var xhttp=new XMLHttpRequest();
     xhttp.open("POST","/forms/api/mentor/register",true);
     xhttp.setRequestHeader('Content-type',"application/json");
+
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            window.location.href='/form/response';
-        }else{
-            formAlert.className="alert alert-danger";
+            // document.cookie="formresponse=valid; Samesite=Strict"
+            window.location.href='/forms/response';
         }
-        formAlert.innerHTML=this.responseText;
-        formAlert.style.display='block';
-        formAlert.scrollIntoView();
+        if(this.status == 404){
+            formAlert.className="alert alert-danger";
+            formAlert.innerHTML=this.responseText;
+            formAlert.style.display='block';
+            formAlert.scrollIntoView();
+        }
         document.getElementsByTagName('form')[2].reset();
         document.getElementsByTagName('form')[1].reset();
         document.getElementsByTagName('form')[0].reset();
@@ -85,6 +90,7 @@ function submitForm(){
     
     
 }
+
 function moveNext(stop){
     $('.form-box').each(function(i){
         if(i==stop){

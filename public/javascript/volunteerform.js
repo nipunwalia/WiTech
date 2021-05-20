@@ -7,6 +7,8 @@ var fieldArray=['vName','vEmail','vDob','vContact','vReason'];
 var formAlert=document.getElementById('formalert');
 
 function submitForm(e){
+    let date=new Date();
+    formData['date']=`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
     for(let i=0;i<formGroups.length;i++){
         formData[fieldArray[i]]=formGroups[i].value;
     }
@@ -40,8 +42,8 @@ function submitForm(e){
 
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-                document.cookie="formresponse=valid; Samesite=Strict"
-                window.location.href='/form/response';
+                // document.cookie="formresponse=valid; Samesite=Strict"
+                window.location.href='/forms/response';
             }
         if(this.status==404){
             formAlert.className="alert alert-danger"; 
