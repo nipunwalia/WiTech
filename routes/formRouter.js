@@ -20,7 +20,7 @@ formRouter.get('/mentorform',(req,res)=>{
 
 // mentor Register
 formRouter.post('/api/mentor/register',expressAsyncHandler(async(req,res)=>{
-    var result = await excelsheet.uploadData([[req.body.mName,req.body.mEmail,
+    var result = await excelsheet.uploadData([[req.body.date,req.body.mName,req.body.mEmail,
         req.body.mDob,req.body.mGender,req.body.countryId,
       req.body.stateId,req.body.mContact,req.body.mDegree,
         req.body.mCollege,req.body.cw,req.body.mJobTitle,
@@ -39,7 +39,7 @@ formRouter.post('/api/mentor/register',expressAsyncHandler(async(req,res)=>{
 
 // Volunteerform register
 formRouter.post('/api/volunteer/register',expressAsyncHandler(async(req,res)=>{
-    var result = await excelsheet.uploadData([[req.body.vName,req.body.vEmail,
+    var result = await excelsheet.uploadData([[req.body.date,req.body.vName,req.body.vEmail,
         req.body.vDob,req.body.vGender,
       req.body.vState,req.body.vContact,req.body.vDonationStatus,req.body.vReason]],"VolunteerForm!A:H");
     if(result){
@@ -52,12 +52,12 @@ formRouter.post('/api/volunteer/register',expressAsyncHandler(async(req,res)=>{
 
 // response
 formRouter.get('/response',(req,res)=>{
-    var cookies=req.cookies;
-     if(cookies.formresponse == 'valid'){
+    // var cookies=req.cookies;
+    //  if(cookies.formresponse == 'valid'){
          res.render("partials/formsuccess");
-     }else{
-         res.render('partials/error');
-     }
+    //  }else{
+        //  res.render('partials/error');
+    //  }
  });
 
 module.exports=formRouter;
