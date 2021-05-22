@@ -405,5 +405,39 @@ padding: 20px 0px;
         padding: 0;
         margin-bottom: 10px;
     }
-    
+    .fontt{
+      text-align: left !important;
+      font-size: 0.8rem;
+      /* padding: 0px 0px; */
+    }
+    section.developers{
+      /* margin: 40px 20px 40px 20px; */
+      padding: 0px !important;
+      margin: 0px !important;
+      height: fit-content;
+    }
+    .bgg{
+      /* margin: 130px 100px 130px 100px; */
+      /* width: 70vh !important; */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      margin-top: 20px !important;
+      padding-top: 0px !important;
+    }
+    p.description{
+      font-size: 0.8rem !important;
+      text-align: left !important;
+    }
+    .pic img{
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 90% !important;
+    }
+    .testimonial-content .title{
+      font-size: 1rem;
+    }
 } 
+
