@@ -166,10 +166,12 @@
     transform: translate3d(0,0,0);
   }
   .bg {  
-      /* background-image:url('../../public/assets/images/pgm3.jpg'); */
+       background-image:url('/assets/images/outreach_bg.jpg'); 
       background-color: grey;
+      margin:100px 0px;
       background-blend-mode: color-burn;
       z-index: -1;
+      background-size:cover;
       border-radius: 30px;
       filter:contrast(.7) brightness(1);  
   }
