@@ -4,11 +4,11 @@
     padding: 10px 20px;
   }
 .navbar.scrolled{
-  background-color: #000000;
+  background-color: #ffffff;
 }
 #nav-color
 {
-   color: #ffffff;
+  color:black;
    font-size: 1rem;
    padding: auto;
 }
