@@ -1,22 +1,56 @@
+.banner1
+{
+  background-image: url('/assets/images/outreach_main.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+.banner2
+{
+  background-image: url('/assets/images/finance_main.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  opacity: 0.7;
+}
+.banner3
+{
+  background-image: url('/assets/images/marketing_main.jpg');
+  background-repeat: no-repeat;
+   background-size: cover;
+   height: 450px;
+   opacity: 0.9;
+}
+.banner4
+{
+  background-image: url('/assets/images/logistics_main.jpg');
+  background-repeat: no-repeat;
+   background-size: cover;
+   height: 450px;
+   opacity: 0.9;
+}
 
 
 .banner
 {
-    background-image: url('/assets/images/tech-banner.jpg');
+    background-image: url('/assets/images/technical_main.jpg');
     background-repeat: no-repeat;
-    background-size: 1600px 600px;
-    height: 400px;
+    background-size: cover;
+    height: 450px;
 }
 
   .tech-head {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     transform: translateY(-600px);
     animation: 0.8s slideIn ease-in-out forwards 1s;
     z-index: 10;
     opacity: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
-    color: #ffffff;
+    color:white;
   }
 
   @keyframes slideIn {
