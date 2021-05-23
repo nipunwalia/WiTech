@@ -1,22 +1,56 @@
+.banner1
+{
+  background-image: url('/assets/images/outreach_main.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+.banner2
+{
+  background-image: url('/assets/images/finance_main.jpg');
+ background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  opacity: 0.7;
+}
+.banner3
+{
+  background-image: url('/assets/images/marketing_main.jpg');
+  background-repeat: no-repeat;
+   background-size: cover;
+   height: 450px;
+   opacity: 0.9;
+}
+.banner4
+{
+  background-image: url('/assets/images/logistics_main.jpg');
+  background-repeat: no-repeat;
+   background-size: cover;
+   height: 450px;
+   opacity: 0.9;
+}
 
 
 .banner
 {
-    background-image: url('/assets/images/tech-banner.jpg');
+    background-image: url('/assets/images/technical_main.jpg');
     background-repeat: no-repeat;
-    background-size: 1600px 600px;
-    height: 400px;
+    background-size: cover;
+    height: 450px;
 }
 
   .tech-head {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     transform: translateY(-600px);
     animation: 0.8s slideIn ease-in-out forwards 1s;
     z-index: 10;
     opacity: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
-    color: #ffffff;
+    color:white;
   }
 
   @keyframes slideIn {
@@ -132,10 +166,14 @@
     transform: translate3d(0,0,0);
   }
   .bg {  
-    background-image:url('/assets/images/pgm3.jpg');
-    z-index: -1;
-    border-radius: 30px;
-    filter:contrast(.7) brightness(.7);  
+       background-image:url('/assets/images/outreach_bg.jpg'); 
+      background-color: grey;
+      margin:100px 0px;
+      background-blend-mode: color-burn;
+      z-index: -1;
+      background-size:cover;
+      border-radius: 30px;
+      filter:contrast(.7) brightness(1);  
   }
   
   .content {
@@ -325,6 +363,7 @@ padding: 20px 0px;
 .testimonial1 .testimonial-content{
     width: 70%;
     float: right;
+   
 }
 .testimonial1 .title{
     display: block;
@@ -338,7 +377,7 @@ padding: 20px 0px;
     padding-left: 15px;
 }
 .testimonial1 .description{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     font-family: 'Bree Serif', serif;
     margin: 0;
@@ -366,5 +405,39 @@ padding: 20px 0px;
         padding: 0;
         margin-bottom: 10px;
     }
-    
+    .fontt{
+      text-align: left !important;
+      font-size: 0.8rem;
+      /* padding: 0px 0px; */
+    }
+    section.developers{
+      /* margin: 40px 20px 40px 20px; */
+      padding: 0px !important;
+      margin: 0px !important;
+      height: fit-content;
+    }
+    .bgg{
+      /* margin: 130px 100px 130px 100px; */
+      /* width: 70vh !important; */
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      margin-top: 20px !important;
+      padding-top: 0px !important;
+    }
+    p.description{
+      font-size: 0.8rem !important;
+      text-align: left !important;
+    }
+    .pic img{
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 90% !important;
+    }
+    .testimonial-content .title{
+      font-size: 1rem;
+    }
 } 
+
