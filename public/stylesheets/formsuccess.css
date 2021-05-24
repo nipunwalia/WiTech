@@ -16,25 +16,22 @@ body{
 }
 
 
-#formsuccess-card{
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: stretch;
-    text-align: center;
-    background-color: darkorange;
-    /* align-items: stretch; */
-    padding:3vw;
-    padding-bottom: auto;
-    width: 100%;
-    height:100%;
+#formsuccess-card {
+    background: #ff7700;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fdbe01, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A);
+    cursor: pointer;
+    color: white;
+    transition: ease-in-out;
+
 }
 
 #formsuccess-card button{
     width: auto;
     height: auto;
     margin:1vw auto;
-    font-size: 1.8vw;
+    /* font-size: 1vw; */
+    background-color: orangered;
 }
 
 #formsuccess-title{

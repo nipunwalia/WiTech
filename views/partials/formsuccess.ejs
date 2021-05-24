@@ -18,18 +18,14 @@
 
 <body>
     <%- include("navbar") %>
-     <div id="formsuccess-card">
-        <div id="formsuccess-title">
-            Your Submition has been 
-        </div>
-        <div id="formsuccess-title">
-            Sucessfull
-        </div>
-        <div id="formsuccess-message">
-            Thanks! We have received your submission, and we'll be in touch really soon.
-        </div>
-        
+     <div id="formsuccess-card" class="m-3" style="border-radius: 20px 40px;">
+        <div class="jumbotron mx-4 py-2">
+            <h1 class="display-4 fw-bolder" style="color: orangered;">Congratulations!</h1>
+            <p class="lead fs-3 fw-bold">You have successfully submitted the form and we have recieved your details.</p>
+            <hr class="my-4">
+            <p class="fs-4">Thank you so much for showing your interest to connect with us. We will contact you super soon!</p>
             <button type="button"  id="backtohome" class="btn btn-primary" >Back to Home</button>
+          </div>
     </div> 
     <%- include('footer') %>
     <script type="text/javascript">
