@@ -1,7 +1,14 @@
+footer
+{
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
 .footer-basic {
     padding:40px 0;
     background-color:#000000;
     color:#ffffff;
+    margin-bottom: 0px;
   }
   
   .footer-basic ul {

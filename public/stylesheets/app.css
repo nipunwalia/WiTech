@@ -467,3 +467,15 @@ padding: 10px 0px;
     width: fit-content;
     border-radius: 20px 10px;
 }
+@media only screen and (max-width: 992px){
+    h1.head-fontt{
+        font-size: 1.5rem !important;
+    }
+    p.fonttt{
+        font-size: 1rem !important;
+    }
+    
+    section#features .row div.feature-box i{
+        height: 10px !important;  
+    }
+}
