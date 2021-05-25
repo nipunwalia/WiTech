@@ -29,14 +29,12 @@
         <div id="formsuccess-message">
             Thanks! We have received your submission, and we'll be in touch really soon.
         </div>
-        
-            <button type="button"  id="backtohome" class="btn btn-primary" >Back to Home</button>
+        <button type="button"  id="backtohome" class="btn btn-primary" >Back to Home</button>
     </div> 
     <%- include('footer') %>
     <script type="text/javascript">
        const f=document.cookie.split('; ');
        const homeButton=document.getElementById('backtohome');
-
        homeButton.addEventListener('click',()=>{
                 window.location.href='/';
        });
