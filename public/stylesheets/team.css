@@ -1,9 +1,25 @@
 .container-teams
 {
     margin-top: 30px;
+    background: linear-gradient(-45deg, #ff3c00, #ffe600, #ff7b00, #c8ff01);
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+      border-radius: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
 }
 
-
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 main#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 8;
@@ -35,7 +51,8 @@ div.item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: black;
+  border-radius: 30px;
   justify-content: center;
 }
 #carousel:hover
@@ -48,19 +65,20 @@ div.item {
 
 div.item:nth-of-type(1) {
   --offset: 1;
-  background-color: #ffe600;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 div.item:nth-of-type(2) {
   --offset: 2;
-  background-color: #ffa32b;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 div.item:nth-of-type(3) {
   --offset: 3;
-  background-color: #ff7c30;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+
 }
 div.item:nth-of-type(4) {
   --offset: 4;
-  background-color: #ff9d1dd7;
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 
