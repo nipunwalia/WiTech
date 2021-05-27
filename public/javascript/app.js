@@ -172,3 +172,11 @@ function Hide6()
 }
 Hide6()
 
+var teamSelectButton=document.querySelectorAll('.select-button input');
+var teamProfile=document.querySelector('main#carousel');
+var teamProfileCSS=getComputedStyle(teamProfile);
+teamSelectButton.forEach((element,i)=>{
+  element.addEventListener('click',()=>{
+    teamProfile.style.setProperty('--position', `${i+1}`);
+  })
+})

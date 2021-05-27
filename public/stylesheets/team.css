@@ -33,6 +33,7 @@
 		background-position: 0% 100%;
 	}
 }
+
 main#carousel {
   grid-row: 1 / 2;
   grid-column: 1 / 8;
@@ -54,6 +55,7 @@ div.item {
   position: absolute;
   width: 300px;
   height: 500px;
+  padding:15px;
   opacity: 1;
   background-color: coral;
   --r: calc(var(--position) - var(--offset));
@@ -70,6 +72,7 @@ div.item {
   box-shadow: 5px 10px 18px #888888;
   justify-content: center;
 }
+
 #carousel:hover
 {
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
@@ -82,52 +85,70 @@ div.item:nth-of-type(1) {
   --offset: 1;
   background-image: linear-gradient(to top, #fcfcfc 0%, white 100%);
 }
+
 div.item:nth-of-type(2) {
   --offset: 2;
   background-image: linear-gradient(to top, #fcfcfc 0%, white 100%);
 }
+
 div.item:nth-of-type(3) {
   --offset: 3;
   background-image: linear-gradient(to top, #fcfcfc 0%, white 100%);
 
 }
+
 div.item:nth-of-type(4) {
   --offset: 4;
   background-image: linear-gradient(to top, #fcfcfc 0%, white 100%);
 }
 
+.select-button {
+  text-align: center;
+}
 
-input:nth-of-type(1) {
+ .select-button input:nth-of-type(1) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  
-}
-input:nth-of-type(1):checked ~ main#carousel {
-  --position: 1;
+  background-color: red;
+} 
+
+/* .select-button input:nth-child(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+} */
+
+.select-button input:nth-of-type(1):checked ~ main#carousel {
+  --position: 1; 
 }
 
-input:nth-of-type(2) {
+.select-button input:nth-of-type(2) {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
-input:nth-of-type(2):checked ~ main#carousel {
-  --position: 2;
-}
 
-input:nth-of-type(3) {
+/* .select-button input:nth-of-type(2):checked ~ main#carousel {
+  --position: 2;
+} */
+
+.select-button input:nth-of-type(3) {
   grid-column: 4 /5;
   grid-row: 2 / 3;
 }
-input:nth-of-type(3):checked ~ main#carousel {
+/* 
+.select-button input:nth-of-type(3):checked ~ main#carousel {
   --position: 3;
-}
+} */
 
-input:nth-of-type(4) {
+.select-button input:nth-of-type(4) {
   grid-column: 5 / 6;
   grid-row: 2 / 3;
 }
-input:nth-of-type(4):checked ~ main#carousel {
+
+/* .select-button input:nth-of-type(4):checked ~ main#carousel {
   --position: 4;
+} */
+
+.item p{
+  padding:0px 10px;
+  text-align: center;
 }
-
-
