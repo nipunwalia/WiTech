@@ -4,7 +4,10 @@
     margin-left: 20px;
     margin-right: 20px;
     font-family: 'Bree Serif', serif;
+    /* background-color: white; */
     background-image: url(../assets/images/team1.jpg);
+    /* background-blend-mode: difference; */
+    /* filter: brightness(120%); */
     opacity: 0.9;
     background-size:  101% 150%;
     animation: gradient 5s ease-in-out infinite;
@@ -12,7 +15,13 @@
       padding-top: 30px;
       padding-bottom: 30px;
 }
-
+.container-teams:after {
+  content: "";
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0; 
+  background: rgba(255, 255, 255, 0.20);
+  pointer-events: none;
+}
 @keyframes gradient {
 	0% {
 		background-position: 0% 100%;
