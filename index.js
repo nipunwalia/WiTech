@@ -1,5 +1,5 @@
 const express=require('express');
-const mongoose=require('mongoose');
+// const mongoose=require('mongoose');
 const formRouter=require('./routes/formRouter');
 const financeRouter=require('./routes/departments/financeRouter');
 const logisticsAndOpsRouter=require('./routes/departments/logisticsandopsRouter');
@@ -9,12 +9,12 @@ const marketingRouter=require('./routes/departments/marketingRouter');
 const cors=require('cors');
 const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
+const dotenv=require('dotenv');
+dotenv.config();
 const app=express();
-const cookieParser=require('cookie-parser');
-const port=5000;
+const port=process.env.PORT ||  5000;
 
 app.use(cors());
-app.use(cookieParser());
 // app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
