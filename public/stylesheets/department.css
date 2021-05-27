@@ -29,8 +29,10 @@
    height: 450px;
    opacity: 0.9;
 }
-
-
+body
+{
+  overflow-x: hidden;
+}
 .banner
 {
     background-image: url('/assets/images/technical_main.jpg');
