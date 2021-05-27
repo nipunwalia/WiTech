@@ -17,6 +17,13 @@ color:black;
 a#title_1{
 font-size: 2rem;
 }
+@media only screen and(max-width:768px){
+
+  .navbar-collapse
+  {
+    background-color: #ffffff;
+  }
+}
 
 @media only screen and (max-width: 365px){
 a.navbar-brand{
