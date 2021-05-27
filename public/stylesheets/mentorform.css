@@ -16,6 +16,7 @@ margin-left: auto;
 margin-right: auto;
 /* height: fit-content; */
 }
+
 .step-row
 {
   display: flex;
@@ -28,12 +29,14 @@ margin-right: auto;
   position: relative;
   border-radius: 10px;
 }
+
 .step-col{
   width: 220px;
   text-align:center;
   color: #333;
   position: relative;
 }
+
 #progress
 {
   position: absolute;
