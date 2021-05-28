@@ -222,6 +222,14 @@ margin: auto;
 margin-top:12px;
 }
 
+@media only screen and (max-width: 576px){
+  .multistep-container{
+    height: 58rem;
+  }
+  .multistep-form-area{
+    height: 58rem;
+  }
+}
 
 
 
