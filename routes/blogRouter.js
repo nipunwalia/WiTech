@@ -6,7 +6,7 @@ blogRouter.get('/',(req,res)=>{
 });
 
 blogRouter.get('/single',(req,res)=>{
-    res.send('blog-single');
+    res.render('blog-single');
 })
 
 module.exports=blogRouter;
