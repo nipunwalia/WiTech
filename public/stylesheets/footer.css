@@ -30,7 +30,7 @@ footer{
   
   .footer-basic ul a:hover {
     opacity:1;
-    color: #fd7a00;
+    color: rgb(255, 136, 0);
   }
   
   .footer-basic .social {
@@ -54,7 +54,7 @@ footer{
   
   .footer-basic .social > a:hover {
     opacity:0.9;
-    color: #fd7a00;
+    background: linear-gradient(-45deg, #ff3c00, #ffe600, #ff7b00, #c8ff01);
   }
   
   .footer-basic .copyright {
