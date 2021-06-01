@@ -1,5 +1,5 @@
 const express=require('express');
-// const mongoose=require('mongoose');
+const mongoose=require('mongoose');
 const formRouter=require('./routes/formRouter');
 const financeRouter=require('./routes/departments/financeRouter');
 const logisticsAndOpsRouter=require('./routes/departments/logisticsandopsRouter');
@@ -19,7 +19,7 @@ app.use(cors());
 // app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-// mongoose.connect('mongodb://localhost/witech', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/witech', {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.static('public'));
 app.set('view engine','ejs');
