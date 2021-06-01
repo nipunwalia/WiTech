@@ -6,6 +6,7 @@ const logisticsAndOpsRouter=require('./routes/departments/logisticsandopsRouter'
 const outreachAndPublicRouter=require('./routes/departments/outreachandpublicRouter');
 const technicalRouter=require('./routes/departments/technicalRouter');
 const marketingRouter=require('./routes/departments/marketingRouter');
+const blogRouter=require('./routes/blogRouter');
 const cors=require('cors');
 const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
@@ -31,6 +32,7 @@ app.get('/about',(req,res)=>{
     res.render('about');
 });
 
+app.use('/blogs',blogRouter);
 app.use('/forms',formRouter);
 app.use('/finance',financeRouter);
 app.use('/logs-ops',logisticsAndOpsRouter);
