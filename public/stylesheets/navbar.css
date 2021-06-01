@@ -17,14 +17,31 @@ color:black;
 a#title_1{
 font-size: 2rem;
 }
-@media only screen and(max-width:768px){
-
+.navbar-collapse ul li a:hover
+{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: orange;
+}
+@media(max-width:768px)
+{
+  .navbar-collapse ul li a:hover
+{
+  cursor: pointer;
+ 
+  background-color: orange;
+  border-radius: 10px;
+}
+}
+@media(max-width:768px)
+{
   .navbar-collapse
   {
     background-color: #ffffff;
+    padding-left:30px ;
+    padding-right: 30px;
   }
 }
-
 @media only screen and (max-width: 365px){
 a.navbar-brand{
   text-align: left;
