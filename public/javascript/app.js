@@ -179,4 +179,4 @@ teamSelectButton.forEach((element,i)=>{
   element.addEventListener('click',()=>{
     teamProfile.style.setProperty('--position', `${i+1}`);
   })
-})
+});
