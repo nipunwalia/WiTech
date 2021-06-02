@@ -21,7 +21,7 @@ async function getCovidData(){
     xhttp.open("GET","/covid/api/getData",true);
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.onreadystatechange = async function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && (this.status == 200 || this.status == 304)) {
              await displayData(JSON.parse(this.responseText));
              await changeMapStateColor(JSON.parse(this.responseText),stateIndex);
         }
@@ -54,7 +54,7 @@ statesDropDown.addEventListener('change',()=>{
 });
 
 async function displayData(data){ 
-        for(let i=0;i<data.length-1;i++){
+        for(let i=0;i<data.length-2;i++){
             stateName[i].innerHTML=data[i+2][0];
             cases[i].innerHTML=data[i+2][1];
             recovered[i].innerHTML=data[i+2][2];
@@ -107,7 +107,7 @@ function resumeDiv() {
 // }
 async function changeMapStateColor(data,stateIndex){    
     // let path=stateAnchor[0].getElementsByTagName('path');
-    for(let i=0;i<data.length-1;i++){
+    for(let i=0;i<data.length-2;i++){
         for(let j=0; j < stateIndex[i].length ; j++){
             let value=parseInt(data[i+1][1].split(',').join(""));
             
