@@ -43,7 +43,3 @@ app.use('/marketing-creative',marketingRouter);
 app.use('/covid',covidRouter);
 
 app.listen(port,()=>console.log(`App is listening at ${port}`));
-
-// var d=new Date();
-
-// console.log(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);

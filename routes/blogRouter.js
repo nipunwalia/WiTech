@@ -46,6 +46,11 @@ blogRouter.post('/api/comment',(req,res)=>{
     });
 })
 
+// route for adding dummy data to db
+blogRouter.post('/api/seed',(req,res)=>{
+    var r=Blog.insertMany(blogData);
+    res.send("Saved");
+})
 
 
 module.exports=blogRouter;
