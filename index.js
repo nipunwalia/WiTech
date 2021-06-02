@@ -15,6 +15,7 @@ dotenv.config();
 const app=express();
 const port=process.env.PORT ||  5000;
 
+
 app.use(cors());
 // app.use(morgan('tiny'));
 app.use(express.json());
@@ -42,3 +43,7 @@ app.use('/marketing-creative',marketingRouter);
 app.use('/covid',covidRouter);
 
 app.listen(port,()=>console.log(`App is listening at ${port}`));
+
+// var d=new Date();
+
+// console.log(`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);

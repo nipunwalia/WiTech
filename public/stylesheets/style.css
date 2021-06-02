@@ -46,16 +46,18 @@ a:hover {
   visibility: visible;
   opacity: 1;
 }
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
+
+
 .breadcrumbs {
   padding: 15px 0;
   background: linear-gradient(60deg,orangered,orange);
@@ -156,6 +158,12 @@ a:hover {
 
 .blog .entry .entry-content p {
   line-height: 24px;
+}
+
+.entry-content p{
+  float:left;
+  text-align: left;
+  text-align-last: left;
 }
 
 .blog .entry .entry-content {

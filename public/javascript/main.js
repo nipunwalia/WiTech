@@ -1,3 +1,22 @@
+function submitComment(){
+  // name
+  // date
+  // comment blog-title
+  const title=document.querySelector('.entry-title').innerHTML.trim();
+  
+  var formFieds=document.getElementsByClassName('form-control');
+  let name=formFieds[0].value;
+  let comment=formFieds[1].value;
+  let date=new Date();
+  let data={'name':name,'date':date,'comment':comment,'title':title};
+  console.log(data);
+  const xhttp=new XMLHttpRequest;
+  xhttp.open("POST",'/blogs/api/comment',true);
+  xhttp.setRequestHeader("Content-type","application/json");
+  xhttp.send(JSON.stringify(data));
+  document.getElementsByTagName('form')[0].reset();
+  window.location.reload();
+}
 
 (function() {
   "use strict";
@@ -36,12 +55,14 @@
   }
 
 
+// Custom date format on blog container
+const formatedDate=document.getElementsByClassName('publishDate');
+for(let i=0;i<formatedDate.length;i++){
+  formatedDate[i].innerHTML=formatedDate[i].innerHTML.split(" ").filter((element,index)=>index<4).join(" ");
 
-  
+}
 
-
-
-  /**
+/**
    * Back to top button
    */
   let backtotop = select('.back-to-top')
