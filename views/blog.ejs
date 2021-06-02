@@ -61,7 +61,7 @@
                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
                       <span class="publishDate"><%=blog.date%></span>
                   </li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i>12 Comments</li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><%=blog.comments.length%> Comments</li>
                   </ul>
                 </div>
                 <div class="entry-content">
@@ -106,7 +106,7 @@
 
               <h3 class="sidebar-title py-2">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
-                <%blogData.forEach((element)=>{%>
+                <%blogData.slice().sort((a,b)=>b.date-a.date).forEach((element)=>{%>
                   <div class="post-item clearfix">
                     <img src="<%=element.image%>" alt="">
                     <h4><a href="/blogs/<%=element.blogid%>"><%=element.title%></a></h4>

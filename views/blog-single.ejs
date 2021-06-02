@@ -144,7 +144,7 @@
             <div class="blog-comments">
 
               <h4 class="comments-count"><%=blogData.comments.length%> Comments</h4>
-              <% blogData.comments.forEach((comment)=>{ %>
+              <% blogData.comments.reverse().forEach((comment)=>{ %>
               <div id="comment-1" class="comment px-2 py-2"style="background-color: white;">
                 <div class="d-flex">
                   <!-- <div class="comment-img"><img src="assets/img/blog/comments-1.jpg" alt=""></div> -->
@@ -213,7 +213,7 @@
                   <div class="post-item clearfix">
                     <img src="<%=element.image%>" alt="<%=element.title%>">
                     <h4><a href="blog-single.html"><%=element.title%></a></h4>
-                    <time class="publishDate"><%=element.Date%></time>
+                    <time class="publishDate"><%=element.date%></time>
                   </div>
                 <%})%>
               </div><!-- End sidebar recent posts-->
