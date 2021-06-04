@@ -1,0 +1,23 @@
+<article class="entry">
+    <div class="entry-img">
+      <img src=<%=blog.image%> alt=<%=blog.title%> class="img-fluid">
+    </div>
+    <h2 class="entry-title">
+      <a href='/blogs/<%=blog.blogid%>'><%=blog.title%></a>
+    </h2>
+    <div class="entry-meta">
+      <ul>
+        <li class="d-flex align-items-center"><i class="bi bi-person"></i><%=blog.author%></li>
+        <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
+          <span class="publishDate"><%=blog.date%></span>
+      </li>
+        <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><%=blog.comments.length%> Comments</li>
+      </ul>
+    </div>
+    <div class="entry-content">
+      <p><%=blog.about%></p>
+      <div class="read-more">
+        <a href='/blogs/<%=blog.blogid%>'>Read More</a>
+      </div>
+    </div>
+  </article>
