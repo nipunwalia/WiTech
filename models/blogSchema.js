@@ -14,6 +14,7 @@ const blogSchema=mongoose.Schema({
    image:{type:String,required:true},
    about:{type:String,required:true},
    category:[String],
+   tags:[String],
    content:{type:String,required:true},
    comments:[commentSchema],
 });
