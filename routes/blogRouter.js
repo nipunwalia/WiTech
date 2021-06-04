@@ -15,7 +15,6 @@ blogRouter.get('/',async(req,res)=>{
 blogRouter.get('/:id',async(req,res)=>{
     let allData=await await Blog.find({});
     let data=allData.find(element=>element.blogid == req.params.id);
-    allData.sort((a,b)=>b.date-a.date);
     res.render('blog-single',{blogData:data,recentPosts:allData});
 });
 
@@ -27,7 +26,7 @@ blogRouter.get('/:id',async(req,res)=>{
 // creating a new blog
 blogRouter.post('/api/create',async(ren,res)=>{
     // blogData[0].blogid=
-    // var req={body:blogData[5]};
+    var req={body:blogData[5]};
     var result=new Blog({blogid:req.body.blogid,title:req.body.title,author:req.body.author,date:req.body.date,
         image:req.body.image,about:req.body.about,category:req.body.category,content:req.body.content,
         comments:req.body.comments});

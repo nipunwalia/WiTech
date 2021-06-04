@@ -14,13 +14,13 @@ const dotenv=require('dotenv');
 dotenv.config();
 const app=express();
 const port=process.env.PORT ||  5000;
-
+const mongodb_url=process.env.MONGODB_URL || 'mongodb://localhost/witech';
 
 app.use(cors());
 // app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-mongoose.connect('mongodb://localhost/witech', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(mongodb_url , {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(express.static('public'));
 app.set('view engine','ejs');
