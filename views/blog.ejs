@@ -47,31 +47,32 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-8 entries">
-            <% blogData.forEach((blog,i)=>{ %>
-              <article class="entry">
-                <div class="entry-img">
-                  <img src=<%=blog.image%> alt=<%=blog.title%> class="img-fluid">
-                </div>
-                <h2 class="entry-title">
-                  <a href='/blogs/<%=blog.blogid%>'><%=blog.title%></a>
-                </h2>
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i><%=blog.author%></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i>
-                      <span class="publishDate"><%=blog.date%></span>
-                  </li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><%=blog.comments.length%> Comments</li>
-                  </ul>
-                </div>
-                <div class="entry-content">
-                  <p><%=blog.about%></p>
-                  <div class="read-more">
-                    <a href='/blogs/<%=blog.blogid%>'>Read More</a>
-                  </div>
-                </div>
-              </article><!-- End blog entry -->
+            <%if(category == "" && tags == ""){%>
+
+              <% blogData.forEach((blog,i)=>{%>
+                <%- include('partials/blogtile',{blog:blog})%>
               <%})%>
+
+            <%} else{%>
+
+                <% if(category!== ""){ %>
+                  <% blogData.forEach((blog,i)=>{%>
+                    <%if(blog.category.includes(category)){%>
+                      <%- include('partials/blogtile',{blog:blog})%>
+                    <%}%>
+                  <%})%>
+                <%}%>
+                <%if(tags!== ""){%>
+                  <% blogData.forEach((blog,i)=>{%>
+                    <%if(blog.tags.includes(tags)){%>
+                        <%- include('partials/blogtile',{blog:blog})%>
+                    <%}%>
+                  <%})%>
+                <%}%>
+            <%}%>
+            
+
+            <!-- End blog entry -->
             <div class="blog-pagination">
               <ul class="justify-content-center">
                 <li><a href="#">1</a></li>
@@ -91,16 +92,15 @@
                   <button type="submit"><i class="bi bi-search"></i></button>
                 </form>
               </div><!-- End sidebar search formn-->
-
               <h3 class="sidebar-title py-2">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(5)</span></a></li>
-                  <li><a href="#">Design <span>(22)</span></a></li>
-                  <li><a href="#">Creative <span>(8)</span></a></li>
-                  <li><a href="#">Education <span>(14)</span></a></li>
+                  <li><a href="/blogs?category=general">General <span>(<%=blogData.filter(blog=>blog.category.includes("general")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=lifestyle">Lifestyle <span>(<%=blogData.filter(blog=>blog.category.includes("lifestyle")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=travel">Travel<span>(<%=blogData.filter(blog=>blog.category.includes("travel")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=design">Design<span>(<%=blogData.filter(blog=>blog.category.includes("design")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=creative">Creative<span>(<%=blogData.filter(blog=>blog.category.includes("creative")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=education">Education<span>(<%=blogData.filter(blog=>blog.category.includes("education")).length%>)</span></a></li>
                 </ul>
               </div><!-- End sidebar categories-->
 
@@ -118,17 +118,12 @@
               <h3 class="sidebar-title py-2">Tags</h3>
               <div class="sidebar-item tags">
                 <ul>
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
-                  <li><a href="#">Creative</a></li>
-                  <li><a href="#">Studio</a></li>
-                  <li><a href="#">Smart</a></li>
-                  <li><a href="#">Tips</a></li>
-                  <li><a href="#">Marketing</a></li>
+                  <li><a href="/blogs?tags=app">App</a></li>
+                  <li><a href="/blogs?tags=it">IT</a></li>
+                  <li><a href="/blogs?tags=bussiness">Business</a></li>
+                  <li><a href="/blogs?tags=mac">Mac</a></li>
+                  <li><a href="/blogs?tags=design">Design</a></li>
+                  <li><a href="/blogs?tags=office">Office</a></li>
                 </ul>
               </div><!-- End sidebar tags-->
 

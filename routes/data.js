@@ -1,7 +1,7 @@
 const { mongo } = require("mongoose");
 
-var d=new Date();
-var mongoDate=`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+// var d=new Date();
+// var mongoDate=`${d.getFullYear()}-${d.getMonth()}-${d.getDate()}T${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
 
 exports.blogData=[
     {
@@ -11,7 +11,8 @@ exports.blogData=[
         date:new Date(),
         image:"/assets/img/blog/blog-1.jpg",
         about:"Blog Info",
-        category:['general','science'],
+        category:['general','lifestyle'],
+        tags:['app','it'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
@@ -33,7 +34,8 @@ exports.blogData=[
         date:new Date(),
         image:"/assets/img/blog/blog-2.jpg",
         about:"Blog Info",
-        category:['App','science'],
+        category:['lifestyle','travel'],
+        tags:['it','bussiness'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
@@ -55,7 +57,8 @@ exports.blogData=[
         date:new Date(),
         image:"/assets/img/blog/blog-3.jpg",
         about:"Blog Info",
-        category:['App','science'],
+        category:['travel','design'],
+        tags:['bussiness,mac'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
@@ -77,7 +80,8 @@ exports.blogData=[
         date:new Date(),
         image:"/assets/img/blog/blog-4.jpg",
         about:"Blog Info",
-        category:['App','science'],
+        category:['design','creative'],
+        tags:['mac','design'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
@@ -99,7 +103,8 @@ exports.blogData=[
         date:new Date(),
         image:"/assets/img/blog/blog-1.jpg",
         about:"Blog Info",
-        category:['App','science'],
+        category:['creative','education'],
+        tags:['design','office'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
@@ -115,13 +120,14 @@ exports.blogData=[
         ]
     },
     {
-        blogid:"5",
+        blogid:"6",
         title:"Blog 6",
         author:"Author-6",
         date:new Date(),
         image:"/assets/img/blog/blog-2.jpg",
         about:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolores labore quis quia molestias ipsum expedita deleniti magni tempore dolor, ullam vitae odit, itaque corrupti asperiores voluptatum! Animi, facilis molestias.",
-        category:['App','science'],
+        category:['education','general'],
+        tags:['office','app'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
