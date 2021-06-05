@@ -18,6 +18,31 @@ function submitComment(){
   window.location.reload();
 }
 
+const search=document.getElementById('blog-search');
+const searchButton=document.getElementById('blog-search-button');
+const blog=document.getElementsByClassName('entry');
+const blogTitle=document.querySelectorAll('.blog-title');
+const blogAuthor=document.querySelectorAll('.blog-author')
+
+searchButton.addEventListener('click',()=>{
+  blogSearch();
+})
+
+function blogSearch(){
+  let filter=search.value.toUpperCase();
+  // filter=filter.replace(" ","",'g');  
+  filter=filter.replace(/(\r\n\s|\n|\r|\s)/gm, '');
+  for(let i=0;i<blog.length;i++){
+    let title=blogTitle[i].innerHTML.toUpperCase().replace(/(\r\n\s|\n|\r|\s)/gm, '');
+    let author=blogAuthor[i].innerHTML.toUpperCase().replace(/(\r\n\s|\n|\r|\s)/gm, '');
+    if(title.indexOf(filter)>-1 || author.indexOf(filter)>-1 ){
+      blog[i].style.display="";
+    }else{
+      blog[i].style.display="none";
+    }
+  }
+}
+
 (function() {
   "use strict";
 

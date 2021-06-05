@@ -58,7 +58,7 @@ exports.blogData=[
         image:"/assets/img/blog/blog-3.jpg",
         about:"Blog Info",
         category:['travel','design'],
-        tags:['bussiness,mac'],
+        tags:['bussiness','mac'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
             {
