@@ -1,6 +1,7 @@
 const mongoose=require('mongoose');
 
 const mentorSchema=mongoose.Schema({
+   date:{type:String,required:true},
    name:{type:String,required:true},
    email:{type:String,required:true,unique:true},
    dob:{type:String,required:true},

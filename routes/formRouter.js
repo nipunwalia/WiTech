@@ -1,5 +1,7 @@
 const express=require('express');
 const expressAsyncHandler=require('express-async-handler');
+const Mentor = require('../models/mentorSchema');
+const Volunteer = require('../models/volunteerSchema');
 const formRouter=express();
 const excelsheet=require('../services/excelsheet');
 
@@ -20,14 +22,15 @@ formRouter.get('/mentorform',(req,res)=>{
 
 // mentor Register
 formRouter.post('/api/mentor/register',expressAsyncHandler(async(req,res)=>{
-    var result = await excelsheet.uploadData([[req.body.date,req.body.mName,req.body.mEmail,
-        req.body.mDob,req.body.mGender,req.body.countryId,
-      req.body.stateId,req.body.mContact,req.body.mDegree,
-        req.body.mCollege,req.body.cw,req.body.mJobTitle,
-        req.body.mJobDesc,req.body.mInterest,
-        req.body.mskill_1,req.body.mskill_1_rating,
-        req.body.mSocialFb,req.body.mSocialLn,
-        req.body.mSocialOt]],"MentorForm!A:Q");
+    let mentor = await Mentor({"date":req.body.date,"name":req.body.mName,"email":req.body.mEmail,
+        "dob":req.body.mDob,"gender":req.body.mGender,"country":req.body.countryId,
+      "state":req.body.stateId,"contact":req.body.mContact,"qualification":req.body.mDegree,
+        "college":req.body.mCollege,"currentlyworking":req.body.cw,"jobtitle":req.body.mJobTitle,
+        "jobdescription":req.body.mJobDesc,"areaofinterest":req.body.mInterest,
+        "skill_1":[{"skilltype":req.body.mskill_1,"rating":req.body.mskill_1_rating}],
+        "facebookprofile":req.body.mSocialFb,"linkedinprofile":req.body.mSocialLn,
+        "otherprofile":req.body.mSocialOt});
+    let result=mentor.save();
     if(result){
         res.send("Form Submitted Successfully");
     }
@@ -39,9 +42,11 @@ formRouter.post('/api/mentor/register',expressAsyncHandler(async(req,res)=>{
 
 // Volunteerform register
 formRouter.post('/api/volunteer/register',expressAsyncHandler(async(req,res)=>{
-    var result = await excelsheet.uploadData([[req.body.date,req.body.vName,req.body.vEmail,
-        req.body.vDob,req.body.vGender,
-      req.body.vState,req.body.vContact,req.body.vDonationStatus,req.body.vReason]],"VolunteerForm!A:H");
+    let volunteer = await Volunteer({"date":req.body.date,"name":req.body.vName,"email":req.body.vEmail,
+        "dob":req.body.vDob,"gender":req.body.vGender,
+      "state":req.body.vState,"contact":req.body.vContact,"donationstatus":req.body.vDonationStatus,"reason":req.body.vReason});
+    let result=volunteer.save();
+    
     if(result){
         res.send("Form Submitted Successfully");
     }

@@ -10,6 +10,7 @@ const blogRouter=require('./routes/blogRouter');
 const cors=require('cors');
 const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
+const fs=require('fs');
 const dotenv=require('dotenv');
 dotenv.config();
 const app=express();

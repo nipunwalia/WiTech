@@ -26,7 +26,7 @@ exports.uploadData=async function uploadData(data,sheet){
 exports.fetchDatafromsheet=async function fetchDatafromsheet(sheet){
     try{
         const auth=new google.auth.GoogleAuth({
-            keyFile:'google-credentials.json',
+            keyFile:'./google-credentials.json',
             scopes:"https://www.googleapis.com/auth/spreadsheets",
 
         });

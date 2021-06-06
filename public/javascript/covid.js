@@ -54,16 +54,16 @@ statesDropDown.addEventListener('change',()=>{
 });
 
 async function displayData(data){ 
-        for(let i=0;i<data.length-2;i++){
-            stateName[i].innerHTML=data[i+2][0];
-            cases[i].innerHTML=data[i+2][1];
-            recovered[i].innerHTML=data[i+2][2];
-            deaths[i].innerHTML=data[i+2][3];
-            oxygen[i].innerHTML=data[i+2][4];
-            beds[i].innerHTML=data[i+2][5];
-            noOfVaccines[i].innerHTML=data[i+2][6];
-            vaccineAvalability[i].innerHTML=data[i+2][7];
-            waste[i].innerHTML=data[i+2][8];
+        for(let i=0;i<data.length;i++){
+            stateName[i].innerHTML=data[i]['state'];
+            cases[i].innerHTML=data[i]['cases'];
+            recovered[i].innerHTML=data[i]['recovered'];
+            deaths[i].innerHTML=data[i]['death'];
+            oxygen[i].innerHTML=data[i]['oxygenAvailability'];
+            beds[i].innerHTML=data[i]['bedsAvailability'];
+            noOfVaccines[i].innerHTML=data[i]["noOfVaccine"];
+            vaccineAvalability[i].innerHTML=data[i]["vaccineAvailability"];
+            waste[i].innerHTML=data[i]["waste"];
         }
 }
 
@@ -107,10 +107,10 @@ function resumeDiv() {
 // }
 async function changeMapStateColor(data,stateIndex){    
     // let path=stateAnchor[0].getElementsByTagName('path');
-    for(let i=0;i<data.length-2;i++){
+    for(let i=0;i<data.length;i++){
         for(let j=0; j < stateIndex[i].length ; j++){
-            let value=parseInt(data[i+1][1].split(',').join(""));
-            
+            let value=parseInt(data[i]['cases']);
+            console.log(value);
             if(value > 1000000){    
                 stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','red');
             }

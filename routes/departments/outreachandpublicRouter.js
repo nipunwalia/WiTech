@@ -1,6 +1,7 @@
 const express=require('express');
 const outreachAndPublicRouter=express();
-const excelsheet=require('../../services/excelsheet');
+// const excelsheet=require('../../services/excelsheet');
+const outreachandpublic=require('../../models/out&publicSchema');
 
 outreachAndPublicRouter.get('/',(req,res)=>{
     res.render("departments/publicandoutreach/outreach");
@@ -34,25 +35,28 @@ outreachAndPublicRouter.get('/event-planner/form',(req,res)=>{
 
 
 outreachAndPublicRouter.post('/api/:id/register',async(req,res)=>{
-    var result;
+
+    var outreachandpr;
     if(req.params.id == 'out-pr-hd-opr'){
-         result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.task]],'Outr-PR-Head!A:I');
+         outreachandpr=await outreachandpublic.head({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
     }else if(req.params.id == 'evt-pln-opr'){
-         result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.task]],'Outr-PR-evnt-pln!A:J');
+         outreachandpr=await outreachandpublic.eventplanner({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
     }else if(req.params.id == 'evt-cor-opr'){
-        result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.task]],'Outr-PR-evnt-co!A:I');
+        outreachandpr=await outreachandpublic.eventcoordinator({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
     }
     else if(req.params.id == 'out-part-spec-opr'){
-        result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.scale,req.body.task]],'Outr-PR-spec!A:K');
+        outreachandpr=await outreachandpublic.partnership({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,scale:req.body.scale,task:req.body.task});
     }
     else{
-         result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.task]],'Outr-PR-community!A:J');
+         outreachandpr=await outreachandpublic.communitybuilder({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
     }
+
+    let result=outreachandpr.save();
 
     if(result){
         res.send("Form Submitted Successfully");

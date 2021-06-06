@@ -1,8 +1,11 @@
 const express=require('express');
-const {google}=require("googleapis");
-const expressAsyncHandler = require('express-async-handler');
+// const {google}=require("googleapis");
+// const expressAsyncHandler = require('express-async-handler');
 const covidRouter=express();
-const excelsheet=require('../services/excelsheet');
+// const excelsheet=require('../services/excelsheet');
+const Covid = require('../models/covidSchema');
+const {covidData}=require('./data.js');
+
 
 // stateslist 
 var statesList=['Andaman and Nicobar Islands','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar',"Chandigarh",'Chhattisgarh',"Dadar and Nagar Haveli",'Delhi','Goa','Gujarat','Haryana','Himachal Pradesh',
@@ -30,7 +33,7 @@ covidRouter.get('/info',(req,res)=>{
 
 // fetching data from excel sheet
 covidRouter.get('/api/getData',async(req,res)=>{
-    var result=await excelsheet.fetchDatafromsheet("Covid!A:I");
+    var result=await Covid.find({});
     if(result!=0){
         res.send(result);
     }else{
@@ -38,5 +41,9 @@ covidRouter.get('/api/getData',async(req,res)=>{
     }
 });
 
+covidRouter.post('/api/seed',async(req,res)=>{
+    var result=await Covid.insertMany(covidData);
+    res.send("Saved");
+});
 
 module.exports=covidRouter;

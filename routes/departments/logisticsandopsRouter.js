@@ -1,6 +1,6 @@
 const express=require('express');
 const logisticsAndOpsRouter=express();
-const excelsheet=require('../../services/excelsheet');
+const logisticsandoperation=require('../../models/logisticsandoprSchema');
 
 
 logisticsAndOpsRouter.get('/',(req,res)=>{
@@ -24,20 +24,28 @@ logisticsAndOpsRouter.get('/ops-manager/form',(req,res)=>{
 // 'opr-man-lgopr' : operations manager
 
 logisticsAndOpsRouter.post('/api/:id/register',async(req,res)=>{
-    var result;
+    var logisticsandopr;
     
     if(req.params.id == 'log-oper-dir-lgopr'){
-        result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5,req.body.scale,req.body.task]],'Log-Opr-dir!A:M');
+        logisticsandopr=await logisticsandoperation.director({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,
+            education:req.body.education,cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,
+            question3:req.body.q3,question4:req.body.q4,question5:req.body.q5,scale:req.body.scale,
+            task:req.body.task});
 
     }else if(req.params.id == 'log-man-lgopr'){
-         result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5]],'Log-manager!A:K');
+         logisticsandopr=await logisticsandoperation.logisticsmanager({date:req.body.date,name:req.body.name,
+            email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,
+            question4:req.body.q4,question5:req.body.q5});
     }
     else{
-         result=await excelsheet.uploadData([[req.body.date,req.body.name,req.body.email,req.body.contact,req.body.education,
-            req.body.cv,req.body.q1,req.body.q2,req.body.q3,req.body.q4,req.body.q5]],'Opr-manager!A:K');
+         logisticsandopr=await logisticsandoperation.operationsmanager({date:req.body.date,name:req.body.name,
+            email:req.body.email,contact:req.body.contact,education:req.body.education,
+            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,
+            question4:req.body.q4,question5:req.body.q5});
     }
+
+    let result=logisticsandopr.save();
 
     if(result){
         res.send("Form Submitted Successfully");
