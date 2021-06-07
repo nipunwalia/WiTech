@@ -63,9 +63,9 @@
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i><%=blogData.author%></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i><span class="publishDate"><%=blogData.date%></span></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i><%=blogData.comments.length%> Comments</li>
+                  <li class="d-flex align-items-center"> <i class="fas fa-user-alt" style="font-size: 30px;color:orangered;padding-right: 10px;"></i><%=blogData.author%></li>
+                  <li class="d-flex align-items-center"><i class="fas fa-clock"style="font-size: 30px;color:orangered;padding-right: 10px;"></i></i><span class="publishDate"><%=blogData.date%></span></li>
+                  <li class="d-flex align-items-center"><i class="fas fa-comment-dots"style="font-size: 30px;color:orangered;padding-right: 10px;"></i><%=blogData.comments.length%> Comments</li>
                 </ul>
               </div>
 
@@ -191,7 +191,7 @@
               <div class="sidebar-item search-form">
                 <form action="">
                   <input type="text">
-                  <button type="submit"><i class="bi bi-search"></i></button>
+                  <button type="" id="blog-search-button" style="border:none;border-radius: 20px;padding: 5px 10px; background: linear-gradient(60deg,orangered,orange);"><i class="fas fa-search" style="color: white;"></i></button>
                 </form>
               </div><!-- End sidebar search formn-->
 
@@ -245,7 +245,7 @@
 <%- include('partials/footer')%>
 
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
 
   <!-- Vendor JS Files -->
  

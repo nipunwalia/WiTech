@@ -1,12 +1,8 @@
-body{
-    background: #a8c0ff;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3f2b96, #a8c0ff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
-} 
+
 
 body {
   animation: scroll 70s linear infinite;
-  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"), #111111;
+  
   color: #eee;
   display: flex;
   justify-content: center;

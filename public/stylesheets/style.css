@@ -19,33 +19,23 @@ a:hover {
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 996;
   background: #f7580e;
   width: 40px;
   height: 40px;
   border-radius: 24px;
-  transition: all 0.4s;
+  color: white;
 }
 
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
+
 
 .back-to-top:hover {
   background: #f7310e;
   color: #fff;
 }
 
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
+
 
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
@@ -464,7 +454,7 @@ a:hover {
   font-weight: 700;
   padding: 0 0 0 0;
   margin: 0 0 15px 0;
-  color: #111111;
+  color: #ffffff;
   position: relative;
 }
 .sidebar-title{
@@ -525,7 +515,7 @@ a:hover {
 }
 
 .blog .sidebar .categories ul a {
-  color: #111111;
+  color: #000000;
   transition: 0.3s;
 }
 
@@ -608,7 +598,5 @@ a:hover {
 }
 
 
-.entries{
-  background: linear-gradient(60deg, rgb(250, 185, 111),rgb(252, 249, 249));
-}
+
 
