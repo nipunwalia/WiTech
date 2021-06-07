@@ -35,34 +35,36 @@ outreachAndPublicRouter.get('/event-planner/form',(req,res)=>{
 
 
 outreachAndPublicRouter.post('/api/:id/register',async(req,res)=>{
-
-    var outreachandpr;
-    if(req.params.id == 'out-pr-hd-opr'){
-         outreachandpr=await outreachandpublic.head({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
-            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
-    }else if(req.params.id == 'evt-pln-opr'){
-         outreachandpr=await outreachandpublic.eventplanner({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
-            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
-    }else if(req.params.id == 'evt-cor-opr'){
-        outreachandpr=await outreachandpublic.eventcoordinator({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
-            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
-    }
-    else if(req.params.id == 'out-part-spec-opr'){
-        outreachandpr=await outreachandpublic.partnership({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
-            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,scale:req.body.scale,task:req.body.task});
-    }
-    else{
-         outreachandpr=await outreachandpublic.communitybuilder({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
-            cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
-    }
-
-    let result=outreachandpr.save();
-
-    if(result){
+    try{
+        var outreachandpr;
+        if(req.params.id == 'out-pr-hd-opr'){
+            outreachandpr=new outreachandpublic.head({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+                cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
+        }else if(req.params.id == 'evt-pln-opr'){
+            outreachandpr=new outreachandpublic.eventplanner({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+                cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
+        }else if(req.params.id == 'evt-cor-opr'){
+            outreachandpr=new outreachandpublic.eventcoordinator({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+                cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,task:req.body.task});
+        }
+        else if(req.params.id == 'out-part-spec-opr'){
+            outreachandpr=new outreachandpublic.partnership({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+                cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,scale:req.body.scale,task:req.body.task});
+        }
+        else{
+            outreachandpr=new outreachandpublic.communitybuilder({date:req.body.date,name:req.body.name,email:req.body.email,contact:req.body.contact,education:req.body.education,
+                cvlink:req.body.cv,question1:req.body.q1,question2:req.body.q2,question3:req.body.q3,task:req.body.task});
+        }
+        await outreachandpr.save();
         res.send("Form Submitted Successfully");
-    }
-    else{
-        res.status(404).send("Error");
+    }catch(err){
+        let errorType=Object.keys(err.keyPattern).find(x=>x=='email');
+        if(err.code == 11000 && errorType == 'email'){
+            res.status(404).send("Email Already Exists!");
+        }
+        else{
+            res.status(404).send("Error");
+        }
     }
 });
 

@@ -12,6 +12,9 @@ exports.blogData=[
         image:"/assets/img/blog/blog-1.jpg",
         about:"Blog Info",
         category:['general','lifestyle'],
+        markdown:"<h2>jatin<h2>",
+        slug:" ",
+        sanitizedHTML:" ",
         tags:['app','it'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
         comments:[
@@ -37,6 +40,9 @@ exports.blogData=[
         category:['lifestyle','travel'],
         tags:['it','bussiness'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
+        markdown:" ",
+        slug:"a",
+        sanitizedHTML:" ",
         comments:[
             {
                 name:"User-1",
@@ -60,6 +66,9 @@ exports.blogData=[
         category:['travel','design'],
         tags:['bussiness','mac'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
+        markdown:" ",
+        slug:"b",
+        sanitizedHTML:" ",
         comments:[
             {
                 name:"User-1",
@@ -83,6 +92,9 @@ exports.blogData=[
         category:['design','creative'],
         tags:['mac','design'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
+        markdown:" ",
+        slug:"c",
+        sanitizedHTML:" ",
         comments:[
             {
                 name:"User-1",
@@ -106,6 +118,9 @@ exports.blogData=[
         category:['creative','education'],
         tags:['design','office'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
+        markdown:" ",
+        slug:"d",
+        sanitizedHTML:" ",
         comments:[
             {
                 name:"User-1",
@@ -129,6 +144,9 @@ exports.blogData=[
         category:['education','general'],
         tags:['office','app'],
         content:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta beatae corrupti quo nobis nulla deleniti nostrum vero repellendus quasi voluptatum ullam, natus quas quibusdam, accusamus deserunt harum, ducimus omnis tenetur.",
+        markdown:" ",
+        slug:"e",
+        sanitizedHTML:" ",
         comments:[
             {
                 name:"User-1",

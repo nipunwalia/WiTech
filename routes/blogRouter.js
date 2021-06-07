@@ -11,9 +11,13 @@ blogRouter.get('/',async(req,res)=>{
     res.render('blog',{blogData:data,category:category,tags:tags});
 });
 
-// route for a single blog page
-// this method is only for current settings
-// if anyone can post a blog on this website then we need to change this and make this unique.
+// route for creating a new blog
+// rendering new blog page
+// blogRouter.get('/create',(req,res)=>{
+//     res.render('blog-create',{blog:new Blog});
+// });
+
+// route to view a single blog
 blogRouter.get('/:id',async(req,res)=>{
     let allData= await Blog.find({});
     let data=allData.find(element=>element.blogid == req.params.id);
@@ -21,17 +25,26 @@ blogRouter.get('/:id',async(req,res)=>{
 });
 
 
+// blogRouter.get('/edit/:slug',(req,res)=>{
+//     res.render();
+// })
+
+// route for posting a new blog
 blogRouter.post('/api/create',async(ren,res)=>{
-    // var req={body:blogData[6]};
-    var result=new Blog({blogid:req.body.blogid,title:req.body.title,author:req.body.author,date:req.body.date,
-        image:req.body.image,about:req.body.about,category:req.body.category,tags:req.body.tags,content:req.body.content,
-        comments:req.body.comments});
-    const blog=result.save();
-    if(blog){
-        res.send('Saved');
-    }else{
-        res.status(404).send("Error");
-    }
+    // console.log(req.body.markdown);
+    // console.log(req.body.slug);
+    // console.log(req.body.sanitizedHTML);
+    // var req={body:blogData[5]};
+    // var result=new Blog({blogid:req.body.blogid,title:req.body.title,author:req.body.author,date:req.body.date,
+    //     image:req.body.image,about:req.body.about,category:req.body.category,tags:req.body.tags,content:req.body.content,
+    //     markdown:req.body.markdown,slug:req.body.slug,sanitizedHTML:req.body.sanitizedHTML,comments:req.body.comments});
+    // const blog=result.save();
+    // if(blog){
+    //     res.send('Saved');
+    // }else{
+    //     res.status(404).send("Error");
+    // }
+    res.send("Saved");
 });
 
 // route for posting comment.

@@ -22,47 +22,52 @@ formRouter.get('/mentorform',(req,res)=>{
 
 // mentor Register
 formRouter.post('/api/mentor/register',expressAsyncHandler(async(req,res)=>{
-    let mentor = await Mentor({"date":req.body.date,"name":req.body.mName,"email":req.body.mEmail,
-        "dob":req.body.mDob,"gender":req.body.mGender,"country":req.body.countryId,
-      "state":req.body.stateId,"contact":req.body.mContact,"qualification":req.body.mDegree,
-        "college":req.body.mCollege,"currentlyworking":req.body.cw,"jobtitle":req.body.mJobTitle,
-        "jobdescription":req.body.mJobDesc,"areaofinterest":req.body.mInterest,
-        "skill_1":[{"skilltype":req.body.mskill_1,"rating":req.body.mskill_1_rating}],
-        "facebookprofile":req.body.mSocialFb,"linkedinprofile":req.body.mSocialLn,
-        "otherprofile":req.body.mSocialOt});
-    let result=mentor.save();
-    if(result){
+    try{
+        let mentor =new Mentor({"date":req.body.date,"name":req.body.mName,"email":req.body.mEmail,
+            "dob":req.body.mDob,"gender":req.body.mGender,"country":req.body.countryId,
+        "state":req.body.stateId,"contact":req.body.mContact,"qualification":req.body.mDegree,
+            "college":req.body.mCollege,"currentlyworking":req.body.cw,"jobtitle":req.body.mJobTitle,
+            "jobdescription":req.body.mJobDesc,"areaofinterest":req.body.mInterest,
+            "skill_1":[{"skilltype":req.body.mskill_1,"rating":req.body.mskill_1_rating}],
+            "facebookprofile":req.body.mSocialFb,"linkedinprofile":req.body.mSocialLn,
+            "otherprofile":req.body.mSocialOt});
+        await mentor.save();
         res.send("Form Submitted Successfully");
+    }catch(err){
+        let errorType=Object.keys(err.keyPattern).find(x=>x=='email');
+        if(err.code == 11000 && errorType == 'email'){
+            res.status(404).send("Email Already Exists!");
+        }else{
+            res.status(404).send("Error");
+        }
     }
-    else{
-        res.status(404).send("Error");
-    }
-
 }));
 
 // Volunteerform register
 formRouter.post('/api/volunteer/register',expressAsyncHandler(async(req,res)=>{
-    let volunteer = await Volunteer({"date":req.body.date,"name":req.body.vName,"email":req.body.vEmail,
-        "dob":req.body.vDob,"gender":req.body.vGender,
-      "state":req.body.vState,"contact":req.body.vContact,"donationstatus":req.body.vDonationStatus,"reason":req.body.vReason});
-    let result=volunteer.save();
     
-    if(result){
-        res.send("Form Submitted Successfully");
-    }
-    else{
-        res.status(404).send("Error");
+    try{
+        let volunteer=new Volunteer({"date":req.body.date,"name":req.body.vName,"email":req.body.vEmail,
+            "dob":req.body.vDob,"gender":req.body.vGender,
+        "state":req.body.vState,"contact":req.body.vContact,"donationstatus":req.body.vDonationStatus,
+        "reason":req.body.vReason
+        });
+        await volunteer.save();
+        res.send('Form submitted Successfull');
+    }catch(err){
+        let errorType=Object.keys(err.keyPattern).find(x=>x=='email');
+        if(err.code == 11000 && errorType == 'email'){
+            res.status(404).send("Email Already Exists!");
+        }
+        else{
+            res.status(404).send(err);
+        }
     }
 }));
 
 // response
 formRouter.get('/response',(req,res)=>{
-    // var cookies=req.cookies;
-    //  if(cookies.formresponse == 'valid'){
          res.render("partials/formsuccess");
-    //  }else{
-        //  res.render('partials/error');
-    //  }
  });
 
 module.exports=formRouter;
