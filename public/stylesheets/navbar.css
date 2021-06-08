@@ -7,6 +7,12 @@
 background-color: #ffffff;
 /* color: #ffffff !important; */
 }
+@media(max-width:768px){
+  a #title_1
+  {
+    font-size: 5px;
+  }
+}
 #nav-color
 {
 color:black;
