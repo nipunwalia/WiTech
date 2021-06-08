@@ -1,0 +1,50 @@
+.attribution {
+    /* font-size: 11px; */
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(46, 87%, 0%);
+}
+
+.mainn {
+    background-color: #F2994A;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    /* color: white; */
+}
+
+.cardd {
+    margin-top: 8%;
+    background-color: #ff7802;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.coll {
+    margin: 50px 20px 0px 0px;
+    padding-left: 80px;
+    border: 3px solid aliceblue;
+}
+a{ 
+    text-decoration: none !important;
+    color: black !important;
+}
+#myBtn {
+    /* display: none; Hidden by default */
+    position: fixed; /* Fixed/sticky position */ 
+    height: 40px;
+    width: 42px;
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    
+    cursor: pointer; /* Add a mouse pointer on hover */
+    /* padding: 15px; Some padding  */
+    border-radius: 100px; /* Rounded corners */
+    /* font-size: 18px; Increase font size */
+  }
