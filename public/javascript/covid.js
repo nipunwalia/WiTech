@@ -54,6 +54,7 @@ statesDropDown.addEventListener('change',()=>{
 });
 
 async function displayData(data){ 
+    data=data.records;
         for(let i=0;i<data.length;i++){
             stateName[i].innerHTML=data[i]['state'];
             cases[i].innerHTML=data[i]['cases'];
@@ -107,6 +108,7 @@ function resumeDiv() {
 // }
 async function changeMapStateColor(data,stateIndex){    
     // let path=stateAnchor[0].getElementsByTagName('path');
+    data=data.records;
     for(let i=0;i<data.length;i++){
         for(let j=0; j < stateIndex[i].length ; j++){
             let value=parseInt(data[i]['cases']);
