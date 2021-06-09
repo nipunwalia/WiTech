@@ -32,9 +32,21 @@
           <li class="nav-item ">
             <a id="nav-color" class="nav-link" aria-current="page" href="/covid">Get Covid-19 info</a>
           </li>
-          <!-- <li class="nav-item ">
-            <a id="nav-color" class="nav-link" aria-current="page" href="https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=1000.TKO2A7GBFUUHWC0PPDWAQL7JOCL4CT&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline&prompt=consent">SignIn</a>
-          </li> -->
+          <!-- https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=1000.TKO2A7GBFUUHWC0PPDWAQL7JOCL4CT&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline&prompt=consent -->
+          <%if(loginStatus == false){%>
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link" aria-current="page" href="/login">SignIn</a>
+          </li>
+          <%}else{%>
+            <li class="nav-item ">
+              <a id="nav-color" class="nav-link" aria-current="page" href=""> <i class="fas fa-user-alt" style="font-size: 30px;color:orangered;padding-right: 10px;"></i></a>
+            </li>
+            <%}%>
+            <%if(loginStatus == true){%>
+              <li class="nav-item ">
+                <a id="nav-color" class="nav-link" aria-current="page" href="/logout">Logout</a>
+              </li>
+            <%}%>
         </ul>
       </div>
     </div>

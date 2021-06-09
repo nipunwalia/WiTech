@@ -25,7 +25,8 @@ var statesIdList=["andaman_nicobar_1","andhra_pradesh_1","arunachal_pradesh_1","
 // --------------------routes--------------------------------///
 
 covidRouter.get("/",(req,res)=>{
-    res.render('covid',{states:{0:statesIdList,1:statesList}});
+    let loginStatus=req.oidc.isAuthenticated() ? true:false;
+    res.render('covid',{states:{0:statesIdList,1:statesList},loginStatus:loginStatus});
 });
 
 // covid info for particular state
@@ -35,38 +36,42 @@ covidRouter.get('/info',(req,res)=>{
 
 // fetching data from excel sheet
 covidRouter.get('/api/getData',async(req,res)=>{
-    
     let zoho_cookies=req.cookies.Witech_India_zoho;
-    try{
-        const params={
-            method:'worksheet.records.fetch',
-            worksheet_name:'Covid',
-            header_row:2
-        };
-        const header={
-            Authorization:`Zoho-oauthtoken ${zoho_cookies.access_token}`,
-            'Content-Type':'application/x-www-form-urlencoded'
-        };
-        let data=await axios.get('https://sheet.zoho.com/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e',{headers:header,params:params});
-        let covidData=data.data;
-        res.send(covidData);
-    }
-    catch(err){
-        // console.log(err.response.data.error_message);
-        const param={
-            client_id:`${process.env.ZOHO_CLIENT_ID}`,
-            client_secret:`${process.env.ZOHO_CLIENT_SECRET}`,
-            grant_type:'refresh_token',
-            redirect_uri:'http://localhost:5000/authcallback',
-            refresh_token:zoho_cookies.refresh_token
-        };
-
-        if(err.response.data.error_message === 'Valid [OAUTHTOKEN] is required for processing the request.'){
-            let data=await axios.post('https://accounts.zoho.com/oauth/v2/token',{},{params:param});
-            await res.cookie('Witech_India_zoho',data.data);
+    if(zoho_cookies==null){
+        // let data=await axios.get(`https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline`);
+        res.status(302).send("https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline");
+    }else{
+        try{
+            const params={
+                method:'worksheet.records.fetch',
+                worksheet_name:'Covid',
+                header_row:2
+            };
+            const header={
+                Authorization:`Zoho-oauthtoken ${zoho_cookies.access_token}`,
+                'Content-Type':'application/x-www-form-urlencoded'
+            };
+            let data=await axios.get('https://sheet.zoho.com/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e',{headers:header,params:params});
+            let covidData=data.data;
+            res.send(covidData);
         }
-        // 'Valid [OAUTHTOKEN] is required for processing the request.'
-        res.send("Error");
+        catch(err){
+            // console.log(err.response.data.error_message);
+            const param={
+                client_id:`${process.env.ZOHO_CLIENT_ID}`,
+                client_secret:`${process.env.ZOHO_CLIENT_SECRET}`,
+                grant_type:'refresh_token',
+                redirect_uri:'http://localhost:5000/authcallback',
+                refresh_token:zoho_cookies.refresh_token
+            };
+
+            if(err.response && err.response.data.error_message === 'Valid [OAUTHTOKEN] is required for processing the request.'){
+                let data=await axios.post('https://accounts.zoho.com/oauth/v2/token',{},{params:param});
+                await res.cookie('Witech_India_zoho',data.data);
+            }
+            // 'Valid [OAUTHTOKEN] is required for processing the request.'
+            res.send("Error");
+        }
     }
     // var result=await Covid.find({});
     // if(result!=0){

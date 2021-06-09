@@ -3,8 +3,10 @@ const expressAsyncHandler=require('express-async-handler');
 const Mentor = require('../models/mentorSchema');
 const Volunteer = require('../models/volunteerSchema');
 const formRouter=express();
-const excelsheet=require('../services/excelsheet');
-const axios=require('axios');
+// const excelsheet=require('../services/excelsheet');
+// const axios=require('axios');
+// const http=require('https');
+// const qs=require('qs');
 
 var statesList=['Andaman and Nicobar Islands','Andhra Pradesh','Arunachal Pradesh','Assam','Bihar',"Chandigarh",'Chhattisgarh',"Dadar and Nagar Haveli",'Delhi','Goa','Gujarat','Haryana','Himachal Pradesh',
     "Jammu and Kashmir",'Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland',
@@ -19,6 +21,14 @@ formRouter.get("/volunteer",(req,res)=>{
 // mentorform
 formRouter.get('/mentorform',(req,res)=>{
     res.render('forms/mentorform');
+});
+
+formRouter.get('/mentor/view',(req,res)=>{
+    res.render('forms/mentor-data');
+});
+
+formRouter.get('/volunteer/view',(req,res)=>{
+    res.render('forms/volunteer-data');
 });
 
 // mentor Register
@@ -54,28 +64,50 @@ formRouter.post('/api/volunteer/register',async(req,res)=>{
         "reason":req.body.vReason
         });
         await volunteer.save();
+        // const queryString=JSON.stringify({date:123});
         // const params={
         //     method:'worksheet.records.add',
         //     worksheet_name:'Volunteer',
         //     header_row:2,
         //     json_data:"[{\"date\":\"123456789\"}]"
         // };
-        // [{"key":"json_data","value":"[{\"date\":\"123456789\"}]","description":null,"type":"text","enabled":true,"equals":true}]
+        // // [{"key":"json_data","value":"[{\"date\":\"123456789\"}]","description":null,"type":"text","enabled":true,"equals":true}]
         // const header={
         //     Authorization:`Zoho-oauthtoken ${zoho_cookies.access_token}`,
         //     'Content-Type':'application/x-www-form-urlencoded'
         // };
-        // let data=await axios.post('https://sheet.zoho.com/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e',
-        // {
+        // const options={
+        //     hostname:'sheet.zoho.com',
+        //     port:process.env.PORT,
+        //     path:`/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e?method=worksheet.records.update&worksheet_name=Volunteer&worksheet_id=&header_row=2&data=${queryString}`,
+        //     method:'POST',
+        //     headers:{
+        //         Authorization:`Zoho-oauthtoken ${zoho_cookies.access_token}`,
+        //         'Content-Type':'application/x-www-form-urlencoded'
+        //     }
+        // }
+        // // const body={
         //     method:'worksheet.records.add',
         //      worksheet_name:'Volunteer',
         //     header_row:2,
-        //     json_data:"[{\"date\":\"123456789\"}]"
-        //  },
+        //     json_data:"[{date:123}]"
+        //  }
+        // const request=http.request(options,response=>{
+        //     console.log(response.statusCode);
+        //     response.on('data',d=>{
+        //         process.stdout.write(d);
+        //     })
+        // });
+        // request.on('error',error=>{
+        //     console.log(error);
+        // });
+        // request.write(" ");
+        // request.end();
+
+        // let data=await axios.post('https://sheet.zoho.com/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e',
         // {headers:header,params:params}).then((response)=>{console.log(response)},(error)=>{console.log(error)});
         res.send('Form submitted Successfull');
     }catch(err){
-        // [{"key":"json_data","value":"[{\"date\":\"123456789\"}]","description":null,"type":"text","enabled":true,"equals":true}]
         // let errorType=Object.keys(err.keyPattern).find(x=>x=='email');
         if(err.code == 11000 && errorType == 'email'){
             res.status(404).send("Email Already Exists!");
@@ -90,7 +122,8 @@ formRouter.post('/api/volunteer/register',async(req,res)=>{
 
 // response
 formRouter.get('/response',(req,res)=>{
-         res.render("partials/formsuccess");
+    let loginStatus=req.oidc.isAuthenticated() ? true:false;
+         res.render("partials/formsuccess",{loginStatus:loginStatus});
  });
 
 module.exports=formRouter;

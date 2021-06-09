@@ -24,6 +24,10 @@ async function getCovidData(){
         if (this.readyState == 4 && (this.status == 200 || this.status == 304)) {
              await displayData(JSON.parse(this.responseText));
              await changeMapStateColor(JSON.parse(this.responseText),stateIndex);
+        }else if(this.status == 302){
+            // console.log("Idea successfull");
+            // console.log(this.responseText);
+            // window.location.assign(this.responseText);
         }
     };
     xhttp.send();
@@ -54,6 +58,7 @@ statesDropDown.addEventListener('change',()=>{
 });
 
 async function displayData(data){ 
+    
     data=data.records;
         for(let i=0;i<data.length;i++){
             stateName[i].innerHTML=data[i]['state'];
@@ -112,7 +117,6 @@ async function changeMapStateColor(data,stateIndex){
     for(let i=0;i<data.length;i++){
         for(let j=0; j < stateIndex[i].length ; j++){
             let value=parseInt(data[i]['cases']);
-            console.log(value);
             if(value > 1000000){    
                 stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','red');
             }

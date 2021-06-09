@@ -5,10 +5,15 @@ const {blogData}=require('./data')
 
 // route to list all blogs
 blogRouter.get('/',async(req,res)=>{
+    let loginStatus=req.oidc.isAuthenticated() ? true:false;
     var data=await Blog.find({});
     let category=req.query.category || "";
     let tags=req.query.tags || "";
-    res.render('blog',{blogData:data,category:category,tags:tags});
+    res.render('blog',{blogData:data,category:category,tags:tags,loginStatus:loginStatus});
+});
+
+blogRouter.get('/user/new',(req,res)=>{
+    res.render('')
 });
 
 // route for creating a new blog
@@ -19,9 +24,10 @@ blogRouter.get('/',async(req,res)=>{
 
 // route to view a single blog
 blogRouter.get('/:id',async(req,res)=>{
+    let loginStatus=req.oidc.isAuthenticated() ? true:false;
     let allData= await Blog.find({});
     let data=allData.find(element=>element.blogid == req.params.id);
-    res.render('blog-single',{blogData:data,recentPosts:allData});
+    res.render('blog-single',{blogData:data,recentPosts:allData,loginStatus:loginStatus});
 });
 
 

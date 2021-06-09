@@ -21,9 +21,6 @@ const blogSchema=mongoose.Schema({
    category:[String],
    tags:[String],
    content:{type:String,required:true},
-   markdown:{type:String,required:true},
-   slug:{type:String,required:true,unique:true},
-   sanitizedHTML:{type:String,required:true},
    comments:[commentSchema],
 });
 
@@ -39,3 +36,5 @@ blogSchema.pre('validate',(next)=>{
 
 const Blog=mongoose.model('Blog',blogSchema);
 module.exports=Blog;
+
+// https://1drv.ms/x/s!Asy2Zfcjy3FHnmdbQ-0pf9SHeuh4?e=Upn3Ue
