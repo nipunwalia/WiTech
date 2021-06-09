@@ -272,13 +272,13 @@ a:hover {
 
 .blog .blog-author {
   padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0px;
+  
 }
 
 .blog .blog-author img {
   width: 120px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .blog .blog-author h4 {
