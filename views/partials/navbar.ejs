@@ -32,34 +32,24 @@
           <li class="nav-item ">
             <a id="nav-color" class="nav-link" aria-current="page" href="/covid">Covid-19</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"style="color:black;" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user" style="color: black;"></i>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Profile</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Log Out</a>
-            </div>
-          </li>
-          <li class="nav-item ">
-            <a id="nav-color" class="nav-link" aria-current="page" href="">Sign In</a>
-          </li>
           <!-- https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=1000.TKO2A7GBFUUHWC0PPDWAQL7JOCL4CT&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline&prompt=consent -->
           <%if(loginStatus == false){%>
-          <li class="nav-item">
-            <a id="nav-color" class="nav-link" aria-current="page" href="/login">SignIn</a>
-          </li>
-          <%}else{%>
-            <li class="nav-item ">
-              <a id="nav-color" class="nav-link" aria-current="page" href=""> <i class="fas fa-user-alt" style="font-size: 30px;color:orangered;padding-right: 10px;"></i></a>
-            </li>
-            <%}%>
-            <%if(loginStatus == true){%>
               <li class="nav-item ">
-                <a id="nav-color" class="nav-link" aria-current="page" href="/logout">Logout</a>
+                <a id="nav-color" class="nav-link" aria-current="page" href="/login">Sign In</a>
+              </li>
+          <%}else{%>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"style="color:black;" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user" style="color: black;"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/profile">Profile</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="/logout">Log Out</a>
+                </div>
               </li>
             <%}%>
+            
         </ul>
       </div>
     </div>

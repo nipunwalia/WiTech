@@ -5,16 +5,21 @@ const {blogData}=require('./data')
 
 // route to list all blogs
 blogRouter.get('/',async(req,res)=>{
+    blogRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
     let loginStatus=req.oidc.isAuthenticated() ? true:false;
     var data=await Blog.find({});
     let category=req.query.category || "";
     let tags=req.query.tags || "";
-    res.render('blog',{blogData:data,category:category,tags:tags,loginStatus:loginStatus});
+    res.render('blog',{blogData:data,category:category,tags:tags,loginStatus:blogRouter.locals.authenticated});
 });
 
 blogRouter.get('/user/new',(req,res)=>{
-    res.render('')
+    res.render('blog-login');
 });
+
+blogRouter.get('/user/:id/edit',(req,res)=>{
+    res.render('blog-login');
+})
 
 // route for creating a new blog
 // rendering new blog page
@@ -24,16 +29,10 @@ blogRouter.get('/user/new',(req,res)=>{
 
 // route to view a single blog
 blogRouter.get('/:id',async(req,res)=>{
-    let loginStatus=req.oidc.isAuthenticated() ? true:false;
     let allData= await Blog.find({});
     let data=allData.find(element=>element.blogid == req.params.id);
-    res.render('blog-single',{blogData:data,recentPosts:allData,loginStatus:loginStatus});
+    res.render('blog-single',{blogData:data,recentPosts:allData,loginStatus:blogRouter.locals.authenticated});
 });
-
-
-// blogRouter.get('/edit/:slug',(req,res)=>{
-//     res.render();
-// })
 
 // route for posting a new blog
 blogRouter.post('/api/create',async(ren,res)=>{

@@ -25,13 +25,16 @@ var statesIdList=["andaman_nicobar_1","andhra_pradesh_1","arunachal_pradesh_1","
 // --------------------routes--------------------------------///
 
 covidRouter.get("/",(req,res)=>{
-    let loginStatus=req.oidc.isAuthenticated() ? true:false;
-    res.render('covid',{states:{0:statesIdList,1:statesList},loginStatus:loginStatus});
+    covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    res.render('covid',{states:{0:statesIdList,1:statesList},loginStatus:covidRouter.locals.authenticated});
 });
 
+covidRouter.get('/edit',(req,res)=>{
+    res.send("Covid data edit page");
+});
 // covid info for particular state
 covidRouter.get('/info',(req,res)=>{
-    res.render('covid-detail');
+    res.render('covid-detail',{loginStatus:covidRouter.locals.authenticated});
 });
 
 // fetching data from excel sheet

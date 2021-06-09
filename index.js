@@ -41,61 +41,16 @@ app.use(
     })
 );
 
-app.use(async function(req,res,next){
-    res.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
-    // const options={
-    //     hostname:"localhost",
-    //     port:5000,
-    //     path:'profile',
-    //     method:'GET',
-    // }
-    // const request = http.request(options, response => {
-    //     console.log(`statusCode: ${response.statusCode}`)
-      
-    //     response.on('data', d => {
-    //       process.stdout.write(d)
-    //     })
-    //   })
-      
-    //   request.on('error', error => {
-    //     console.error(error)
-    //   })
-      
-    //   request.end()
-    // let data=await fetch(');
-    // console.log(data);
-    res.locals.userEmail="";
-});
-
-async function fetchdata(){
-    const options={
-        hostname:"localhost",
-        port:5000,
-        path:'profile',
-        method:'GET',
-    }
-    const request = http.request(options, response => {
-        console.log(`statusCode: ${response.statusCode}`)
-        response.on('data', d => {
-          process.stdout.write(d)
-        })
-      })
-      request.on('error', error => {
-        console.error(error)
-      })
-      request.end()
-}
-
-// fetchdata();
 // home page
 app.get('/',(req,res)=>{
-    let loginStatus=req.oidc.isAuthenticated() ? true:false;
-    res.render('home',{data:"",loginStatus:loginStatus});
+    app.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    res.render('home',{data:"",loginStatus:app.locals.authenticated});
 });
 
 // auth0 profile
 app.get('/profile',requiresAuth(),(req,res)=>{
-    res.send(JSON.stringify(req.oidc.user));
+    res.render('userprofile');
+    // res.send(JSON.stringify(req.oidc.user));
 })
 
 // autho callback
@@ -116,14 +71,9 @@ app.get('/authcallback',async(req,res)=>{
 
 // about page
 app.get('/about',(req,res)=>{
-    let loginStatus=req.oidc.isAuthenticated() ? true:false;
-    res.render('about',{loginStatus:loginStatus});
+   
+    res.render('about',{loginStatus:app.locals.authenticated});
 });
-
-
-app.get('/test',(req,res)=>{
-    res.render('login-landing');
-})
 
 app.use('/blogs',blogRouter);
 app.use('/forms',formRouter);

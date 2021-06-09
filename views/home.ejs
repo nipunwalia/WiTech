@@ -386,7 +386,9 @@
           <p class="about-content fonttt">Find out about the Covid situation in all the states of India</p>
           <div class="buttonswithin">
           <a type="button" class="btn btn-dark" href="/covid">Find here</a>
-          <a type="button" class="btn btn-dark" href="">Edit</a>
+          <%if(loginStatus == true){%>
+          <a type="button" class="btn btn-dark" href="/covid/edit">Edit</a>
+          <%}%>
           </div>
         </div>
         <div class="feature-box col-lg-4">
@@ -395,7 +397,9 @@
           <p class="about-content fonttt">Share your knowledge, experiences or the latest news</p>
           <div class="buttonswithin">
           <a type="button" class="btn btn-dark" href="/forms/mentorform">Visit</a>
-          <a type="button" class="btn btn-dark" href="">View</a>
+          <%if(loginStatus == true){%>
+            <a type="button" class="btn btn-dark" href="/forms/mentor/view">View</a>
+          <%}%>
           </div>
         </div>
         <div class="feature-box col-lg-4">
@@ -404,7 +408,9 @@
           <p class="about-content fonttt">We are looking out for new vision, and strategic talents.</p>
           <div class="buttonswithin">
           <a type="button" class="btn btn-dark" href="/forms/volunteer">Join Us</a>
-          <a type="button" class="btn btn-dark" href="">View</a>
+          <%if(loginStatus == true){%>
+            <a type="button" class="btn btn-dark" href="/forms/volunteer/view">View</a>
+          <%}%>
           </div>
         </div>
       </div>

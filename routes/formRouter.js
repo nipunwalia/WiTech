@@ -15,6 +15,7 @@ var statesList=['Andaman and Nicobar Islands','Andhra Pradesh','Arunachal Prades
 
 // volunteer
 formRouter.get("/volunteer",(req,res)=>{
+    formRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
     res.render('forms/volunteerform',{states:statesList});
 });
 
@@ -23,12 +24,14 @@ formRouter.get('/mentorform',(req,res)=>{
     res.render('forms/mentorform');
 });
 
-formRouter.get('/mentor/view',(req,res)=>{
-    res.render('forms/mentor-data');
+formRouter.get('/mentor/view',async(req,res)=>{
+    let data=await Mentor.find({});
+    res.render('forms/mentor-data',{mentor:data,loginStatus:formRouter.locals.authenticated});
 });
 
-formRouter.get('/volunteer/view',(req,res)=>{
-    res.render('forms/volunteer-data');
+formRouter.get('/volunteer/view',async(req,res)=>{
+    let data=await Volunteer.find({});
+    res.render('forms/volunteer-data',{volunteer:data,loginStatus:formRouter.locals.authenticated});
 });
 
 // mentor Register
@@ -122,8 +125,7 @@ formRouter.post('/api/volunteer/register',async(req,res)=>{
 
 // response
 formRouter.get('/response',(req,res)=>{
-    let loginStatus=req.oidc.isAuthenticated() ? true:false;
-         res.render("partials/formsuccess",{loginStatus:loginStatus});
+     res.render("partials/formsuccess",{loginStatus:formRouter.locals.authenticated});
  });
 
 module.exports=formRouter;

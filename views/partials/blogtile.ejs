@@ -1,7 +1,7 @@
 <article class="entry">
     <div class="entry-img">
       <!-- <%=blog.image%> -->
-      <img src="https://drive.google.com/thumbnail?id=1dQvx5_5jdgk6meGgiJJChnFjikoljY_t" alt=<%=blog.title%> class="img-fluid">
+      <img src="<%=blog.image%>" alt=<%=blog.title%> class="img-fluid">
     </div>
     <h2 class="entry-title">
       <a href='/blogs/<%=blog.blogid%>' class="blog-title"><%=blog.title%></a>
@@ -16,6 +16,9 @@
           <span class="publishDate"><%=blog.date%></span>
       </li>
         <li class="d-flex align-items-center"><i class="fas fa-comment-dots"style="font-size: 30px;color:orangered;padding-right: 10px;"></i><%=blog.comments.length%> Comments</li>
+        <%if(loginStatus == true){%>
+        <li><a href='/blogs/user/<%=blog.blogid%>/edit'>Edit</a></li>
+        <%}%>
       </ul>
     </div>
     <div class="entry-content">

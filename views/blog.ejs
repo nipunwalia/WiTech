@@ -83,11 +83,12 @@
             </div>
           </div><!-- End blog entries list -->
           <div class="col-lg-4">
+            <%if(loginStatus ==true){%>
             <div class="addblog">
-              <center><a href=""><button style="border: none;padding: 10px 40px;background: linear-gradient(60deg,orangered,orange);color: white;font-weight: 800;border-radius: 30px;margin-bottom: 30px;text-transform: uppercase;">Create Blog</button></a></center>
+              <center><a href="/blogs/user/new"><button style="border: none;padding: 10px 40px;background: linear-gradient(60deg,orangered,orange);color: white;font-weight: 800;border-radius: 30px;margin-bottom: 30px;text-transform: uppercase;">Create Blog</button></a></center>
              </div>
+             <%}%>
             <div class="sidebar">
-              <a href="/blogs/user/new">New Blog</a>
               <h3 class="sidebar-title py-2">Search</h3>
               <div class="sidebar-item search-form">
                 <!-- <form action=""> -->
