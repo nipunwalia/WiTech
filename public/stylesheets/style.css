@@ -466,21 +466,21 @@ a:hover {
   margin-bottom: 30px;
 }
 
-.blog .sidebar .search-form form {
+.blog .sidebar .search-form .search-section {
   background: #fff;
   border: 1px solid #ddd;
   padding: 3px 10px;
   position: relative;
 }
 
-.blog .sidebar .search-form form input[type="text"] {
+.blog .sidebar .search-form .search-section input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
 }
 
-.blog .sidebar .search-form form button {
+.blog .sidebar .search-form .search-section button {
   position: absolute;
   top: 0;
   right: 0;
@@ -497,11 +497,11 @@ a:hover {
   line-height: 0;
 }
 
-.blog .sidebar .search-form form button i {
+.blog .sidebar .search-form .search-section button i {
   line-height: 0;
 }
 
-.blog .sidebar .search-form form button:hover {
+.blog .sidebar .search-form .search-section button:hover {
   background: #fda015;
 }
 

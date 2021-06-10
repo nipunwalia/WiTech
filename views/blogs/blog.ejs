@@ -32,7 +32,7 @@
 
   
 <!-- start of navbar -->
-<%- include('partials/navbar')%>
+<%- include('../partials/navbar')%>
 <!--end of navbar-->
 
   <main id="main">
@@ -51,7 +51,7 @@
             <%if(category == "" && tags == ""){%>
 
               <% blogData.forEach((blog,i)=>{%>
-                <%- include('partials/blogtile',{blog:blog})%>
+                <%- include('../partials/blogtile',{blog:blog})%>
               <%})%>
 
             <%} else{%>
@@ -59,14 +59,14 @@
                 <% if(category!== ""){ %>
                   <% blogData.forEach((blog,i)=>{%>
                     <%if(blog.category.includes(category)){%>
-                      <%- include('partials/blogtile',{blog:blog})%>
+                      <%- include('../partials/blogtile',{blog:blog})%>
                     <%}%>
                   <%})%>
                 <%}%>
                 <%if(tags!== ""){%>
                   <% blogData.forEach((blog,i)=>{%>
                     <%if(blog.tags.includes(tags)){%>
-                        <%- include('partials/blogtile',{blog:blog})%>
+                        <%- include('../partials/blogtile',{blog:blog})%>
                     <%}%>
                   <%})%>
                 <%}%>
@@ -92,10 +92,13 @@
               <h3 class="sidebar-title py-2">Search</h3>
               <div class="sidebar-item search-form">
                 <!-- <form action=""> -->
+                  <div class="search-section">
                   <input type="text" id="blog-search">
                   <button type="" id="blog-search-button" style="border:none;border-radius: 20px;padding: 5px 10px; background: linear-gradient(60deg,orangered,orange);"><i class="fas fa-search" style="color: white;"></i></button>
                 <!-- </form> -->
-              </div><!-- End sidebar search formn-->
+                </div>
+              </div>
+              <!-- End sidebar search formn -->
               <h3 class="sidebar-title py-2">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
@@ -148,7 +151,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <%- include('partials/footer')%>
+  <%- include('../partials/footer')%>
   <!-- Template Main JS File -->
   <script src="/javascript/main.js"></script>
   <script src="/javascript/navbar.js"></script>

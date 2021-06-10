@@ -28,6 +28,8 @@ async function getCovidData(){
             // console.log("Idea successfull");
             // console.log(this.responseText);
             // window.location.assign(this.responseText);
+            console.log("this is it");
+            // window.open(this.responseText);
         }
     };
     xhttp.send();

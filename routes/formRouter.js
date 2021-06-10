@@ -25,13 +25,23 @@ formRouter.get('/mentorform',(req,res)=>{
 });
 
 formRouter.get('/mentor/view',async(req,res)=>{
-    let data=await Mentor.find({});
-    res.render('forms/mentor-data',{mentor:data,loginStatus:formRouter.locals.authenticated});
+    formRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    if(formRouter.locals.authenticated == true){
+        let data=await Mentor.find({});
+        res.render('forms/mentor-data',{mentor:data,loginStatus:formRouter.locals.authenticated});
+    }else{
+        res.render('partials/error');
+    }
 });
 
 formRouter.get('/volunteer/view',async(req,res)=>{
-    let data=await Volunteer.find({});
-    res.render('forms/volunteer-data',{volunteer:data,loginStatus:formRouter.locals.authenticated});
+    formRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    if(formRouter.locals.authenticated == true){
+        let data=await Volunteer.find({});
+        res.render('forms/volunteer-data',{volunteer:data,loginStatus:formRouter.locals.authenticated});
+    }else{
+        res.render('partials/error');
+    }
 });
 
 // mentor Register

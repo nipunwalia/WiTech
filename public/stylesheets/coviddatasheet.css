@@ -48,3 +48,23 @@ a{
     border-radius: 100px; /* Rounded corners */
     /* font-size: 18px; Increase font size */
   }
+
+  input{
+      background-color:#fff3cd ;
+      border: none;
+      outline:none;
+  }
+
+  input:hover{
+      border: none;
+  }
+
+  input:focus{
+      border: none;
+  }
+
+  td,th{
+    outline-style:solid;
+    outline-color:black;
+    outline-width:1px;
+  }

@@ -12,7 +12,7 @@ const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
 const dotenv=require('dotenv');
 dotenv.config();
-const {getToken}=require('./services/zohosheet');
+const {Encrypt,getToken}=require('./services/zohosheet');
 const app=express();
 const http=require('http');
 const {auth,requiresAuth}=require('express-openid-connect'); 
@@ -47,10 +47,10 @@ app.get('/',(req,res)=>{
     res.render('home',{data:"",loginStatus:app.locals.authenticated});
 });
 
+// await encryptData("jatin123}");
 // auth0 profile
 app.get('/profile',requiresAuth(),(req,res)=>{
     res.render('userprofile');
-    // res.send(JSON.stringify(req.oidc.user));
 })
 
 // autho callback
@@ -61,7 +61,7 @@ app.get('/authcallback',async(req,res)=>{
     const query=req.query;
     if(Object.keys(query).length !== 0 && query.constructor === Object){
         let data=await getToken(query.code);
-        res.cookie('Witech_India_zoho',data);
+        res.cookie('Witech_India_zoho',JSON.stringify(data),{httpOnly:true});
         res.redirect('/');
     }
     else{

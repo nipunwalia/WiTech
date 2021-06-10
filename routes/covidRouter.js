@@ -2,12 +2,11 @@ const express=require('express');
 const covidRouter=express();
 const Covid = require('../models/covidSchema');
 const {covidData}=require('./data.js');
-const cryptr=require('cryptr');
 const dotenv=require('dotenv');
 dotenv.config();
-const crypto=new cryptr(process.env.TOKEN_KEY);
 const axios=require('axios');
 const cookieparser=require('cookie-parser');
+
 covidRouter.use(cookieparser());
 
 // stateslist 
@@ -26,24 +25,38 @@ var statesIdList=["andaman_nicobar_1","andhra_pradesh_1","arunachal_pradesh_1","
 
 covidRouter.get("/",(req,res)=>{
     covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
-    res.render('covid',{states:{0:statesIdList,1:statesList},loginStatus:covidRouter.locals.authenticated});
+    if(req.cookies.Witech_India_zoho){
+        res.render('covid/covid',{states:{0:statesIdList,1:statesList},loginStatus:covidRouter.locals.authenticated});
+    }else{
+        res.redirect(`https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline`)
+    }
+    // res.redirect('/blogs');
 });
 
-covidRouter.get('/edit',(req,res)=>{
-    res.send("Covid data edit page");
+covidRouter.get('/edit',async(req,res)=>{
+    covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    if(covidRouter.locals.authenticated == true){
+        try{
+            var result=await Covid.find({});
+            res.render("covid/covid-datasheet",{loginStatus:covidRouter.locals.authenticated,covid:result});
+            // res.render("covid/covid-data",{loginStatus:covidRouter.locals.authenticated});
+        }catch(err){
+            res.status(404).send("Error");
+        }
+    }else{
+        res.render('partials/error');
+    }
 });
+
 // covid info for particular state
 covidRouter.get('/info',(req,res)=>{
-    res.render('covid-detail',{loginStatus:covidRouter.locals.authenticated});
+    res.render('covid/covid-detail',{loginStatus:covidRouter.locals.authenticated});
 });
 
 // fetching data from excel sheet
 covidRouter.get('/api/getData',async(req,res)=>{
-    let zoho_cookies=req.cookies.Witech_India_zoho;
-    if(zoho_cookies==null){
-        // let data=await axios.get(`https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline`);
-        res.status(302).send("https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline");
-    }else{
+   let zoho_cookies=req.cookies.Witech_India_zoho;
+    zoho_cookies=JSON.parse(zoho_cookies);
         try{
             const params={
                 method:'worksheet.records.fetch',
@@ -59,7 +72,6 @@ covidRouter.get('/api/getData',async(req,res)=>{
             res.send(covidData);
         }
         catch(err){
-            // console.log(err.response.data.error_message);
             const param={
                 client_id:`${process.env.ZOHO_CLIENT_ID}`,
                 client_secret:`${process.env.ZOHO_CLIENT_SECRET}`,
@@ -67,22 +79,35 @@ covidRouter.get('/api/getData',async(req,res)=>{
                 redirect_uri:'http://localhost:5000/authcallback',
                 refresh_token:zoho_cookies.refresh_token
             };
-
-            if(err.response && err.response.data.error_message === 'Valid [OAUTHTOKEN] is required for processing the request.'){
                 let data=await axios.post('https://accounts.zoho.com/oauth/v2/token',{},{params:param});
-                await res.cookie('Witech_India_zoho',data.data);
-            }
-            // 'Valid [OAUTHTOKEN] is required for processing the request.'
+                res.cookie('Witech_India_zoho',JSON.stringify(data.data),{httpOnly:true});
             res.send("Error");
         }
-    }
+    // }
     // var result=await Covid.find({});
+    // // console.log(result);
     // if(result!=0){
     //     res.send(result);
     // }else{
     //     res.status(404).send("Data not Received");
     // }
 });
+
+
+covidRouter.post('/api/saveData',async(req,res)=>{
+    covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+    if(covidRouter.locals.authenticated == true){
+        try{
+            // var result=await Covid.find({});
+            res.send('Saved');
+            // res.render("covid/covid-data",{loginStatus:covidRouter.locals.authenticated});
+        }catch(err){
+            res.status(404).send("Error");
+        }
+    }else{
+        res.render('partials/error');
+    }
+})
 
 covidRouter.post('/api/seed',async(req,res)=>{
     var result=await Covid.insertMany(covidData);

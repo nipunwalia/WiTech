@@ -10,15 +10,15 @@ blogRouter.get('/',async(req,res)=>{
     var data=await Blog.find({});
     let category=req.query.category || "";
     let tags=req.query.tags || "";
-    res.render('blog',{blogData:data,category:category,tags:tags,loginStatus:blogRouter.locals.authenticated});
+    res.render('blogs/blog',{blogData:data,category:category,tags:tags,loginStatus:blogRouter.locals.authenticated});
 });
 
 blogRouter.get('/user/new',(req,res)=>{
-    res.render('blog-login');
+    res.render('blogs/blog-login',{loginStatus:blogRouter.locals.authenticated});
 });
 
 blogRouter.get('/user/:id/edit',(req,res)=>{
-    res.render('blog-login');
+    res.render('blogs/blog-login');
 })
 
 // route for creating a new blog
@@ -31,7 +31,7 @@ blogRouter.get('/user/:id/edit',(req,res)=>{
 blogRouter.get('/:id',async(req,res)=>{
     let allData= await Blog.find({});
     let data=allData.find(element=>element.blogid == req.params.id);
-    res.render('blog-single',{blogData:data,recentPosts:allData,loginStatus:blogRouter.locals.authenticated});
+    res.render('blogs/blog-single',{blogData:data,recentPosts:allData,loginStatus:blogRouter.locals.authenticated});
 });
 
 // route for posting a new blog

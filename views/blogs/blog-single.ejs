@@ -33,7 +33,7 @@
   <!-- ======= Header ======= -->
     
 <!-- start of navbar -->
-<%- include('partials/navbar')%>
+<%- include('../partials/navbar')%>
 <!--end of navbar-->
   <main id="main">
 
@@ -189,27 +189,27 @@
 
               <h3 class="sidebar-title py-2">Search</h3>
               <div class="sidebar-item search-form">
-                <form action="">
+              <div class="search-section">
                   <input type="text">
                   <button type="" id="blog-search-button" style="border:none;border-radius: 20px;padding: 5px 10px; background: linear-gradient(60deg,orangered,orange);"><i class="fas fa-search" style="color: white;"></i></button>
-                </form>
+                </div>
               </div><!-- End sidebar search formn-->
 
               <h3 class="sidebar-title py-2">Categories</h3>
               <div class="sidebar-item categories">
                 <ul>
-                  <li><a href="#">General <span>(25)</span></a></li>
-                  <li><a href="#">Lifestyle <span>(12)</span></a></li>
-                  <li><a href="#">Travel <span>(5)</span></a></li>
-                  <li><a href="#">Design <span>(22)</span></a></li>
-                  <li><a href="#">Creative <span>(8)</span></a></li>
-                  <li><a href="#">Education <span>(14)</span></a></li>
+                  <li><a href="/blogs?category=general">General <span>(<%=recentPosts.filter(blog=>blog.category.includes("general")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=lifestyle">Lifestyle <span>(<%=recentPosts.filter(blog=>blog.category.includes("lifestyle")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=travel">Travel<span>(<%=recentPosts.filter(blog=>blog.category.includes("travel")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=design">Design<span>(<%=recentPosts.filter(blog=>blog.category.includes("design")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=creative">Creative<span>(<%=recentPosts.filter(blog=>blog.category.includes("creative")).length%>)</span></a></li>
+                  <li><a href="/blogs?category=education">Education<span>(<%=recentPosts.filter(blog=>blog.category.includes("education")).length%>)</span></a></li>
                 </ul>
               </div><!-- End sidebar categories-->
 
               <h3 class="sidebar-title py-2">Recent Posts</h3>
               <div class="sidebar-item recent-posts">
-                <%recentPosts.forEach((element)=>{%>
+                <%recentPosts.slice().sort((a,b)=>b.date-a.date).forEach((element)=>{%>
                   <div class="post-item clearfix">
                     <img src="<%=element.image%>" alt="<%=element.title%>">
                     <h4><a href="blog-single.html"><%=element.title%></a></h4>
@@ -221,12 +221,12 @@
               <h3 class="sidebar-title py-2">Tags</h3>
               <div class="sidebar-item tags">
                 <ul>
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
+                  <li><a href="/blogs?tags=app">App</a></li>
+                  <li><a href="/blogs?tags=it">IT</a></li>
+                  <li><a href="/blogs?tags=bussiness">Business</a></li>
+                  <li><a href="/blogs?tags=mac">Mac</a></li>
+                  <li><a href="/blogs?tags=design">Design</a></li>
+                  <li><a href="/blogs?tags=office">Office</a></li>
                 </ul>
               </div><!-- End sidebar tags-->
 
@@ -242,7 +242,7 @@
   </main><!-- End #main -->
 
 <!--including footer-->
-<%- include('partials/footer')%>
+<%- include('../partials/footer')%>
 
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
