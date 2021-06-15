@@ -22,14 +22,10 @@ async function getCovidData(){
     xhttp.setRequestHeader('Content-type',"application/json");
     xhttp.onreadystatechange = async function() {
         if (this.readyState == 4 && (this.status == 200 || this.status == 304)) {
+            
              await displayData(JSON.parse(this.responseText));
              await changeMapStateColor(JSON.parse(this.responseText),stateIndex);
         }else if(this.status == 302){
-            // console.log("Idea successfull");
-            // console.log(this.responseText);
-            // window.location.assign(this.responseText);
-            console.log("this is it");
-            // window.open(this.responseText);
         }
     };
     xhttp.send();
@@ -60,8 +56,6 @@ statesDropDown.addEventListener('change',()=>{
 });
 
 async function displayData(data){ 
-    
-    data=data.records;
         for(let i=0;i<data.length;i++){
             stateName[i].innerHTML=data[i]['state'];
             cases[i].innerHTML=data[i]['cases'];
@@ -115,17 +109,17 @@ function resumeDiv() {
 // }
 async function changeMapStateColor(data,stateIndex){    
     // let path=stateAnchor[0].getElementsByTagName('path');
-    data=data.records;
     for(let i=0;i<data.length;i++){
         for(let j=0; j < stateIndex[i].length ; j++){
             let value=parseInt(data[i]['cases']);
+            
             if(value > 1000000){    
                 stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','red');
             }
-            if(value > 500000 && value < 1000000){
+            else if(value > 500000 && value < 1000000){
                 stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','orange');
             }
-            if(value < 500000){
+            else if(value < 500000){
                 stateAnchor[stateIndex[i][j]].getElementsByTagName('path')[0].setAttribute('fill','green');
             }
         }
