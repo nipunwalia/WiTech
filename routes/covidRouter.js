@@ -55,42 +55,13 @@ covidRouter.get('/info',(req,res)=>{
 
 // fetching data from excel sheet
 covidRouter.get('/api/getData',async(req,res)=>{
-   let zoho_cookies=req.cookies.Witech_India_zoho;
-    zoho_cookies=JSON.parse(zoho_cookies);
-        try{
-            const params={
-                method:'worksheet.records.fetch',
-                worksheet_name:'Covid',
-                header_row:2
-            };
-            const header={
-                Authorization:`Zoho-oauthtoken ${zoho_cookies.access_token}`,
-                'Content-Type':'application/x-www-form-urlencoded'
-            };
-            let data=await axios.get('https://sheet.zoho.com/api/v2/nuxy5c4f34bfbb334405087a58c2b29c4bf9e',{headers:header,params:params});
-            let covidData=data.data;
-            res.send(covidData);
-        }
-        catch(err){
-            const param={
-                client_id:`${process.env.ZOHO_CLIENT_ID}`,
-                client_secret:`${process.env.ZOHO_CLIENT_SECRET}`,
-                grant_type:'refresh_token',
-                redirect_uri:'http://localhost:5000/authcallback',
-                refresh_token:zoho_cookies.refresh_token
-            };
-                let data=await axios.post('https://accounts.zoho.com/oauth/v2/token',{},{params:param});
-                res.cookie('Witech_India_zoho',JSON.stringify(data.data),{httpOnly:true});
-            res.send("Error");
-        }
-    // }
-    // var result=await Covid.find({});
-    // // console.log(result);
-    // if(result!=0){
-    //     res.send(result);
-    // }else{
-    //     res.status(404).send("Data not Received");
-    // }
+    var result=await Covid.find({});
+    // console.log(result);
+    if(result!=0){
+        res.send(result);
+    }else{
+        res.status(404).send("Data not Received");
+    }
 });
 
 
@@ -102,6 +73,25 @@ covidRouter.post('/api/saveData',async(req,res)=>{
             res.send('Saved');
             // res.render("covid/covid-data",{loginStatus:covidRouter.locals.authenticated});
         }catch(err){
+            res.status(404).send("Error");
+        }
+    }else{
+        res.render('partials/error');
+    }
+})
+
+covidRouter.post('/api/updateData',async(req,res)=>{
+    covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
+   
+    if(covidRouter.locals.authenticated == true){
+        try{
+            var field=req.body.field;
+            var query={};
+            query[field]=req.body.value;
+            var result=await Covid.updateOne({state:req.body.state},query,{returnOriginal:false});
+            res.send('Saved');
+        }catch(err){
+            console.log(err);
             res.status(404).send("Error");
         }
     }else{

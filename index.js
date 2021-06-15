@@ -12,9 +12,7 @@ const covidRouter=require('./routes/covidRouter');
 const morgan = require('morgan');
 const dotenv=require('dotenv');
 dotenv.config();
-const {Encrypt,getToken}=require('./services/zohosheet');
 const app=express();
-const http=require('http');
 const {auth,requiresAuth}=require('express-openid-connect'); 
 const cookieparser=require('cookie-parser');
 const port=process.env.PORT ||  5000;
@@ -56,19 +54,6 @@ app.get('/profile',requiresAuth(),(req,res)=>{
 // autho callback
 app.get('/callback',(req,res)=>{});
 
-//  for zohosheets callback
-app.get('/authcallback',async(req,res)=>{
-    const query=req.query;
-    if(Object.keys(query).length !== 0 && query.constructor === Object){
-        let data=await getToken(query.code);
-        res.cookie('Witech_India_zoho',JSON.stringify(data),{httpOnly:true});
-        res.redirect('/');
-    }
-    else{
-        res.send("Error");
-    }
-});
-
 // about page
 app.get('/about',(req,res)=>{
    
@@ -85,6 +70,3 @@ app.use('/marketing-creative',marketingRouter);
 app.use('/covid',covidRouter);
 
 app.listen(port,()=>console.log(`App is listening at ${port}`));
-
-// for getting authorization
-// https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=1000.TKO2A7GBFUUHWC0PPDWAQL7JOCL4CT&scope=ZohoSheet.dataAPI.ALL&redirect_uri=https://witech-india.herokuapp.com/&access_type=offline&prompt=consent

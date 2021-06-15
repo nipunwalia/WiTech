@@ -69,5 +69,4 @@ blogRouter.post('/api/seed',(req,res)=>{
     res.send("Saved");
 })
 
-
 module.exports=blogRouter;
