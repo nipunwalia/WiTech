@@ -25,12 +25,7 @@ var statesIdList=["andaman_nicobar_1","andhra_pradesh_1","arunachal_pradesh_1","
 
 covidRouter.get("/",(req,res)=>{
     covidRouter.locals.authenticated=req.oidc.isAuthenticated() ? true:false;
-    if(req.cookies.Witech_India_zoho){
         res.render('covid/covid',{states:{0:statesIdList,1:statesList},loginStatus:covidRouter.locals.authenticated});
-    }else{
-        res.redirect(`https://accounts.zoho.com/oauth/v2/auth?response_type=code&client_id=${process.env.ZOHO_CLIENT_ID}&scope=ZohoSheet.dataAPI.UPDATE,ZohoSheet.dataAPI.READ&redirect_uri=http://localhost:5000/authcallback&access_type=offline`)
-    }
-    // res.redirect('/blogs');
 });
 
 covidRouter.get('/edit',async(req,res)=>{
