@@ -78,7 +78,7 @@ function searchStatesInDropDown(value){
 }
 
 var ScrollRate = 25;
-function scrollDiv_init() {
+function scrollDiv_init(){
      DivElmnt = document.getElementById("MyDivName");
      ReachedMaxScroll = false;
      DivElmnt.scrollTop = 0;
@@ -86,7 +86,7 @@ function scrollDiv_init() {
      ScrollInterval = setInterval('scrollDiv()', ScrollRate);
 }
 
-function scrollDiv() {
+function scrollDiv(){
      if (!ReachedMaxScroll) {
           DivElmnt.scrollTop = PreviousScrollTop;
           PreviousScrollTop++;
@@ -94,11 +94,11 @@ function scrollDiv() {
      }
 }
 
-function pauseDiv() {
+function pauseDiv(){
      clearInterval(ScrollInterval);
 }
 
-function resumeDiv() {
+function resumeDiv(){
      PreviousScrollTop = DivElmnt.scrollTop;
      ScrollInterval  = setInterval('scrollDiv()', ScrollRate);
 }
